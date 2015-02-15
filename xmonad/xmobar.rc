@@ -1,0 +1,17 @@
+Config  { font          = "xft:Terminus-9:antialias=true"
+        , bgColor       = "#3f3f3f"
+        , fgColor       = "#dcdccc"
+        , position      = Static        { xpos  = 12
+                                        , ypos  = 12
+                                        , width = 1896
+                                        , height= 12
+                                        }
+        , border        = NoBorder
+        , lowerOnStart  = True
+        , commands      =       [ Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                                , Run StdinReader
+                                ]
+        , sepChar       = "%"
+        , alignSep      = "}{"
+        , template      = "%StdinReader% }{ <fc=#dcdccc>%date%</fc> "
+        }

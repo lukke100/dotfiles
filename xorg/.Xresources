@@ -1,0 +1,73 @@
+URxvt.scrollBar:                false
+URxvt.font:                     xft:Terminus:size=9
+URxvt.depth:                    32
+URxvt.saveLines:                0
+URxvt.perl-ext:                 default,url-select
+URxvt.keysym.C-i:               perl:url-select:select_next
+URxvt.url-select.launcher:      firefox
+URxvt.url-select.underline:     true
+URxvt*cursorUnderline:          false
+
+URxvt*foreground:               #dcdccc
+URxvt*background:               #3f3f3f
+
+Xft.dpi:                        96
+Xft.antialias:                  true
+Xft.rgba:                       rgb
+Xft.hinting:                    true
+Xft.hintstyle:                  hintsfull
+Xft.autohint:                   true
+
+!font settings
+xscreensaver.Dialog.headingFont:                -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:                   -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:                  -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:                  -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:                 -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:                   -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:                 -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:                 #dcdccc
+xscreensaver.Dialog.background:                 #3f3f3f
+xscreensaver.Dialog.topShadowColor:             #dcdccc
+xscreensaver.Dialog.bottomShadowColor:          #dcdccc
+xscreensaver.Dialog.Button.foreground:          #dcdccc
+xscreensaver.Dialog.Button.background:          #3f3f3f
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:            #dcdccc
+xscreensaver.Dialog.text.background:            #3f3f3f
+xscreensaver.Dialog.internalBorderWidth:        16
+xscreensaver.Dialog.borderWidth:                0
+xscreensaver.Dialog.shadowThickness:            1
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:     #dcdccc
+xscreensaver.passwd.thermometer.background:     #3f3f3f
+xscreensaver.passwd.thermometer.width:          8
+!datestamp format--see the strftime(3) manual page for details
+xscreensaver.dateFormat:                        %d-%m-%y
+
+! Black + DarkGrey
+URxvt*color0:   #0f0f0f
+URxvt*color8:   #242424
+! DarkRed + Red
+URxvt*color1:   #b08080
+URxvt*color9:   #e0b0b0
+! DarkGreen + Green
+URxvt*color2:   #80b080
+URxvt*color10:  #b0e0b0
+! DarkYellow + Yellow
+URxvt*color3:   #b0b080
+URxvt*color11:  #e0e0b0
+! DarkBlue + Blue
+URxvt*color4:   #8080b0
+URxvt*color12:  #b0b0e0
+! DarkMagenta + Magenta
+URxvt*color5:   #b080b0
+URxvt*color13:  #e0b0e0
+!DarkCyan + Cyan
+URxvt*color6:   #80b0b0
+URxvt*color14:  #b0e0e0
+! LightGrey + White
+URxvt*color7:   #9fafaf
+URxvt*color15:  #ffffff
+

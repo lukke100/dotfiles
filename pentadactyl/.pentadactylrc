@@ -1,0 +1,8 @@
+set scrollsteps=1
+set scrolltime=0
+set editor="urxvt -e vim"
+set followhints=0
+set guioptions=C
+set suggestengines="duckduckgo"
+set titlestring="Firefox"
+set defsearch="duckduckgo"
