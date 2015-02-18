@@ -7,4 +7,6 @@ set suggestengines="duckduckgo"
 set titlestring="Firefox"
 set defsearch="duckduckgo"
 set popups=window
+set showtabline=never
+set showtabline=multitab
 colorscheme zenburn
