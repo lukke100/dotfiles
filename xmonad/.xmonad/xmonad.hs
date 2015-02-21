@@ -13,23 +13,6 @@ brSelTx = "#3f3f3f"
 brTtlTx = "#ffffff"
 bdFocus = "#3f3f3f"
 bdNorm  = "#dcdccc"
-dmenuArgs = intercalate " "
-        [ "-f"
-        , "-i"
-        , "-q"
-        , "-t"
-        , "-w", "1904"
-        , "-h", "12" -- Does not apply. Font limits height to 14
-        , "-x", "12"
-        , "-y", "11" -- Compensates for height being 14
-        , "-p", q " -> "
-        , "-nb", q "#3f3f3f" -- Normal background color
-        , "-nf", q "#dcdccc" -- Normal foreground (text) color
-        , "-sb", q "#dcdccc" -- Selected background color
-        , "-sf", q "#3f3f3f" -- Selected foreground (text) color
-        , "-dc", q "#3f3f3f" -- Dim color
-        , "-fn", "Terminus-9"-- Text font
-        ] where q s = '"':s++"\""
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
@@ -62,9 +45,9 @@ conf = ewmh $ defaultConfig
         , workspaces            = ["term", "code", "http", "media", "misc"]
         , handleEventHook       = handleEventHook defaultConfig <+> fullscreenEventHook
         , clickJustFocuses      = False
-        } `additionalKeys`
-                [ ((mod1Mask,                   xK_p),          spawn $ "dmenu_run " ++ dmenuArgs )
-                , ((mod4Mask,                   xK_l),          spawn "xscreensaver-command -lock")
+        }
+        `additionalKeys`
+                [ ((mod4Mask,                   xK_l),          spawn "xscreensaver-command -lock")
                 , ((mod1Mask,                   xK_Down),       nextWS)
                 , ((mod1Mask,                   xK_Up),         prevWS)
                 , ((mod1Mask .|. shiftMask,     xK_Down),       shiftToNext)
@@ -73,5 +56,8 @@ conf = ewmh $ defaultConfig
                 , ((mod1Mask,                   xK_Left),       prevScreen)
                 , ((mod1Mask .|. shiftMask,     xK_Right),      shiftNextScreen)
                 , ((mod1Mask .|. shiftMask,     xK_Left),       shiftPrevScreen)
+                ]
+        `removeKeys`
+                [ (mod1Mask,                    xK_p)
                 ]
 

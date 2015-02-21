@@ -7,10 +7,6 @@ if [ ! "$(pidof transmission-daemon)" ];
 then transmission-daemon &
 fi
 
-if [ ! "$(pidof eclimd)" ];
-then "$ECLIPSE_HOME/eclimd" "-Dosgi.instance.area.default=@user.home/work" &
-fi
-
 umask 077
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc

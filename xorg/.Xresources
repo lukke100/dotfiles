@@ -71,3 +71,37 @@ URxvt*color14:  #b0e0e0
 URxvt*color7:   #9fafaf
 URxvt*color15:  #ffffff
 
+! Rofi config
+rofi.switchers:            window,run,ssh
+rofi.opacity:              100
+rofi.width:                1896
+rofi.lines:                12
+rofi.columns:              1
+rofi.font:                 terminus 9
+rofi.fg:                   #dcdccc
+rofi.bg:                   #3f3f3f
+rofi.bgalt:                #242424
+rofi.hlfg:                 #3f3f3f
+rofi.hlbg:                 #dcdccc
+rofi.bc:                   #dcdccc
+rofi.bw:                   0
+rofi.location:             2
+rofi.padding:              0
+rofi.yoffset:              9
+rofi.xoffset:              0
+rofi.fixed-num-lines:      false
+rofi.hmode:                false
+rofi.terminal:             urxvt
+rofi.ssh-client:           ssh
+rofi.ssh-command:          {terminal} -e {ssh-client} {host}
+rofi.run-command:          {cmd}
+rofi.run-list-command:
+rofi.run-shell-command:    {terminal} -e {cmd}
+rofi.disable-history:      false
+rofi.levenshtein-sort:     false
+rofi.case-sensitive:       false
+rofi.key:                  mod1+o
+rofi.rkey:                 mod1+p
+rofi.skey:                 mod1+i
+rofi.sidebar-mode:         false
+rofi.lazy-filter-limit:    5000
