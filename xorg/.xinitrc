@@ -14,7 +14,7 @@ compton &
 # Disabled for now (there are bugs)
 # stalonetray &
 redshift -l 45.0:-75.0 &
-unclutter -idle 1 -noevents & # "-noevents" prevents issues with Firefox
+unclutter -idle 10 -noevents & # "-noevents" prevents issues with Firefox
 wmname LG3D
 dex -a -e xmonad
 rofi &
