@@ -14,6 +14,7 @@ eval $(dircolors -b | $COLOR_SED)
 unset COLOR_SED
 alias la="ls -A"
 alias ls="ls -hbHL1 --time-style=long-iso --file-type --color --group-directories-first"
+alias ll="ls -l"
 alias dir="dir --color --time-style=long-iso --group-directories-first"
 alias vdir="vdir -A --color --time-style=long-iso --group-directories-first"
 alias grep='grep --color=auto'

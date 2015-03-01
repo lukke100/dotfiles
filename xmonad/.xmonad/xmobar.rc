@@ -9,9 +9,23 @@ Config  { font          = "xft:Terminus-9:antialias=true"
         , border        = NoBorder
         , lowerOnStart  = True
         , commands      =       [ Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                                , Run CoreTemp  [ "--template" , "<core0>° <core1>° <core2>° <core3>°"
+                                                , "--Low"      , "60"        -- units: °C
+                                                , "--High"     , "80"        -- units: °C
+                                                , "--low"      , "#30b030"
+                                                , "--normal"   , "#b0b080"
+                                                , "--high"     , "#b08080"
+                                                ] 10
+                                , Run MultiCpu  [ "--template" , "<total0>% <total1>% <total2>% <total3>%"
+                                                , "--Low"      , "50"         -- units: %
+                                                , "--High"     , "85"         -- units: %
+                                                , "--low"      , "#30b030"
+                                                , "--normal"   , "#b0b080"
+                                                , "--high"     , "#b08080"
+                                                ] 10
                                 , Run StdinReader
                                 ]
         , sepChar       = "%"
         , alignSep      = "}{"
-        , template      = "%StdinReader% }{ <fc=#dcdccc>%date%</fc> "
+        , template      = "%StdinReader% }{ CPU %multicpu% : %coretemp% | <fc=#dcdccc>%date%</fc> "
         }
