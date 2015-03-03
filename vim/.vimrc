@@ -6,12 +6,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
-Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bitc/vim-hdevtools'
+Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'bitc/vim-hdevtools'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/YankRing.vim'
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
@@ -84,6 +86,14 @@ let g:syntastic_haskell_hdevtools_args = '-g-Wall'
 " endif
 
 let g:airline_powerline_fonts = 1
+
+let g:yankring_max_history = 10
+let g:yankring_min_element_length = 2
+let g:yankring_history_file = '.yankring'
+let g:yankring_manual_clipboard_check = 1
+
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
 
 " Enable omni completion.
 " autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
