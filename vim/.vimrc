@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/YankRing.vim'
+Plugin 'eagletmt/neco-ghc'
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
@@ -72,6 +73,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " let g:neocomplete#enable_at_startup = 1
 " let g:neocomplete#enable_smart_case = 1
@@ -79,6 +81,10 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 
 let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_haskell_hdevtools_args = '-g-Wall'
+
+setlocal omnifunc=necoghc#omnifunc
+
+let g:necoghc_enable_detailed_browse = 1
 
 " " Enable heavy omni completion.
 " if !exists('g:neocomplete#sources#omni#input_patterns')
