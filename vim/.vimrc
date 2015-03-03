@@ -11,6 +11,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'bitc/vim-hdevtools'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'bling/vim-airline'
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
@@ -81,6 +82,8 @@ let g:syntastic_haskell_hdevtools_args = '-g-Wall'
 " if !exists('g:neocomplete#sources#omni#input_patterns')
 "   let g:neocomplete#sources#omni#input_patterns = {}
 " endif
+
+let g:airline_powerline_fonts = 1
 
 " Enable omni completion.
 " autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS

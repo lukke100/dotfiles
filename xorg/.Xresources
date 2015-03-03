@@ -1,5 +1,5 @@
 URxvt.scrollBar:                false
-URxvt.font:                     xft:Terminus:size=9
+URxvt.font:                     xft:Terminess Powerline:size=9
 URxvt.depth:                    32
 URxvt.saveLines:                0
 URxvt.perl-ext:                 default,url-select
