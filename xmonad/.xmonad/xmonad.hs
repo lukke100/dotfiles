@@ -6,8 +6,8 @@ import XMonad.Util.EZConfig
 import XMonad.Layout.NoBorders
 import XMonad.Layout.GridVariants
 import XMonad.Actions.CycleWS
-import Data.List
 
+brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
 brSelBg = "#dcdccc"
 brSelTx = "#3f3f3f"
 brTtlTx = "#ffffff"
