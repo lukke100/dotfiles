@@ -101,6 +101,9 @@ let g:yankring_manual_clipboard_check = 1
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " Enable omni completion.
 " autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 " autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
