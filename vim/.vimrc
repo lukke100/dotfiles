@@ -86,6 +86,8 @@ setlocal omnifunc=necoghc#omnifunc
 
 let g:necoghc_enable_detailed_browse = 1
 
+let g:EclimCompletionMethod = 'omnifunc'
+
 " " Enable heavy omni completion.
 " if !exists('g:neocomplete#sources#omni#input_patterns')
 "   let g:neocomplete#sources#omni#input_patterns = {}
