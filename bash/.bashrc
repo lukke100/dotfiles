@@ -4,27 +4,29 @@
 
 source /usr/share/git/completion/git-prompt.sh
 
-SET_TITLE_COMMAND()
+function SET_TITLE_COMMAND
 {
-        # echo -ne "\033]0;${PWD} -> $(history | tail -n 1 | sed 's/^ *[0-9]* *//')\007";
         echo -ne "\033]0;bash (${PWD/$HOME/\~}) - urxvt\007";
 }
 
-PRINT_SEP_BAR()
-{
-        printf %${COLUMNS}s | tr " " "=";
+function PRINT_SEP_BAR {
+        perl -e '{
+                my $center_text = " F**KIN'\'' LIGHTNING ";
+                my $columns     = '${COLUMNS}';
+                my $spaces_side = int($columns/2) - int(length($center_text) / 2 + 1);
+                my $side_text   = "=" x $spaces_side;
+                print($side_text . $center_text . $side_text);
+        }';
 }
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
-# Explicitly unset color (default anyhow). Use 1 to set it.
 GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_DESCRIBE_STYLE="branch"
 GIT_PS1_SHOWUPSTREAM="auto git"
 
 # PS1 is overloaded by __git_ps1 PROMPT_COMMAND
-# PS1='\w/ -> '
 PS2='... '
 PS3='> '
 PS4='+ '
