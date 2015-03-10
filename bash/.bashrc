@@ -10,6 +10,11 @@ SET_TITLE_COMMAND()
         echo -ne "\033]0;bash (${PWD/$HOME/\~}) - urxvt\007";
 }
 
+PRINT_SEP_BAR()
+{
+        printf %${COLUMNS}s | tr " " "=";
+}
+
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -26,7 +31,7 @@ PS4='+ '
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
-export PROMPT_COMMAND='__git_ps1 "\w/" " -> "; SET_TITLE_COMMAND'
+export PROMPT_COMMAND='__git_ps1 "`PRINT_SEP_BAR`\n\w/" " -> "; SET_TITLE_COMMAND'
 export COLOR_SED='sed s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
 eval $(dircolors -b | $COLOR_SED)
 unset COLOR_SED
