@@ -11,8 +11,8 @@ brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
 brSelBg = "#dcdccc"
 brSelTx = "#3f3f3f"
 brTtlTx = "#ffffff"
-bdFocus = "#3f3f3f"
-bdNorm  = "#dcdccc"
+bdFocus = "#b08080"
+bdNorm  = "#3f3f3f"
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
@@ -41,7 +41,7 @@ conf = ewmh $ defaultConfig
         , layoutHook            = smartBorders layouts
         , focusedBorderColor    = bdFocus
         , normalBorderColor     = bdNorm
-        , borderWidth           = 1
+        , borderWidth           = 2
         , workspaces            = ["term", "code", "http", "media", "misc"]
         , handleEventHook       = handleEventHook defaultConfig <+> fullscreenEventHook
         , clickJustFocuses      = False
