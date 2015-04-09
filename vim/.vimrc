@@ -45,14 +45,14 @@ set novisualbell
 set nowb
 set number                              " Show line numbers
 set ruler                               " Always show current position
-set shiftwidth=8                        " 1 tab == 8 spaces
+set shiftwidth=4                        " 1 tab == 4 spaces
 set showcmd                             " Shows what you are typing as a command
 set showmatch                           " Show matching brackets when text indicator is over them
 set si                                  " Smart indent
 set smartcase                           " When searching try to be smart about cases
 set smarttab                            " Be smart when using tabs ;)
 set so=7                                " Set 7 lines to the cursor - when moving vertically using j/k
-set tabstop=8
+set tabstop=4
 set tm=500
 set t_vb=
 set virtualedit=all                     " Enable free-range cursor
