@@ -13,8 +13,8 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/YankRing.vim'
 Plugin 'eagletmt/neco-ghc'
+Plugin 'wting/rust.vim'
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
