@@ -21,7 +21,7 @@ filetype plugin indent on               " required
 
 " Non-Vundle config:
 " set nocompatible                       " Necessary for cool stuff
-colorscheme zenburn
+colorscheme default
 set ai                                  " Auto indent
 set autoread                            " Set to auto read when a file is changed from the outside
 set backspace=eol,start,indent          " Configure backspace so it acts as it should act

@@ -10,3 +10,4 @@ fi
 umask 077
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
+

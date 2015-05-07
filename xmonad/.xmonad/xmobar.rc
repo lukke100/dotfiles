@@ -1,6 +1,6 @@
 Config  { font          = "xft:Terminus-9:antialias=true"
-        , bgColor       = "#3f3f3f"
-        , fgColor       = "#dcdccc"
+        , bgColor       = "#6c1714"
+        , fgColor       = "#ffffff"
         , position      = Static        { xpos  = 12
                                         , ypos  = 12
                                         , width = 1896
@@ -27,5 +27,5 @@ Config  { font          = "xft:Terminus-9:antialias=true"
                                 ]
         , sepChar       = "%"
         , alignSep      = "}{"
-        , template      = "%StdinReader% }{ CPU %multicpu% : %coretemp% | <fc=#dcdccc>%date%</fc> "
+        , template      = "%StdinReader% }{ CPU %multicpu% : %coretemp% | <fc=#ffffff>%date%</fc> "
         }

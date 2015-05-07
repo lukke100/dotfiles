@@ -8,11 +8,11 @@ import XMonad.Layout.GridVariants
 import XMonad.Actions.CycleWS
 
 brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
-brSelBg = "#dcdccc"
-brSelTx = "#3f3f3f"
+brSelBg = "#ffffff"
+brSelTx = "#aa1e1f"
 brTtlTx = "#ffffff"
-bdFocus = "#b08080"
-bdNorm  = "#3f3f3f"
+bdFocus = "#aa1e1f"
+bdNorm  = "#000000"
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
@@ -33,6 +33,7 @@ barFmt = xmobarPP
         , ppUrgent    = xmobarColor "red" "yellow"
         }
 
+toggleStrutsKey :: XConfig t -> (KeyMask, KeySym)
 toggleStrutsKey XConfig {XMonad.modMask = m} = (m, xK_b)
 
 conf = ewmh $ defaultConfig
@@ -41,7 +42,7 @@ conf = ewmh $ defaultConfig
         , layoutHook            = smartBorders layouts
         , focusedBorderColor    = bdFocus
         , normalBorderColor     = bdNorm
-        , borderWidth           = 2
+        , borderWidth           = 1
         , workspaces            = ["term", "code", "http", "media", "misc"]
         , handleEventHook       = handleEventHook defaultConfig <+> fullscreenEventHook
         , clickJustFocuses      = False

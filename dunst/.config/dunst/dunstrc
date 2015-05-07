@@ -62,7 +62,7 @@
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
-    transparency = 0
+    transparency = 25
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -124,7 +124,7 @@
 
 [frame]
     width = 1
-    color = "#dcdccc"
+    color = "#ffffff"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -148,13 +148,13 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#3f3f3f"
-    foreground = "#dcdccc"
+    background = "#000000"
+    foreground = "#ffffff"
     timeout = 5
 
 [urgency_normal]
-    background = "#3f3f3f"
-    foreground = "#dcdccc"
+    background = "#000000"
+    foreground = "#ffffff"
     timeout = 5
 
 [urgency_critical]

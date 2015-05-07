@@ -6,17 +6,29 @@ source /usr/share/git/completion/git-prompt.sh
 
 function SET_TITLE_COMMAND
 {
-        echo -ne "\033]0;bash (${PWD/$HOME/\~}) - urxvt\007";
+    echo -ne "\033]0;bash (${PWD/$HOME/\~}) - urxvt\007";
 }
 
 function PRINT_SEP_BAR {
-        perl -e '{
-                my $center_text = " F**KIN'\'' LIGHTNING ";
-                my $columns     = '${COLUMNS}';
-                my $spaces_side = int($columns/2) - int(length($center_text) / 2 + 1);
-                my $side_text   = "=" x $spaces_side;
-                print($side_text . $center_text . $side_text);
-        }';
+    # Ensure ${COLUMNS} is set properly
+    eval `resize`
+    # Write our string
+    perl -e '{
+        use strict;
+        use warnings;
+
+        my $hostname    = `hostname`;
+        chomp $hostname;
+        my $center_text = " $hostname ";
+        my $columns     = '${COLUMNS}';
+        my $spaces_side = int($columns/2) - int(length($center_text) / 2);
+        my $side_text   = "=" x $spaces_side;
+
+        my $full_text   = $side_text . $center_text . $side_text;
+        chop $full_text if (length $full_text) > $columns;
+
+        print $full_text;
+    }';
 }
 
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -73,3 +85,4 @@ PERL5LIB="/home/lukke/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/lukke/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/lukke/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/lukke/perl5"; export PERL_MM_OPT;
+

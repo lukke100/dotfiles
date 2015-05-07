@@ -1,107 +1,108 @@
-URxvt.scrollBar:                false
-URxvt.font:                     xft:Terminess Powerline:size=9
-URxvt.depth:                    32
-URxvt.saveLines:                0
-URxvt.perl-ext:                 default,url-select
-URxvt.keysym.C-i:               perl:url-select:select_next
-URxvt.url-select.launcher:      firefox
-URxvt.url-select.underline:     true
-URxvt*cursorUnderline:          false
+URxvt.scrollBar:            false
+URxvt.font:                 xft:Terminess Powerline:size=9
+URxvt.depth:                32
+URxvt.saveLines:            0
+URxvt.perl-ext:             default,url-select
+URxvt.keysym.C-i:           perl:url-select:select_next
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+URxvt*cursorUnderline:      false
 
-URxvt*foreground:               #dcdccc
-URxvt*background:               #3f3f3f
+URxvt*foreground:   #ffffff
+URxvt*background:   [75]#000000
 
-Xft.dpi:                        96
-Xft.antialias:                  true
-Xft.rgba:                       rgb
-Xft.hinting:                    true
-Xft.hintstyle:                  hintsfull
-Xft.autohint:                   true
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintsfull
+Xft.autohint:   true
 
 !font settings
-xscreensaver.Dialog.headingFont:                -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:                   -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:                  -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:                  -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:                 -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:                   -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:                 -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.headingFont:            -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:               -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:              -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:              -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:             -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:               -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:             -*-Terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 !general dialog box (affects main hostname, username, password text)
-xscreensaver.Dialog.foreground:                 #dcdccc
-xscreensaver.Dialog.background:                 #3f3f3f
-xscreensaver.Dialog.topShadowColor:             #dcdccc
-xscreensaver.Dialog.bottomShadowColor:          #dcdccc
-xscreensaver.Dialog.Button.foreground:          #dcdccc
-xscreensaver.Dialog.Button.background:          #3f3f3f
+xscreensaver.Dialog.foreground:             #dcdccc
+xscreensaver.Dialog.background:             #3f3f3f
+xscreensaver.Dialog.topShadowColor:         #dcdccc
+xscreensaver.Dialog.bottomShadowColor:      #dcdccc
+xscreensaver.Dialog.Button.foreground:      #dcdccc
+xscreensaver.Dialog.Button.background:      #3f3f3f
 !username/password input box and date text colour
-xscreensaver.Dialog.text.foreground:            #dcdccc
-xscreensaver.Dialog.text.background:            #3f3f3f
-xscreensaver.Dialog.internalBorderWidth:        16
-xscreensaver.Dialog.borderWidth:                0
-xscreensaver.Dialog.shadowThickness:            1
+xscreensaver.Dialog.text.foreground:        #dcdccc
+xscreensaver.Dialog.text.background:        #3f3f3f
+xscreensaver.Dialog.internalBorderWidth:    16
+xscreensaver.Dialog.borderWidth:            0
+xscreensaver.Dialog.shadowThickness:        1
 !timeout bar (background is actually determined by Dialog.text.background)
-xscreensaver.passwd.thermometer.foreground:     #dcdccc
-xscreensaver.passwd.thermometer.background:     #3f3f3f
-xscreensaver.passwd.thermometer.width:          8
+xscreensaver.passwd.thermometer.foreground: #dcdccc
+xscreensaver.passwd.thermometer.background: #3f3f3f
+xscreensaver.passwd.thermometer.width:      8
 !datestamp format--see the strftime(3) manual page for details
-xscreensaver.dateFormat:                        %d-%m-%y
+xscreensaver.dateFormat:                    %d-%m-%y
 
 ! Black + DarkGrey
-URxvt*color0:   #0f0f0f
-URxvt*color8:   #242424
+URxvt*color0:   #532621
+URxvt*color8:   #6c1714
 ! DarkRed + Red
-URxvt*color1:   #b08080
-URxvt*color9:   #e0b0b0
+URxvt*color1:   #723437
+URxvt*color9:   #b83032
 ! DarkGreen + Green
-URxvt*color2:   #80b080
-URxvt*color10:  #b0e0b0
+URxvt*color2:   #bc8080
+URxvt*color10:  #aa1e1f
 ! DarkYellow + Yellow
-URxvt*color3:   #b0b080
-URxvt*color11:  #e0e0b0
+URxvt*color3:   #eeb2b2
+URxvt*color11:  #d57372
 ! DarkBlue + Blue
-URxvt*color4:   #8080b0
-URxvt*color12:  #b0b0e0
+URxvt*color4:   #904a52
+URxvt*color12:  #bc4e4f
 ! DarkMagenta + Magenta
-URxvt*color5:   #b080b0
-URxvt*color13:  #e0b0e0
+URxvt*color5:   #a76569
+URxvt*color13:  #d01617
 !DarkCyan + Cyan
-URxvt*color6:   #80b0b0
-URxvt*color14:  #b0e0e0
+URxvt*color6:   #d29091
+URxvt*color14:  #93110f
 ! LightGrey + White
-URxvt*color7:   #9fafaf
-URxvt*color15:  #ffffff
+URxvt*color7:   #862627
+URxvt*color15:  #f22021
 
 ! Rofi config
-rofi.switchers:            window,run,ssh
-rofi.opacity:              100
-rofi.width:                1896
-rofi.lines:                12
-rofi.columns:              1
-rofi.font:                 terminus 9
-rofi.fg:                   #dcdccc
-rofi.bg:                   #3f3f3f
-rofi.bgalt:                #242424
-rofi.hlfg:                 #3f3f3f
-rofi.hlbg:                 #dcdccc
-rofi.bc:                   #dcdccc
-rofi.bw:                   0
-rofi.location:             2
-rofi.padding:              0
-rofi.yoffset:              9
-rofi.xoffset:              0
-rofi.fixed-num-lines:      false
-rofi.hmode:                false
-rofi.terminal:             urxvt
-rofi.ssh-client:           ssh
-rofi.ssh-command:          {terminal} -e {ssh-client} {host}
-rofi.run-command:          {cmd}
+rofi.switchers:         window,run,ssh
+rofi.opacity:           100
+rofi.width:             1920
+rofi.lines:             65
+rofi.columns:           1
+rofi.font:              terminus 9
+rofi.fg:                #ffffff
+rofi.bg:                argb:C0000000
+! rofi.bgalt:             #532621
+rofi.hlfg:              #aa1e1f
+rofi.hlbg:              #ffffff
+rofi.bc:                #ffffff
+rofi.bw:                0
+rofi.location:          2
+rofi.padding:           13
+rofi.yoffset:           -3
+rofi.xoffset:           0
+rofi.fixed-num-lines:   false
+rofi.hmode:             false
+rofi.terminal:          urxvt
+rofi.ssh-client:        ssh
+rofi.ssh-command:       {terminal} -e {ssh-client} {host}
+rofi.run-command:       {cmd}
 rofi.run-list-command:
-rofi.run-shell-command:    {terminal} -e {cmd}
-rofi.disable-history:      false
-rofi.levenshtein-sort:     false
-rofi.case-sensitive:       false
-rofi.key-window:           mod1+o
-rofi.key-run:              mod1+p
-rofi.key-ssh:              mod1+i
-rofi.sidebar-mode:         false
-rofi.lazy-filter-limit:    5000
+rofi.run-shell-command: {terminal} -e {cmd}
+rofi.disable-history:   false
+rofi.levenshtein-sort:  false
+rofi.case-sensitive:    false
+rofi.key-window:        mod1+o
+rofi.key-run:           mod1+p
+rofi.key-ssh:           mod1+i
+rofi.sidebar-mode:      false
+rofi.lazy-filter-limit: 5000
+

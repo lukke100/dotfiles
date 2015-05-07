@@ -10,7 +10,7 @@ xrdb -load ~/.Xresources
 xsetroot -cursor_name left_ptr
 eval $(cat ~/.fehbg)
 xscreensaver -no-splash &
-# compton &
+compton &
 # Disabled for now (there are bugs)
 # stalonetray &
 redshift -l 45.0:-75.0 &
