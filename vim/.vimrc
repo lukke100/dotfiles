@@ -62,6 +62,7 @@ set wildmenu                            " Turn on the WiLd menu
 syntax enable                           " Enable syntax highlighting
 "set spell                               " Use spell check (it's really annoying)
 set nowrap                              " Don't wrap lines
+set clipboard=unnamedplus               " Use X11 clipboard for yanks
 
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
@@ -94,11 +95,6 @@ let g:EclimCompletionMethod = 'omnifunc'
 " endif
 
 let g:airline_powerline_fonts = 1
-
-let g:yankring_max_history = 10
-let g:yankring_min_element_length = 2
-let g:yankring_history_file = '.yankring'
-let g:yankring_manual_clipboard_check = 1
 
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
