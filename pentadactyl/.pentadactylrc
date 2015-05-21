@@ -15,3 +15,5 @@ map -b k 4k
 map -b h 4h
 map -b l 4l
 set strictfocus=google.com:laissez-faire,'chrome:*':laissez-faire,*:despotic
+set showtabline=never
+set showtabline=multitab
