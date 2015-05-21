@@ -59,19 +59,19 @@ alias dir="dir --color --time-style=long-iso --group-directories-first"
 alias vdir="vdir -A --color --time-style=long-iso --group-directories-first"
 alias grep='grep --color=auto'
 alias info='info --vi-keys'
-EDITOR=vim
-VISUAL=vim
-PAGER=less
-BROWSER=firefox
-LESS_TERMCAP_mb=$'\E[01;31m'
-LESS_TERMCAP_md=$'\E[01;31m'
-LESS_TERMCAP_me=$'\E[0m'
-LESS_TERMCAP_se=$'\E[0m'
-LESS_TERMCAP_so=$'\E[01;44;33m'
-LESS_TERMCAP_ue=$'\E[0m'
-LESS_TERMCAP_us=$'\E[01;32m'
-LESS="-RXFsi"
-LESSHISTFILE='/dev/null'
+export EDITOR=vim
+export VISUAL=vim
+export PAGER=less
+export BROWSER=firefox
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+export LESS="-RXFsi"
+export LESSHISTFILE='/dev/null'
 HISTFILE="$HOME/.cmd_history"
 XDG_CONFIG_HOME="$HOME/.config"
 GREP_COLORS="ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36"
