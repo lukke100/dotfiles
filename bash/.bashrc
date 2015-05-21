@@ -45,8 +45,10 @@ PS4='+ '
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
-export PROMPT_COMMAND='__git_ps1 "`PRINT_SEP_BAR`\n\w/" " -> "; SET_TITLE_COMMAND'
-export COLOR_SED='sed s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
+# Exporting this doesn't seem to work
+PROMPT_COMMAND='__git_ps1 "`PRINT_SEP_BAR`\n\w/" " -> "; SET_TITLE_COMMAND'
+
+COLOR_SED='sed s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
 eval $(dircolors -b | $COLOR_SED)
 unset COLOR_SED
 alias la="ls -A"
@@ -56,33 +58,32 @@ alias dir="dir --color --time-style=long-iso --group-directories-first"
 alias vdir="vdir -A --color --time-style=long-iso --group-directories-first"
 alias grep='grep --color=auto'
 alias info='info --vi-keys'
-export EDITOR=vim
-export VISUAL=vim
-export PAGER=less
-export BROWSER=firefox
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-export LESS="-RXFsi"
-export LESSHISTFILE='/dev/null'
-export HISTFILE="/home/lukke/.cmd_history"
-export XDG_CONFIG_HOME="/home/lukke/.config"
-export GREP_COLORS="ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36"
-export HISTFILESIZE=
-export HISTSIZE=
+EDITOR=vim
+VISUAL=vim
+PAGER=less
+BROWSER=firefox
+LESS_TERMCAP_mb=$'\E[01;31m'
+LESS_TERMCAP_md=$'\E[01;31m'
+LESS_TERMCAP_me=$'\E[0m'
+LESS_TERMCAP_se=$'\E[0m'
+LESS_TERMCAP_so=$'\E[01;44;33m'
+LESS_TERMCAP_ue=$'\E[0m'
+LESS_TERMCAP_us=$'\E[01;32m'
+LESS="-RXFsi"
+LESSHISTFILE='/dev/null'
+HISTFILE="$HOME/.cmd_history"
+XDG_CONFIG_HOME="$HOME/.config"
+GREP_COLORS="ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36"
+HISTFILESIZE=
+HISTSIZE=
 shopt -s histappend
 alias top='htop'
 
 # For mutt
 COLORFGBG="default;default"
 
-PATH="/home/lukke/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/home/lukke/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/lukke/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/lukke/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/lukke/perl5"; export PERL_MM_OPT;
+PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"
+PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"
+PERL_MB_OPT="--install_base \"$HOME/perl5\""
+PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 

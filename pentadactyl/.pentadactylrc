@@ -7,7 +7,6 @@ set suggestengines="duckduckgo"
 set titlestring="Firefox"
 set defsearch="duckduckgo"
 set popups=window
-colorscheme zenburn
 set incfind
 set hlfind
 set findcase=smart

@@ -1,7 +1,8 @@
-PATH="$HOME/.local/bin:$HOME/.cabal/bin:"$PATH
-eval `luarocks path`
+PATH="$HOME/.local/bin:$HOME/.cabal/bin:$PATH"
 PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
-export ECLIPSE_HOME="/usr/share/eclipse"
+PATH="$HOME/perl5/bin${PATH+:}${PATH}"
+eval `luarocks path`;
+ECLIPSE_HOME="/usr/share/eclipse";
 
 if [ ! "$(pidof transmission-daemon)" ];
 then transmission-daemon &

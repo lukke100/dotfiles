@@ -69,7 +69,7 @@ au FileType xml setlocal foldmethod=syntax
 autocmd FileType xml setlocal shiftwidth=2
 autocmd FileType xml setlocal tabstop=2
 
-let g:ycm_global_ycm_extra_conf = '/home/lukke/.ycm/ycm_global.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm/ycm_global.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion = ['<Down>']
