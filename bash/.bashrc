@@ -22,7 +22,8 @@ function PRINT_SEP_BAR {
         my $center_text = " $hostname ";
         my $columns     = '${COLUMNS}';
         my $spaces_side = int($columns/2) - int(length($center_text) / 2);
-        my $side_text   = "=" x $spaces_side;
+        my $repeat_char = ('${UID}')? "=" : "#";
+        my $side_text   = $repeat_char x $spaces_side;
 
         my $full_text   = $side_text . $center_text . $side_text;
         chop $full_text if (length $full_text) > $columns;
