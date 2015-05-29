@@ -1,31 +1,36 @@
-Config  { font          = "xft:Terminus-9:antialias=true"
-        , bgColor       = "#6c1714"
-        , fgColor       = "#ffffff"
-        , position      = Static        { xpos  = 12
-                                        , ypos  = 12
-                                        , width = 1896
-                                        , height= 12
-                                        }
-        , border        = NoBorder
-        , lowerOnStart  = True
-        , commands      =       [ Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                                , Run CoreTemp  [ "--template" , "<core0>° <core1>° <core2>° <core3>°"
-                                                , "--Low"      , "60"        -- units: °C
-                                                , "--High"     , "80"        -- units: °C
-                                                , "--low"      , "#30b030"
-                                                , "--normal"   , "#b0b080"
-                                                , "--high"     , "#b08080"
-                                                ] 10
-                                , Run MultiCpu  [ "--template" , "<total0>% <total1>% <total2>% <total3>%"
-                                                , "--Low"      , "50"         -- units: %
-                                                , "--High"     , "85"         -- units: %
-                                                , "--low"      , "#30b030"
-                                                , "--normal"   , "#b0b080"
-                                                , "--high"     , "#b08080"
-                                                ] 10
-                                , Run StdinReader
-                                ]
-        , sepChar       = "%"
-        , alignSep      = "}{"
-        , template      = "%StdinReader% }{ CPU %multicpu% : %coretemp% | <fc=#ffffff>%date%</fc> "
+Config
+    { font          = "xft:Terminus (TTF)-9"
+    , bgColor       = "#ffffff"
+    , fgColor       = "#202668"
+    , position      = Static
+        { xpos    = 12
+        , ypos    = 12
+        , width   = 1896
+        , height  = 12
         }
+    , border        = NoBorder
+    , lowerOnStart  = True
+    , commands      =
+        [ Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+        , Run CoreTemp
+            [ "--template" , "<core0>° <core1>° <core2>° <core3>°"
+            , "--Low"      , "60"   -- units: °C
+            , "--High"     , "80"   -- units: °C
+            , "--low"      , "#202668"
+            , "--normal"   , "#d0d080"
+            , "--high"     , "#d08080"
+            ] 10
+        , Run MultiCpu
+            [ "--template" , "<total0>% <total1>% <total2>% <total3>%"
+            , "--Low"      , "50"   -- units: %
+            , "--High"     , "85"   -- units: %
+            , "--low"      , "#202668"
+            , "--normal"   , "#d0d080"
+            , "--high"     , "#d08080"
+            ] 10
+        , Run StdinReader
+        ]
+    , sepChar   = "%"
+    , alignSep  = "}{"
+    , template  = "%StdinReader% }{ CPU %multicpu% : %coretemp% | <fc=#202668>%date%</fc> "
+    }

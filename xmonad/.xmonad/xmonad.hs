@@ -8,10 +8,10 @@ import XMonad.Layout.GridVariants
 import XMonad.Actions.CycleWS
 
 brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
-brSelBg = "#ffffff"
-brSelTx = "#aa1e1f"
-brTtlTx = "#ffffff"
-bdFocus = "#aa1e1f"
+brSelBg = "#202668"
+brSelTx = "#ffffff"
+brTtlTx = "#202668"
+bdFocus = "#ffffff"
 bdNorm  = "#000000"
 
 barPath :: String
@@ -27,7 +27,7 @@ main = statusBar barPath barFmt toggleStrutsKey conf >>= xmonad
 
 barFmt :: PP
 barFmt = xmobarPP
-        { ppCurrent   = xmobarColor brSelTx brSelBg . wrap " -:" ":- "
+        { ppCurrent   = xmobarColor brSelTx brSelBg . wrap " λ " " "
         , ppTitle     = xmobarColor brTtlTx "" . shorten 200
         , ppVisible   = wrap "(" ")"
         , ppUrgent    = xmobarColor "red" "yellow"
@@ -48,8 +48,9 @@ conf = ewmh $ defaultConfig
         , clickJustFocuses      = False
         }
         `additionalKeys`
-                [ ((mod4Mask,                   xK_l),          spawn "xscreensaver-command -lock")
-                , ((mod1Mask,                   xK_Down),       nextWS)
+                -- [ ((mod4Mask,                   xK_l),          spawn "xscreensaver-command -lock")
+                -- , ((mod1Mask,                   xK_Down),       nextWS)
+                [ ((mod1Mask,                   xK_Down),       nextWS)
                 , ((mod1Mask,                   xK_Up),         prevWS)
                 , ((mod1Mask .|. shiftMask,     xK_Down),       shiftToNext)
                 , ((mod1Mask .|. shiftMask,     xK_Up),         shiftToPrev)
