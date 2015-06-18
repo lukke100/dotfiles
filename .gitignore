@@ -4,6 +4,9 @@ xmonad/.xmonad/xmonad.o
 xmonad/.xmonad/xmonad-x86_64-linux
 vim/.vim/bundle/
 ycm/.ycm/build/
+mpd/.config/mpd/log
+mpd/.config/mpd/database
+mpd/.config/mpd/pid
 
 #############################################################################
 # Python
