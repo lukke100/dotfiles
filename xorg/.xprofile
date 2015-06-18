@@ -8,7 +8,7 @@ fi
 
 xrdb -load ~/.Xresources
 xsetroot -cursor_name left_ptr
-eval $(cat ~/.fehbg)
+~/.fehbg
 compton &
 # Disabled for now (there are bugs)
 # stalonetray &
