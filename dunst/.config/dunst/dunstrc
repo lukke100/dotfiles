@@ -58,11 +58,11 @@
     # right side of the screen.  Y is measured from the top and down respectevly.
     # The width can be negative. In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "256x1+840+6"
+    geometry = "948x1+486+36"
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
-    transparency = 25
+    transparency = 0
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -123,7 +123,7 @@
     browser = /usr/bin/firefox -new-tab
 
 [frame]
-    width = 1
+    width = 0
     color = "#ffffff"
 
 [shortcuts]
@@ -148,13 +148,13 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#000000"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#202668"
     timeout = 5
 
 [urgency_normal]
-    background = "#000000"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#202668"
     timeout = 5
 
 [urgency_critical]
