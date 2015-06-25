@@ -64,10 +64,12 @@ syntax enable                           " Enable syntax highlighting
 set nowrap                              " Don't wrap lines
 set clipboard=unnamedplus               " Use X11 clipboard for yanks
 
-let g:xml_syntax_folding=1
-au FileType xml setlocal foldmethod=syntax
 autocmd FileType xml setlocal shiftwidth=2
 autocmd FileType xml setlocal tabstop=2
+autocmd FileType xhtml setlocal shiftwidth=2
+autocmd FileType xhtml setlocal tabstop=2
+
+let g:syntastic_javascript_checkers = ['gjslint']
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm/ycm_global.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
