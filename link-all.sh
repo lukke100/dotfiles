@@ -1,2 +1,2 @@
 #!/bin/bash
-stow $@ -vt ~ */
+stow $@ -vt ~ */ --ignore='\.ignore\.[^/]*'
