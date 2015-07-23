@@ -15,7 +15,7 @@ function PUT_HEADER
 {
     SOURCE_DIR=$(dirname $(realpath "$BASH_SOURCE"))
     SCRIPT_LOC="$SOURCE_DIR/.ignore.header-cmd.plx"
-    HEADER_CHR=$(if [[ $UID ]]; then echo '-'; else echo '#'; fi)
+    HEADER_CHR=$(if [[ $UID != 0 ]]; then echo '-'; else echo '#'; fi)
 
     eval $(resize)
     [[ -x "$SCRIPT_LOC" ]] && "$SCRIPT_LOC" -title " $(hostname) " -width "$COLUMNS" -pad "$HEADER_CHR"
