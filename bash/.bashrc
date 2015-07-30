@@ -11,9 +11,10 @@ alias grep=$(echo grep         --color=auto )
 alias info=$(echo info         --vi-keys    )
 alias top=$( echo htop  )
 
+SOURCE_DIR=$(dirname $(realpath "$BASH_SOURCE"))
+
 function PUT_HEADER
 {
-    SOURCE_DIR=$(dirname $(realpath "$BASH_SOURCE"))
     SCRIPT_LOC="$SOURCE_DIR/.ignore.header-cmd.plx"
     HEADER_CHR=$(if [[ $UID != 0 ]]; then echo '-'; else echo '#'; fi)
 
@@ -28,7 +29,7 @@ function PUT_TITLE
     echo -ne "\033]0; bash ($TITLE_PATH) - urxvt\007"
 }
 
-PROMPT_COMMAND='__git_ps1 "$(PUT_HEADER)\w" " -> "; PUT_TITLE;'
+PROMPT_COMMAND=$(cat "$SOURCE_DIR/.ignore.prompt-cmd.sh")
 
 PS2='... '
 PS3='> '
