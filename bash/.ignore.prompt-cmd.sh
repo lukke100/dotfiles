@@ -1,2 +1,2 @@
-__git_ps1 "$(PUT_HEADER)\n\w " "";
+__git_ps1 "$(PUT_HEADER)\n\w/" " -> ";
 PUT_TITLE;
