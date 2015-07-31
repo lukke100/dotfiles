@@ -6,60 +6,60 @@ URxvt.perl-ext:             default,url-select
 URxvt.keysym.C-i:           perl:url-select:select_next
 URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
-URxvt*cursorUnderline:      false
+URxvt.cursorUnderline:      true
+URxvt.cursorBlink:          true
 
-URxvt*foreground:   #ffffff
-URxvt*background:   [75]#000000
-
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintsfull
-Xft.autohint:   true
+URxvt*foreground:       #ffffff
+URxvt*background:   [20]#120040
 
 ! Black + DarkGrey
-URxvt*color0:   #532621
-URxvt*color8:   #6c1714
+URxvt*color0:           #120040
+URxvt*color8:           #242424
 ! DarkRed + Red
-URxvt*color1:   #723437
-URxvt*color9:   #b83032
+URxvt*color1:           #b08080
+URxvt*color9:           #e0b0b0
 ! DarkGreen + Green
-URxvt*color2:   #bc8080
-URxvt*color10:  #aa1e1f
+URxvt*color2:           #80b080
+URxvt*color10:          #b0e0b0
 ! DarkYellow + Yellow
-URxvt*color3:   #eeb2b2
-URxvt*color11:  #d57372
+URxvt*color3:           #b0b080
+URxvt*color11:          #e0e0b0
 ! DarkBlue + Blue
-URxvt*color4:   #904a52
-URxvt*color12:  #bc4e4f
+URxvt*color4:           #8080b0
+URxvt*color12:          #b0b0e0
 ! DarkMagenta + Magenta
-URxvt*color5:   #a76569
-URxvt*color13:  #d01617
+URxvt*color5:           #b080b0
+URxvt*color13:          #e0b0e0
 !DarkCyan + Cyan
-URxvt*color6:   #d29091
-URxvt*color14:  #93110f
+URxvt*color6:           #80b0b0
+URxvt*color14:          #b0e0e0
 ! LightGrey + White
-URxvt*color7:   #862627
-URxvt*color15:  #f22021
+URxvt*color7:           #9fafaf
+URxvt*color15:          #ffffff
+
+Xft.antialias:          false
+Xft.autohint:           false
+Xft.dpi:                96
+Xft.hinting:            false
+Xft.hintstyle:          none
+Xft.rgba:               rgb
 
 ! Rofi config
 rofi.switchers:         window,run,ssh
 rofi.opacity:           100
-rofi.width:             1920
-rofi.lines:             65
+rofi.width:             948
+rofi.lines:             5
 rofi.columns:           1
-rofi.font:              terminus 9
-rofi.fg:                #ffffff
-rofi.bg:                argb:C0000000
-! rofi.bgalt:             #532621
-rofi.hlfg:              #aa1e1f
-rofi.hlbg:              #ffffff
-rofi.bc:                #ffffff
+rofi.font:              Terminus (TTF) 9
+rofi.fg:                #120040
+rofi.bg:                #ffffff
+rofi.hlfg:              #ffffff
+rofi.hlbg:              #120040
+rofi.bc:                #120040
 rofi.bw:                0
 rofi.location:          2
-rofi.padding:           13
-rofi.yoffset:           -3
+rofi.padding:           0
+rofi.yoffset:           36
 rofi.xoffset:           0
 rofi.fixed-num-lines:   false
 rofi.hmode:             false
@@ -69,7 +69,7 @@ rofi.ssh-command:       {terminal} -e {ssh-client} {host}
 rofi.run-command:       {cmd}
 rofi.run-list-command:
 rofi.run-shell-command: {terminal} -e {cmd}
-rofi.disable-history:   false
+rofi.disable-history:   true
 rofi.levenshtein-sort:  false
 rofi.case-sensitive:    false
 rofi.key-window:        mod1+o
