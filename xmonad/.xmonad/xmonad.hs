@@ -8,9 +8,9 @@ import XMonad.Layout.GridVariants
 import XMonad.Actions.CycleWS
 
 brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
-brSelBg = "#202668"
+brSelBg = "#120040"
 brSelTx = "#ffffff"
-brTtlTx = "#202668"
+brTtlTx = "#120040"
 bdFocus = "#ffffff"
 bdNorm  = "#000000"
 
