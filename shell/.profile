@@ -32,3 +32,8 @@ then
     transmission-daemon &
 fi
 
+BASHRC="$HOME/.bashrc"
+[[ `which bash 2> /dev/null` ]] \
+    && [[ -r "$BASHRC" ]] \
+    && source "$HOME/.bashrc"
+
