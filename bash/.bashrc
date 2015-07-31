@@ -23,7 +23,8 @@ function PUT_HEADER
         -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
         -width      "$COLUMNS" \
         -pad        "$HEADER_CHR" \
-        -ansi_line  $'\E[48;5;15;38;5;0m'
+        -ansi_line  $'\E[48;5;15;38;5;0m' \
+        -ansi_title $'\E[0;38;5;15m'
 }
 
 function PUT_TITLE
