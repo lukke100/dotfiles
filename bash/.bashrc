@@ -16,10 +16,14 @@ SOURCE_DIR=$(dirname $(realpath "$BASH_SOURCE"))
 function PUT_HEADER
 {
     SCRIPT_LOC="$SOURCE_DIR/.ignore.header-cmd.plx"
-    HEADER_CHR=$(if [[ $UID != 0 ]]; then echo '-'; else echo '#'; fi)
+    HEADER_CHR=$(if [[ $UID != 0 ]]; then echo ' '; else echo '#'; fi)
 
     eval $(resize)
-    [[ -x "$SCRIPT_LOC" ]] && "$SCRIPT_LOC" -title " $(hostname) " -width "$COLUMNS" -pad "$HEADER_CHR"
+    [[ -x "$SCRIPT_LOC" ]] && "$SCRIPT_LOC" \
+        -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
+        -width      "$COLUMNS" \
+        -pad        "$HEADER_CHR" \
+        -ansi_line  $'\E[48;5;15;38;5;0m'
 }
 
 function PUT_TITLE
@@ -58,16 +62,16 @@ LESS_TERMCAP_so=$'\E[01;44;33m'
 LESS_TERMCAP_ue=$'\E[0m'
 LESS_TERMCAP_us=$'\E[01;32m'
 
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWCOLORHINTS=1
-GIT_PS1_DESCRIBE_STYLE='branch'
-GIT_PS1_SHOWUPSTREAM='auto git'
+# GIT_PS1_SHOWDIRTYSTATE=1
+# GIT_PS1_SHOWSTASHSTATE=1
+# GIT_PS1_SHOWUNTRACKEDFILES=1
+# GIT_PS1_SHOWCOLORHINTS=1
+# GIT_PS1_DESCRIBE_STYLE='branch'
+# GIT_PS1_SHOWUPSTREAM='auto git'
 
-GIT_COMPLETE="/usr/share/git/completion/git-prompt.sh"
+# GIT_COMPLETE="/usr/share/git/completion/git-prompt.sh"
 BASH_COMPLETE="/usr/share/bash-completion/bash_completion"
 
-[[ -r "$GIT_COMPLETE" ]] && source "$GIT_COMPLETE"
+# [[ -r "$GIT_COMPLETE" ]] && source "$GIT_COMPLETE"
 [[ -r "$BASH_COMPLETE" ]] && source "$BASH_COMPLETE"
 
