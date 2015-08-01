@@ -70,9 +70,9 @@ LESS_TERMCAP_us=$'\E[01;32m'
 # GIT_PS1_DESCRIBE_STYLE='branch'
 # GIT_PS1_SHOWUPSTREAM='auto git'
 
-# GIT_COMPLETE="/usr/share/git/completion/git-prompt.sh"
+GIT_COMPLETE="/usr/share/git/completion/git-prompt.sh"
 BASH_COMPLETE="/usr/share/bash-completion/bash_completion"
 
-# [[ -r "$GIT_COMPLETE" ]] && source "$GIT_COMPLETE"
+[[ -r "$GIT_COMPLETE" ]] && source "$GIT_COMPLETE"
 [[ -r "$BASH_COMPLETE" ]] && source "$BASH_COMPLETE"
 
