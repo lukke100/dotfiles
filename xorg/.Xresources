@@ -37,11 +37,11 @@ URxvt*color14:          #b0e0e0
 URxvt*color7:           #9fafaf
 URxvt*color15:          #ffffff
 
-Xft.antialias:          false
-Xft.autohint:           false
+Xft.antialias:          true
+Xft.autohint:           true
 Xft.dpi:                96
-Xft.hinting:            false
-Xft.hintstyle:          none
+Xft.hinting:            true
+Xft.hintstyle:          hintsfull
 Xft.rgba:               rgb
 
 ! Rofi config
