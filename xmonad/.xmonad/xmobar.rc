@@ -3,7 +3,7 @@ Config
     , bgColor       = "#ffffff"
     , fgColor       = "#120040"
     , position      = Static
-        { xpos    = 12
+        { xpos    = 1932
         , ypos    = 12
         , width   = 1896
         , height  = 12
