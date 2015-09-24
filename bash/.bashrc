@@ -18,7 +18,7 @@ function PUT_HEADER
     SCRIPT_LOC="$SOURCE_DIR/.ignore.header-cmd.plx"
     HEADER_CHR=$(if [[ $UID != 0 ]]; then echo ' '; else echo '#'; fi)
 
-    (type resize 1> /dev/null 2> /dev/null) && (eval $(resize))
+    (type resize > /dev/null 2>&1) && (eval $(resize))
     [[ -x "$SCRIPT_LOC" ]] && "$SCRIPT_LOC" \
         -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
         -width      "$COLUMNS" \
