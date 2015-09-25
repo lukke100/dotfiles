@@ -27,10 +27,10 @@ export PERL_LOCAL_LIB_ROOT=$(perl -e "$PATH_FIX" "$HOME/perl5" "$PERL_LOCAL_LIB_
 export PERL_MB_OPT="--install_base '$HOME/perl5'"
 export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 
-if [ ! $(pidof transmission-daemon) ];
-then
-    transmission-daemon &
-fi
+#if [ ! $(pidof transmission-daemon) ];
+#then
+#    transmission-daemon &
+#fi
 
 BASHRC="$HOME/.bashrc"
 [[ `which bash 2> /dev/null` ]] \
