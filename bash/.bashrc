@@ -19,7 +19,7 @@ function PUT_HEADER
     HEADER_CHR=$(if [[ $UID != 0 ]]; then echo ' '; else echo '#'; fi)
 
     (type resize > /dev/null 2>&1) && (eval $(resize))
-    [[ -x "$SCRIPT_LOC" ]] && "$SCRIPT_LOC" \
+    [[ -x "$SCRIPT_LOC" ]] && [[ -n "$COLUMNS" ]] && "$SCRIPT_LOC" \
         -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
         -width      "$COLUMNS" \
         -pad        "$HEADER_CHR" \
