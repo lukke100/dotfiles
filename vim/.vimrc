@@ -22,7 +22,7 @@ colorscheme default
 set ai                                  " Auto indent
 set autoread                            " Set to auto read when a file is changed from the outside
 set backspace=eol,start,indent          " Configure backspace so it acts as it should act
-set cmdheight=2                         " Height of the command bar
+set cmdheight=1                         " Height of the command bar
 set encoding=utf8                       " Set utf8 as standard encoding and en_US as the standard language
 set expandtab                           " Use spaces instead of tabs
 set ffs=unix,dos,mac                    " Use Unix as the standard file type

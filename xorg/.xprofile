@@ -12,7 +12,7 @@ xsetroot -cursor_name left_ptr
 compton &
 # redshift -l 45.0:-75.0 &
 unclutter -idle 4 -noevents & # "-noevents" prevents issues with Firefox
-xset r rate 250 11
+xset r rate 200 30
 wmname LG3D
 dex -a -e xmonad
 rofi &
