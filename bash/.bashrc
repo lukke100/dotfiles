@@ -32,7 +32,7 @@ function PUT_TITLE
 {
     TITLE_PATH="${PWD/"$HOME"/\~}/"
     TITLE_PATH="${TITLE_PATH/\/\//\/}"
-    echo -ne "\033]0; bash ($TITLE_PATH) - urxvt\007"
+    echo -ne "\033]0;bash ($TITLE_PATH) - urxvt\007"
 }
 
 PROMPT_COMMAND=$(cat "$SOURCE_DIR/.ignore.prompt-cmd.sh")
