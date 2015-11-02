@@ -8,6 +8,7 @@ mpd/.config/mpd/log
 mpd/.config/mpd/database
 mpd/.config/mpd/pid
 pentadactyl/.pentadactyl/info
+bash/.ignore.prev-col
 
 #############################################################################
 # Python
