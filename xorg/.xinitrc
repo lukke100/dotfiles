@@ -16,3 +16,4 @@ wmname LG3D
 dex -a -e xmonad
 rofi &
 
+~/.xmonad/xmonad
