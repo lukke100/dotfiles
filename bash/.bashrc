@@ -20,8 +20,6 @@ function PUT_HEADER
 
     (type resize > /dev/null 2>&1) && (eval $(resize))
 
-    (type screen > /dev/null 2>&1) && (screen -X title "$(pwd)" > /dev/null 2>&1)
-
     [[ -x "$SCRIPT_LOC" ]] && [[ -n "$COLUMNS" ]] && "$SCRIPT_LOC" \
         -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
         -width      "$COLUMNS" \
