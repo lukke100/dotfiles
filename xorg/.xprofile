@@ -9,9 +9,9 @@ fi
 xrdb -load ~/.Xresources
 xsetroot -cursor_name left_ptr
 ~/.fehbg
-compton &
+(pidof compton) || compton &
 # redshift -l 45.0:-75.0 &
-unclutter -idle 4 -noevents & # "-noevents" prevents issues with Firefox
+(pidof unclutter) || unclutter -idle 4 -noevents & # "-noevents" prevents issues with Firefox
 xset r rate 200 30
 wmname LG3D
 dex -a -e xmonad
