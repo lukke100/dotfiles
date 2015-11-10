@@ -1,7 +1,7 @@
 Config
     { font          = "xft:Terminus (TTF)-9"
-    , bgColor       = "#ffffff"
-    , fgColor       = "#120040"
+    , bgColor       = "#777b83"
+    , fgColor       = "#fbf1d0"
     , position      = Static
         { xpos    = 1932
         , ypos    = 12
@@ -17,7 +17,7 @@ Config
             [ "--template" , "<core0>° <core1>° <core2>° <core3>°"
             , "--Low"      , "60"   -- units: °C
             , "--High"     , "80"   -- units: °C
-            , "--low"      , "#120040"
+            , "--low"      , "#fbf1d0"
             , "--normal"   , "#d0d080"
             , "--high"     , "#d08080"
             ] 10
@@ -25,7 +25,7 @@ Config
             [ "--template" , "<total0>% <total1>% <total2>% <total3>%"
             , "--Low"      , "50"   -- units: %
             , "--High"     , "85"   -- units: %
-            , "--low"      , "#120040"
+            , "--low"      , "#fbf1d0"
             , "--normal"   , "#d0d080"
             , "--high"     , "#d08080"
             ] 10
@@ -33,5 +33,5 @@ Config
         ]
     , sepChar   = "%"
     , alignSep  = "}{"
-    , template  = "%StdinReader% }{ %mpd% | CPU %multicpu% : %coretemp% | <fc=#120040>%date%</fc> "
+    , template  = "%StdinReader% }{ %mpd% | CPU %multicpu% : %coretemp% | <fc=#fbf1d0>%date%</fc> "
     }
