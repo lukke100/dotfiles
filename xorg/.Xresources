@@ -51,11 +51,11 @@ rofi.width:             948
 rofi.lines:             5
 rofi.columns:           1
 rofi.font:              Terminus (TTF) 9
-rofi.fg:                #120040
-rofi.bg:                #ffffff
-rofi.hlfg:              #ffffff
-rofi.hlbg:              #120040
-rofi.bc:                #120040
+rofi.fg:                #fbf1d0
+rofi.bg:                #777b83
+rofi.hlfg:              #777b83
+rofi.hlbg:              #fbf1d0
+rofi.bc:                #fbf1d0
 rofi.bw:                0
 rofi.location:          2
 rofi.padding:           0
