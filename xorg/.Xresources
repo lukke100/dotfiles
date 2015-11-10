@@ -9,11 +9,11 @@ URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
-URxvt*foreground:       #ffffff
-URxvt*background:   [20]#120040
+URxvt*foreground:       #fbf1d0
+URxvt*background:   [33]#777b83
 
 ! Black + DarkGrey
-URxvt*color0:           #120040
+URxvt*color0:           #000000
 URxvt*color8:           #242424
 ! DarkRed + Red
 URxvt*color1:           #b08080
@@ -34,8 +34,8 @@ URxvt*color13:          #e0b0e0
 URxvt*color6:           #80b0b0
 URxvt*color14:          #b0e0e0
 ! LightGrey + White
-URxvt*color7:           #9fafaf
-URxvt*color15:          #ffffff
+URxvt*color7:           #b0a992
+URxvt*color15:          #fbf1d0
 
 Xft.antialias:          true
 Xft.autohint:           true
