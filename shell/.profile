@@ -13,7 +13,7 @@ HASK_BIN=$( ( (type stack > /dev/null 2>&1) && (stack path 2> /dev/null) ) | gre
 
 export PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" "$CLUA_BIN" "$PATH")
 
-export BROWSER=firefox
+export BROWSER=firefox-nightly
 export EDITOR=vim
 export VISUAL=vim
 export PAGER=less
