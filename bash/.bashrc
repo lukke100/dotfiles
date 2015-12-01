@@ -19,6 +19,8 @@ function PUT_HEADER
     COLUMNS_LOC="$SOURCE_DIR/.ignore.prev-col"
     HEADER_CHR=$(if [[ $UID != 0 ]]; then echo ' '; else echo '#'; fi)
 
+    (type resize > /dev/null 2>&1) && (eval $(resize))
+
     if [ -n "$COLUMNS" ];
     then
         echo "$COLUMNS" > "$COLUMNS_LOC"
