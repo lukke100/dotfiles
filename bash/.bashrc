@@ -51,10 +51,10 @@ PS2='... '
 PS3='> '
 PS4='+ '
 
-HISTFILE="$HOME/.cmd_history"
+export HISTFILE="$HOME/.cmd_history"
+export HISTFILESIZE=
+export HISTSIZE=
 shopt -s histappend
-unset HISTFILESIZE
-unset HISTSIZE
 
 COLORFGBG='default;default'
 
