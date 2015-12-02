@@ -17,9 +17,9 @@ bdNorm  = "#777b83"
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
 
-layouts =   (spacing 12 $ Grid (16/9))
-        ||| (spacing 12 $ Tall 1 (3/100) (1/2))
-        ||| (spacing 12 $ Mirror $ Tall 1 (3/100) (1/2))
+layouts =   (spacing 24 $ Grid (16/9))
+        ||| (spacing 24 $ Tall 1 (3/100) (1/2))
+        ||| (spacing 24 $ Mirror $ Tall 1 (3/100) (1/2))
         ||| Full
 
 main :: IO ()

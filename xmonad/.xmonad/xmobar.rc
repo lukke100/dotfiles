@@ -3,9 +3,9 @@ Config
     , bgColor       = "#777b83"
     , fgColor       = "#fbf1d0"
     , position      = Static
-        { xpos    = 1932
-        , ypos    = 12
-        , width   = 1896
+        { xpos    = 1944
+        , ypos    = 24
+        , width   = 1872
         , height  = 12
         }
     , border        = NoBorder
