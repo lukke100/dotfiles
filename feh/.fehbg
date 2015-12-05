@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-fill '/mnt/linux-shared/lukke/pictures/Jh9TEaZ.jpg'
+feh  --bg-fill '/mnt/linux-shared/lukke/pictures/Jh9TEaZ.jpg' 
