@@ -10,7 +10,7 @@ URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
 URxvt*foreground:       #ffffff
-URxvt*background:   [40]#2f163f
+URxvt*background:   [66]#2f163f
 
 ! ! Black + DarkGrey
 ! URxvt*color0:           #000000
