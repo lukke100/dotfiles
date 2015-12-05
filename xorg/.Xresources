@@ -12,30 +12,30 @@ URxvt.cursorBlink:          true
 URxvt*foreground:       #ffffff
 URxvt*background:   [40]#2f163f
 
-! Black + DarkGrey
-URxvt*color0:           #000000
-URxvt*color8:           #242424
-! DarkRed + Red
-URxvt*color1:           #b08080
-URxvt*color9:           #e0b0b0
-! DarkGreen + Green
-URxvt*color2:           #80b080
-URxvt*color10:          #b0e0b0
-! DarkYellow + Yellow
-URxvt*color3:           #b0b080
-URxvt*color11:          #e0e0b0
-! DarkBlue + Blue
-URxvt*color4:           #8080b0
-URxvt*color12:          #b0b0e0
-! DarkMagenta + Magenta
-URxvt*color5:           #b080b0
-URxvt*color13:          #e0b0e0
-!DarkCyan + Cyan
-URxvt*color6:           #80b0b0
-URxvt*color14:          #b0e0e0
-! LightGrey + White
-URxvt*color7:           #b0a992
-URxvt*color15:          #fbf1d0
+! ! Black + DarkGrey
+! URxvt*color0:           #000000
+! URxvt*color8:           #242424
+! ! DarkRed + Red
+! URxvt*color1:           #b08080
+! URxvt*color9:           #e0b0b0
+! ! DarkGreen + Green
+! URxvt*color2:           #80b080
+! URxvt*color10:          #b0e0b0
+! ! DarkYellow + Yellow
+! URxvt*color3:           #b0b080
+! URxvt*color11:          #e0e0b0
+! ! DarkBlue + Blue
+! URxvt*color4:           #8080b0
+! URxvt*color12:          #b0b0e0
+! ! DarkMagenta + Magenta
+! URxvt*color5:           #b080b0
+! URxvt*color13:          #e0b0e0
+! !DarkCyan + Cyan
+! URxvt*color6:           #80b0b0
+! URxvt*color14:          #b0e0e0
+! ! LightGrey + White
+! URxvt*color7:           #b0a992
+! URxvt*color15:          #ffffff
 
 Xft.antialias:          true
 Xft.autohint:           true
