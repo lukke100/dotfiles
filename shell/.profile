@@ -30,10 +30,14 @@ export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 
 export GOPATH="$HOME/.go"
 
-#if [ ! $(pidof transmission-daemon) ];
-#then
-#    transmission-daemon &
-#fi
+export LLVM_ROOT="/usr/bin"
+export NODE_JS="/usr/bin/node"
+export EMSCRIPTEN_ROOT="/usr/lib/emscripten"
+
+if [ ! $(pidof transmission-daemon) ];
+then
+    transmission-daemon &
+fi
 
 BASHRC="$HOME/.bashrc"
 [[ `which bash 2> /dev/null` ]] \
