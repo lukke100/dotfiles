@@ -16,3 +16,4 @@ xset r rate 200 30
 wmname LG3D
 dex -a -e xmonad
 rofi &
+conky -d
