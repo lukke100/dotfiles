@@ -17,9 +17,10 @@ bdNorm  = "#cfbfdf"
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
 
-layouts =   (spacing 24 $ Grid (16/9))
-        ||| (spacing 24 $ Tall 1 (3/100) (1/2))
-        ||| (spacing 24 $ Mirror $ Tall 1 (3/100) (1/2))
+tLayout = Tall 1 (3/100) (1/2)
+layouts =   spacing 24 (Grid (16/10))
+        ||| spacing 24 tLayout
+        ||| spacing 24 (Mirror tLayout)
         ||| Full
 
 main :: IO ()
@@ -28,8 +29,8 @@ main = statusBar barPath barFmt toggleStrutsKey conf >>= xmonad
 barFmt :: PP
 barFmt = xmobarPP
         { ppCurrent   = xmobarColor brSelTx brSelBg . wrap " λ " " "
-        , ppTitle     = xmobarColor brTtlTx "" . shorten 200
-        , ppVisible   = wrap "(" ")"
+        , ppTitle     = xmobarColor brTtlTx ""
+        , ppVisible   = wrap "[" "]"
         , ppUrgent    = xmobarColor "red" "yellow"
         }
 
