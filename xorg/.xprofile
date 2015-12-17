@@ -10,7 +10,7 @@ xrdb -load ~/.Xresources
 xsetroot -cursor_name left_ptr
 ~/.fehbg
 (pidof compton) || compton &
-# redshift -l 45.0:-75.0 &
+redshift -l 45.0:-75.0 &
 (pidof unclutter) || unclutter -idle 4 -noevents & # "-noevents" prevents issues with Firefox
 xset r rate 200 30
 wmname LG3D
