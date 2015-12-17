@@ -13,29 +13,34 @@ alias top=$( echo htop  )
 
 SOURCE_DIR=$(dirname $(realpath "$BASH_SOURCE"))
 
+# function PUT_HEADER
+# {
+#     SCRIPT_LOC="$SOURCE_DIR/.ignore.header-cmd.plx"
+#     COLUMNS_LOC="$SOURCE_DIR/.ignore.prev-col"
+#     HEADER_CHR=$(if [[ $UID != 0 ]]; then echo ' '; else echo '#'; fi)
+#
+#     (type resize > /dev/null 2>&1) && (eval $(resize))
+#
+#     if [ -n "$COLUMNS" ];
+#     then
+#         echo "$COLUMNS" > "$COLUMNS_LOC"
+#         chmod +x "$COLUMNS_LOC"
+#         CURR_COLUMNS="$COLUMNS"
+#     else
+#         [[ -x "$COLUMNS_LOC" ]] && CURR_COLUMNS="$(cat $COLUMNS_LOC)"
+#     fi
+#
+#     [[ -x "$SCRIPT_LOC" ]] && [[ -n "$CURR_COLUMNS" ]] && "$SCRIPT_LOC" \
+#         -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
+#         -width      "$CURR_COLUMNS" \
+#         -pad        "$HEADER_CHR" \
+#         -ansi_line  $'\E[48;5;15;38;5;0m' \
+#         -ansi_title $'\E[0;38;5;15m'
+# }
+
 function PUT_HEADER
 {
-    SCRIPT_LOC="$SOURCE_DIR/.ignore.header-cmd.plx"
-    COLUMNS_LOC="$SOURCE_DIR/.ignore.prev-col"
-    HEADER_CHR=$(if [[ $UID != 0 ]]; then echo ' '; else echo '#'; fi)
-
-    (type resize > /dev/null 2>&1) && (eval $(resize))
-
-    if [ -n "$COLUMNS" ];
-    then
-        echo "$COLUMNS" > "$COLUMNS_LOC"
-        chmod +x "$COLUMNS_LOC"
-        CURR_COLUMNS="$COLUMNS"
-    else
-        [[ -x "$COLUMNS_LOC" ]] && CURR_COLUMNS="$(cat $COLUMNS_LOC)"
-    fi
-
-    [[ -x "$SCRIPT_LOC" ]] && [[ -n "$CURR_COLUMNS" ]] && "$SCRIPT_LOC" \
-        -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
-        -width      "$CURR_COLUMNS" \
-        -pad        "$HEADER_CHR" \
-        -ansi_line  $'\E[48;5;15;38;5;0m' \
-        -ansi_title $'\E[0;38;5;15m'
+    echo ''
 }
 
 function PUT_TITLE
