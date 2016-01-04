@@ -72,9 +72,9 @@ rofi.run-shell-command: {terminal} -e {cmd}
 rofi.disable-history:   true
 rofi.levenshtein-sort:  false
 rofi.case-sensitive:    false
-rofi.key-window:        mod1+o
-rofi.key-run:           mod1+p
-rofi.key-ssh:           mod1+i
+rofi.key-window:        Alt+o
+rofi.key-run:           Alt+p
+rofi.key-ssh:           Alt+i
 rofi.sidebar-mode:      false
 rofi.lazy-filter-limit: 5000
 
