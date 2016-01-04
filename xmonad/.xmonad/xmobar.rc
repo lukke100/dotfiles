@@ -1,6 +1,6 @@
 Config
     { font          = "xft:Terminus (TTF)-9"
-    , bgColor       = "#2f163f"
+    , bgColor       = "#101010"
     , fgColor       = "#ffffff"
     , position      = Static
         { xpos    = 1944
