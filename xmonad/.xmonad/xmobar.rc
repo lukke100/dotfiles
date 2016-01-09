@@ -1,7 +1,7 @@
 Config
     { font          = "xft:Terminus (TTF)-9"
-    , bgColor       = "#101010"
     , fgColor       = "#ffffff"
+    , bgColor       = "#404040"
     , position      = Static
         { xpos    = 1944
         , ypos    = 24

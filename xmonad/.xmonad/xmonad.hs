@@ -9,10 +9,10 @@ import XMonad.Actions.CycleWS
 
 brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
 brSelBg = "#8667e0"
-brSelTx = "#000000"
+brSelTx = "#404040"
 brTtlTx = "#8667e0"
-bdFocus = "#ffffff"
-bdNorm  = "#000000"
+bdFocus = "#8667e0"
+bdNorm  = "#ffffff"
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
@@ -43,7 +43,7 @@ conf = ewmh $ defaultConfig
     , layoutHook            = smartBorders layouts
     , focusedBorderColor    = bdFocus
     , normalBorderColor     = bdNorm
-    , borderWidth           = 0
+    , borderWidth           = 2
     , workspaces            = ["term", "code", "http", "media", "misc"]
     , handleEventHook       = handleEventHook defaultConfig <+> fullscreenEventHook
     , clickJustFocuses      = False
