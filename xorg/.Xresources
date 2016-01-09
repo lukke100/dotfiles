@@ -10,7 +10,7 @@ URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
 URxvt*foreground:       #ffffff
-URxvt*background:   [00]#000000
+URxvt*background:   [88]#494949
 
 ! ! Black + DarkGrey
 ! URxvt*color0:           #000000
@@ -52,8 +52,8 @@ rofi.lines:             5
 rofi.columns:           1
 rofi.font:              Terminus (TTF) 9
 rofi.fg:                #ffffff
-rofi.bg:                argb:ff101010
-rofi.hlfg:              argb:ff000000
+rofi.bg:                argb:ff404040
+rofi.hlfg:              argb:ff404040
 rofi.hlbg:              argb:ff8667e0
 rofi.bc:                argb:ff8667e0
 rofi.bw:                0
