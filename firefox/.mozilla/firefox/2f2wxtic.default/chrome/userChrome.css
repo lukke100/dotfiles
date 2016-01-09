@@ -1,0 +1,4 @@
+#TabsToolbar, #tabbrowser-tab {
+    --tab-min-height: 24px;
+    --space-above-tabbar: 0px;
+}
