@@ -1,2 +1,2 @@
 #!/bin/bash
-stow $@ -vt ~ */ --ignore='\.ignore\.[^/]*'
+stow --no-folding $@ -vt ~ */ --ignore='\.ignore\.[^/]*'
