@@ -3,6 +3,5 @@ backtick 1 5 5 echo 
 backtick 2 5 5 echo 
 hardstatus alwayslastline '%{= Wk}%=%{= dW}%1` %?%h%:%t%? %2`%{= Wk}%='
 startup_message off
-term rxvt-unicode-256color
 vbell off
 windowlist string "%4n %h%=%f"
