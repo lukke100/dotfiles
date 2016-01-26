@@ -11,6 +11,26 @@ alias grep=$(echo grep         --color=auto )
 alias info=$(echo info         --vi-keys    )
 alias top=$( echo htop  )
 
+if [[ "$TERM" =~ "linux" ]]; then
+    echo -en "\e]P035313b"; # Black
+    echo -en "\e]P1885163"; # Red
+    echo -en "\e]P25c845b"; # Green
+    echo -en "\e]P3887d5b"; # Yellow
+    echo -en "\e]P455598e"; # Blue
+    echo -en "\e]P581518e"; # Magenta
+    echo -en "\e]P6558487"; # Cyan
+    echo -en "\e]P7aeaab4"; # White
+    echo -en "\e]P84f4c56"; # Bright Black
+    echo -en "\e]P9b98898"; # Bright Red
+    echo -en "\e]PA92b692"; # Bright Green
+    echo -en "\e]PBb9af92"; # Bright Yellow
+    echo -en "\e]PC8c8ec0"; # Bright Blue
+    echo -en "\e]PDb388c0"; # Bright Magenta
+    echo -en "\e]PE8cb6b9"; # Bright Cyan
+    echo -en "\e]PFd0cdd7"; # Bright White
+    clear;
+fi
+
 SOURCE_DIR=$(dirname $(realpath "$BASH_SOURCE"))
 
 # function PUT_HEADER
@@ -91,4 +111,3 @@ BASH_COMPLETE="/usr/share/bash-completion/bash_completion"
 
 [[ -r "$GIT_COMPLETE" ]] && source "$GIT_COMPLETE"
 [[ -r "$BASH_COMPLETE" ]] && source "$BASH_COMPLETE"
-

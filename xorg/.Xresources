@@ -9,33 +9,40 @@ URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
-URxvt*foreground:       #ffffff
-URxvt*background:   [88]#494949
+URxvt*foreground:      #d0cdd7
+URxvt*background: [100]#35313b
 
-! ! Black + DarkGrey
-! URxvt*color0:           #000000
-! URxvt*color8:           #242424
-! ! DarkRed + Red
-! URxvt*color1:           #b08080
-! URxvt*color9:           #e0b0b0
-! ! DarkGreen + Green
-! URxvt*color2:           #80b080
-! URxvt*color10:          #b0e0b0
-! ! DarkYellow + Yellow
-! URxvt*color3:           #b0b080
-! URxvt*color11:          #e0e0b0
-! ! DarkBlue + Blue
-! URxvt*color4:           #8080b0
-! URxvt*color12:          #b0b0e0
-! ! DarkMagenta + Magenta
-! URxvt*color5:           #b080b0
-! URxvt*color13:          #e0b0e0
-! !DarkCyan + Cyan
-! URxvt*color6:           #80b0b0
-! URxvt*color14:          #b0e0e0
-! ! LightGrey + White
-! URxvt*color7:           #b0a992
-! URxvt*color15:          #ffffff
+! Black
+*color0:  #35313b
+*color8:  #4f4c56
+
+! Red
+*color1:  #885163
+*color9:  #b98898
+
+! Green
+*color2:  #5c845b
+*color10: #92b692
+
+! Yellow
+*color3:  #887d5b
+*color11: #b9af92
+
+! Blue
+*color4:  #55598e
+*color12: #8c8ec0
+
+! Magenta
+*color5:  #81518e
+*color13: #b388c0
+
+! Cyan
+*color6:  #558487
+*color14: #8cb6b9
+
+! White
+*color7:  #aeaab4
+*color15: #d0cdd7
 
 Xft.antialias:          true
 Xft.autohint:           true
