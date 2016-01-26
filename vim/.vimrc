@@ -52,7 +52,7 @@ set wrap
 " ========================================================================== "
 " ============================ Interface Options =========================== "
 " ========================================================================== "
-colorscheme default
+colorscheme slate
 
 filetype indent on
 filetype plugin on
@@ -70,6 +70,7 @@ set scrolloff=7
 set showmatch
 set t_vb=
 set timeoutlen=500
+set virtualedit=all
 set wildmenu
 
 syntax enable
