@@ -43,10 +43,10 @@ autocmd FileType xml setlocal tabstop=2
 set autoindent
 set expandtab
 set nowrap
-set shiftwidth=4
+set shiftwidth=2
 set smartindent
 set smarttab
-set tabstop=4
+set tabstop=2
 
 
 " ========================================================================== "
