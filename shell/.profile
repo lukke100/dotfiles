@@ -2,6 +2,21 @@
 
 umask 077
 
+export PATH
+
+export BROWSER
+export EDITOR
+export EMSCRIPTEN_ROOT
+export GOPATH
+export LLVM_ROOT
+export LUA_CPATH
+export LUA_PATH
+export NODE_JS
+export PAGER
+export VISUAL
+export XDG_CONFIG_HOME
+
+# shellcheck disable=SC2016
 PERL_NUB='sub nub { (@_)? ($_[0], nub(grep { $_ ne $_[0] } @_[1..$#_])) : () }'
 PATH_FIX="$PERL_NUB; print(join(':', nub(map {split':'} @ARGV)))"
 
@@ -12,35 +27,26 @@ RUBY_BIN=$(ruby -rubygems -e "puts Gem.user_dir")/bin
 HASK_BIN=$( ( (type stack > /dev/null 2>&1) && (stack path 2> /dev/null) ) | grep "^bin-path: " | sed "s/^bin-path: //")
 GO_L_BIN=$HOME/.go/bin
 
-export PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" "$CLUA_BIN" "$GO_L_BIN" "$PATH")
+# TODO: replace `type` with POSIX compliant function
 
-export BROWSER=firefox-nightly
-export EDITOR=vim
-export VISUAL=vim
-export PAGER=less
-export XDG_CONFIG_HOME=$HOME/.config
+PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" "$CLUA_BIN" "$GO_L_BIN" "$PATH")
 
-export LUA_PATH=$(luarocks path --lr-path)
-export LUA_CPATH=$(luarocks path --lr-cpath)
+BROWSER=firefox-nightly
+EDITOR=vim
+EMSCRIPTEN_ROOT=/usr/lib/emscripten
+GOPATH=$HOME/.go
+LLVM_ROOT=/usr/bin
+LUA_CPATH=$(luarocks path --lr-cpath)
+LUA_PATH=$(luarocks path --lr-path)
+NODE_JS=/usr/bin/node
+PAGER=less
+VISUAL=vim
+XDG_CONFIG_HOME=$HOME/.config
 
-export PERL5LIB=$(perl -e "$PATH_FIX" "$HOME/perl5/lib/perl5" "$PERL5LIB")
-export PERL_LOCAL_LIB_ROOT=$(perl -e "$PATH_FIX" "$HOME/perl5" "$PERL_LOCAL_LIB_ROOT")
-export PERL_MB_OPT="--install_base '$HOME/perl5'"
-export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
-
-export GOPATH="$HOME/.go"
-
-export LLVM_ROOT="/usr/bin"
-export NODE_JS="/usr/bin/node"
-export EMSCRIPTEN_ROOT="/usr/lib/emscripten"
-
-if [ ! $(pidof transmission-daemon) ];
+if [ ! "$(pidof transmission-daemon)" ];
 then
     transmission-daemon &
 fi
 
-BASHRC="$HOME/.bashrc"
-[[ `which bash 2> /dev/null` ]] \
-    && [[ -r "$BASHRC" ]] \
-    && source "$HOME/.bashrc"
-
+# shellcheck disable=SC1090
+. "$HOME/.bashrc"
