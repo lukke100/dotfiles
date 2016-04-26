@@ -1,2 +1,5 @@
 #!/bin/bash
-stow --no-folding $@ -vt ~ */ --ignore='\.ignore\.[^/]*'
+set -euo pipefail
+IFS=$'\n\t'
+
+stow --no-folding "$@" -vt ~ */ --ignore='\.ignore\.[^/]*'
