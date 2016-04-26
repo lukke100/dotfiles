@@ -48,5 +48,7 @@ then
     transmission-daemon &
 fi
 
+BASHRC=$HOME/.bashrc
+
 # shellcheck disable=SC1090
-. "$HOME/.bashrc"
+[ -r "$BASHRC" ] && . "$BASHRC"
