@@ -50,5 +50,8 @@ fi
 
 BASHRC=$HOME/.bashrc
 
-# shellcheck disable=SC1090
-[ -r "$BASHRC" ] && . "$BASHRC"
+if [ -r "$BASHRC" ]
+then
+  # shellcheck disable=SC1090
+  . "$BASHRC"
+fi
