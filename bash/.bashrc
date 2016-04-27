@@ -36,7 +36,7 @@ PUT_TITLE()
 
   printf "\033]0;bash (%s) - urxvt\007" "$TITLE_PATH"
 
-  TITLE_PATH=
+  unset TITLE_PATH
 }
 
 if [ -n "$BASH" ]
@@ -54,8 +54,6 @@ fi
 COLORFGBG='default;default'
 GREP_COLORS='ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 HISTFILE=$HOME/.cmd_history
-HISTFILESIZE=
-HISTSIZE=
 LESS_TERMCAP_mb=$(printf '\033[01;31m')
 LESS_TERMCAP_md=$(printf '\033[01;31m')
 LESS_TERMCAP_me=$(printf '\033[0m')
@@ -70,6 +68,9 @@ PS2='... '
 PS3='> '
 PS4='+ '
 
+HISTFILESIZE=""
+HISTSIZE=""
+
 COLORTYPE='--color=auto'
 DIRSFIRST='--group-directories-first'
 TIMESTYLE='--time-style=long-iso'
@@ -83,13 +84,13 @@ alias ls="ls -1HLbh --file-type $COLORTYPE $DIRSFIRST $TIMESTYLE"
 alias top=htop
 alias vdir="vdir -A $COLORTYPE $DIRSFIRST $TIMESTYLE"
 
-COLORTYPE=
-DIRSFIRST=
-TIMESTYLE=
+unset COLORTYPE
+unset DIRSFIRST
+unset TIMESTYLE
 
 RM_EX_RGX='s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
 eval "$(dircolors -b | sed -e "$RM_EX_RGX")"
-RM_EX_RGX=
+unset RM_EX_RGX
 
 BASH_COMPLETE=/usr/share/bash-completion/bash_completion
 GIT_COMPLETE=/usr/share/git/completion/git-prompt.sh
@@ -106,8 +107,8 @@ then
   . "$GIT_COMPLETE"
 fi
 
-BASH_COMPLETE=
-GIT_COMPLETE=
+unset BASH_COMPLETE
+unset GIT_COMPLETE
 
 if echo "$TERM" | grep -q linux
 then

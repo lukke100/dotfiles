@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PROMPT_TRAIL=/
-[ "$PWD" != "/" ] || PROMPT_TRAIL=
+[ "$PWD" != / ] || unset PROMPT_TRAIL
 HEADER_TEXT=$(PUT_HEADER)
 
 if [ -n "$HEADER_TEXT" ]
@@ -13,5 +13,5 @@ fi
 
 PUT_TITLE
 
-PROMPT_TRAIL=
-HEADER_TEXT=
+unset PROMPT_TRAIL
+unset HEADER_TEXT
