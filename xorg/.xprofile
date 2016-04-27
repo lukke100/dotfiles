@@ -1,18 +1,24 @@
-#!/bin/bash
-if [ -d /etc/X11/xinit/xinitrc.d ]; then
-  for f in /etc/X11/xinit/xinitrc.d/*; do
-    [ -x "$f" ] && . "$f"
+#!/bin/sh
+# shellcheck disable=SC1090
+
+if [ -d /etc/X11/xinit/xinitrc.d ]
+then
+  for X11_FILE in /etc/X11/xinit/xinitrc.d/*
+  do
+    [ -x "$X11_FILE" ] && . "$X11_FILE"
   done
-  unset f
+
+  unset X11_FILE
 fi
 
-xrdb -load ~/.Xresources
-xsetroot -cursor_name left_ptr
+pidof compton  || compton &
+pidof conky    || conky &
+pidof redshift || redshift -l 45.0:-75.0 &
+pidof rofi     || rofi &
+
 ~/.fehbg
-(pidof compton)   || compton &
-(pidof redshift)  || redshift -l 45.0:-75.0 &
-xset r rate 200 30
-wmname LG3D
 dex -a -e xmonad
-rofi &
-(pidof conky) || conky &
+wmname LG3D
+xrdb -load ~/.Xresources
+xset r rate 200 30
+xsetroot -cursor_name left_ptr
