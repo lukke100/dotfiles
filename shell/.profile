@@ -43,14 +43,14 @@ PAGER=less
 VISUAL=vim
 XDG_CONFIG_HOME=$HOME/.config
 
-if [ ! "$(pidof transmission-daemon)" ];
+if [ ! "$(pidof transmission-daemon)" ]
 then
     transmission-daemon &
 fi
 
 BASHRC=$HOME/.bashrc
 
-if [ -r "$BASHRC" ]
+if [ -x "$BASHRC" ]
 then
   # shellcheck disable=SC1090
   . "$BASHRC"
