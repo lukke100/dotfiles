@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+# shellcheck disable=SC1090
 
-source ~/.xprofile
+. ~/.xprofile
 
 ~/.xmonad/xmonad
