@@ -11,14 +11,13 @@ then
   unset X11_FILE
 fi
 
-pidof compton  || compton &
-pidof conky    || conky &
-pidof redshift || redshift -l 45.0:-75.0 &
-pidof rofi     || rofi &
+# pidof compton  || compton &
+# pidof conky    || conky &
+# pidof redshift || redshift -l 45.0:-75.0 &
 
-~/.fehbg
 dex -a -e xmonad
 wmname LG3D
 xrdb -load ~/.Xresources
 xset r rate 200 30
 xsetroot -cursor_name left_ptr
+~/.fehbg
