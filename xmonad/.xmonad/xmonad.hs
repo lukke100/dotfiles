@@ -59,8 +59,5 @@ conf = ewmh $ defaultConfig
         , ((mod1Mask,                   xK_Left),       prevScreen)
         , ((mod1Mask .|. shiftMask,     xK_Right),      shiftNextScreen)
         , ((mod1Mask .|. shiftMask,     xK_Left),       shiftPrevScreen)
+        , ((mod1Mask,                   xK_p),          spawn "rofi -show run")
         ]
-    `removeKeys`
-        [ (mod1Mask,                    xK_p)
-        ]
-
