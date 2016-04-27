@@ -2,12 +2,7 @@ Config
     { font          = "xft:Terminus (TTF)-9"
     , fgColor       = "#ffffff"
     , bgColor       = "#404040"
-    , position      = Static
-        { xpos    = 1944
-        , ypos    = 24
-        , width   = 1712
-        , height  = 12
-        }
+    , position      = TopP 24 24
     , border        = NoBorder
     , lowerOnStart  = True
     , commands      =
