@@ -1,113 +1,132 @@
-#!/bin/bash
+#!/bin/sh
+# shellcheck disable=SC2139
 
-[[ $- != *i* ]] && return
-
-alias ls=$(  echo ls    -1HLbh --color=auto --group-directories-first --time-style=long-iso --file-type)
-alias la=$(  echo ls    -A     )
-alias ll=$(  echo ls    -l     )
-alias dir=$( echo dir          --color=auto --group-directories-first --time-style=long-iso )
-alias vdir=$(echo vdir  -A     --color=auto --group-directories-first --time-style=long-iso )
-alias grep=$(echo grep         --color=auto )
-alias info=$(echo info         --vi-keys    )
-alias top=$( echo htop  )
-
-if [[ "$TERM" =~ "linux" ]]; then
-    echo -en "\e]P035313b"; # Black
-    echo -en "\e]P1885163"; # Red
-    echo -en "\e]P25c845b"; # Green
-    echo -en "\e]P3887d5b"; # Yellow
-    echo -en "\e]P455598e"; # Blue
-    echo -en "\e]P581518e"; # Magenta
-    echo -en "\e]P6558487"; # Cyan
-    echo -en "\e]P7aeaab4"; # White
-    echo -en "\e]P84f4c56"; # Bright Black
-    echo -en "\e]P9b98898"; # Bright Red
-    echo -en "\e]PA92b692"; # Bright Green
-    echo -en "\e]PBb9af92"; # Bright Yellow
-    echo -en "\e]PC8c8ec0"; # Bright Blue
-    echo -en "\e]PDb388c0"; # Bright Magenta
-    echo -en "\e]PE8cb6b9"; # Bright Cyan
-    echo -en "\e]PFd0cdd7"; # Bright White
-    clear;
+if [ -z "$PS1" ]
+then
+  return
 fi
 
-SOURCE_DIR=$(dirname $(realpath "$BASH_SOURCE"))
+export COLORFGBG
+export GREP_COLORS
+export HISTFILE
+export HISTFILESIZE
+export HISTSIZE
+export LESS
+export LESS_TERMCAP_mb
+export LESS_TERMCAP_md
+export LESS_TERMCAP_me
+export LESS_TERMCAP_se
+export LESS_TERMCAP_so
+export LESS_TERMCAP_ue
+export LESS_TERMCAP_us
+export LESSHISTFILE
+export PROMPT_COMMAND
+export PS2
+export PS3
+export PS4
 
-# function PUT_HEADER
-# {
-#     SCRIPT_LOC="$SOURCE_DIR/.ignore.header-cmd.plx"
-#     COLUMNS_LOC="$SOURCE_DIR/.ignore.prev-col"
-#     HEADER_CHR=$(if [[ $UID != 0 ]]; then echo ' '; else echo '#'; fi)
-#
-#     (type resize > /dev/null 2>&1) && (eval $(resize))
-#
-#     if [ -n "$COLUMNS" ];
-#     then
-#         echo "$COLUMNS" > "$COLUMNS_LOC"
-#         chmod +x "$COLUMNS_LOC"
-#         CURR_COLUMNS="$COLUMNS"
-#     else
-#         [[ -x "$COLUMNS_LOC" ]] && CURR_COLUMNS="$(cat $COLUMNS_LOC)"
-#     fi
-#
-#     [[ -x "$SCRIPT_LOC" ]] && [[ -n "$CURR_COLUMNS" ]] && "$SCRIPT_LOC" \
-#         -title      $'\uE0B0'" $(hostname) "$'\uE0B2' \
-#         -width      "$CURR_COLUMNS" \
-#         -pad        "$HEADER_CHR" \
-#         -ansi_line  $'\E[48;5;15;38;5;0m' \
-#         -ansi_title $'\E[0;38;5;15m'
-# }
-
-function PUT_HEADER
+PUT_HEADER()
 {
-    echo ''
+  printf ''
 }
 
-function PUT_TITLE
+PUT_TITLE()
 {
-    TITLE_PATH="${PWD/"$HOME"/\~}/"
-    TITLE_PATH="${TITLE_PATH/\/\//\/}"
-    echo -ne "\033]0;bash ($TITLE_PATH) - urxvt\007"
+  TITLE_PATH=$(echo "$PWD" | sed -e "s@$HOME@~@" | sed -e "s@//@/@")
+
+  printf "\033]0;bash (%s) - urxvt\007" "$TITLE_PATH"
+
+  TITLE_PATH=
 }
 
+if [ -n "$BASH" ]
+then
+  # shellcheck disable=SC2039
+  shopt -s histappend
+
+  # shellcheck disable=SC2039
+  SOURCE_DIR=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
+else
+  # TODO: determine SOURCE_DIR in a POSIX-compliant way
+  SOURCE_DIR=''
+fi
+
+COLORFGBG='default;default'
+GREP_COLORS='ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
+HISTFILE=$HOME/.cmd_history
+HISTFILESIZE=
+HISTSIZE=
+LESS_TERMCAP_mb=$(printf '\033[01;31m')
+LESS_TERMCAP_md=$(printf '\033[01;31m')
+LESS_TERMCAP_me=$(printf '\033[0m')
+LESS_TERMCAP_se=$(printf '\033[0m')
+LESS_TERMCAP_so=$(printf '\033[01;44;33m')
+LESS_TERMCAP_ue=$(printf '\033[0m')
+LESS_TERMCAP_us=$(printf '\033[01;32m')
+LESS='-FRXis'
+LESSHISTFILE=/dev/null
 PROMPT_COMMAND=$(cat "$SOURCE_DIR/.ignore.prompt-cmd.sh")
-
 PS2='... '
 PS3='> '
 PS4='+ '
 
-export HISTFILE="$HOME/.cmd_history"
-export HISTFILESIZE=
-export HISTSIZE=
-shopt -s histappend
+COLORTYPE='--color=auto'
+DIRSFIRST='--group-directories-first'
+TIMESTYLE='--time-style=long-iso'
 
-COLORFGBG='default;default'
+alias dir="dir $COLORTYPE $DIRSFIRST $TIMESTYLE"
+alias grep="grep $COLORTYPE"
+alias info="info --vi-keys"
+alias la="ls -A"
+alias ll="ls -l"
+alias ls="ls -1HLbh --file-type $COLORTYPE $DIRSFIRST $TIMESTYLE"
+alias top=htop
+alias vdir="vdir -A $COLORTYPE $DIRSFIRST $TIMESTYLE"
 
-GREP_COLORS='ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
+COLORTYPE=
+DIRSFIRST=
+TIMESTYLE=
 
 RM_EX_RGX='s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
-eval $(dircolors -b | sed "$RM_EX_RGX")
+eval "$(dircolors -b | sed -e "$RM_EX_RGX")"
 RM_EX_RGX=
 
-LESS='-FRXis'
-LESSHISTFILE='/dev/null'
-LESS_TERMCAP_mb=$'\E[01;31m'
-LESS_TERMCAP_md=$'\E[01;31m'
-LESS_TERMCAP_me=$'\E[0m'
-LESS_TERMCAP_se=$'\E[0m'
-LESS_TERMCAP_so=$'\E[01;44;33m'
-LESS_TERMCAP_ue=$'\E[0m'
-LESS_TERMCAP_us=$'\E[01;32m'
+BASH_COMPLETE=/usr/share/bash-completion/bash_completion
+GIT_COMPLETE=/usr/share/git/completion/git-prompt.sh
 
-# GIT_PS1_SHOWDIRTYSTATE=1
-# GIT_PS1_SHOWSTASHSTATE=1
-# GIT_PS1_SHOWUNTRACKEDFILES=1
-# GIT_PS1_SHOWCOLORHINTS=1
-# GIT_PS1_DESCRIBE_STYLE='branch'
-# GIT_PS1_SHOWUPSTREAM='auto git'
+if [ -r "$BASH_COMPLETE" ]
+then
+  # shellcheck disable=SC1090
+  . "$BASH_COMPLETE"
+fi
 
-GIT_COMPLETE="/usr/share/git/completion/git-prompt.sh"
-BASH_COMPLETE="/usr/share/bash-completion/bash_completion"
+if [ -r "$GIT_COMPLETE" ]
+then
+  # shellcheck disable=SC1090
+  . "$GIT_COMPLETE"
+fi
 
-[[ -r "$GIT_COMPLETE" ]] && source "$GIT_COMPLETE"
-[[ -r "$BASH_COMPLETE" ]] && source "$BASH_COMPLETE"
+BASH_COMPLETE=
+GIT_COMPLETE=
+
+if echo "$TERM" | grep -q linux
+then
+  printf "\033]P0000000" # Black
+  printf "\033]P1ff6565" # Red
+  printf "\033]P293d44f" # Green
+  printf "\033]P3eab93d" # Yellow
+  printf "\033]P4204a87" # Blue
+  printf "\033]P5ce5c00" # Magenta
+  printf "\033]P689b6e2" # Cyan
+  printf "\033]P7cccccc" # White
+  printf "\033]P8555753" # Bright Black
+  printf "\033]P9ff8d8d" # Bright Red
+  printf "\033]PAc8e7a8" # Bright Green
+  printf "\033]PBffc123" # Bright Yellow
+  printf "\033]PC3465a4" # Bright Blue
+  printf "\033]PDf57900" # Bright Magenta
+  printf "\033]PE46a4ff" # Bright Cyan
+  printf "\033]PFffffff" # Bright White
+
+  clear
+fi
