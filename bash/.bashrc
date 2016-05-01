@@ -25,20 +25,6 @@ export PS2
 export PS3
 export PS4
 
-PUT_HEADER()
-{
-  printf ''
-}
-
-PUT_TITLE()
-{
-  TITLE_PATH=$(echo "$PWD" | sed -e "s@$HOME@~@" | sed -e "s@//@/@")
-
-  printf "\033]0;bash (%s) - urxvt\007" "$TITLE_PATH"
-
-  unset TITLE_PATH
-}
-
 if [ -n "$BASH" ]
 then
   # shellcheck disable=SC2039

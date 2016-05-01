@@ -1,5 +1,19 @@
 #!/bin/sh
 
+PUT_HEADER()
+{
+  printf ''
+}
+
+PUT_TITLE()
+{
+  TITLE_PATH=$(echo "$PWD" | sed -e "s@$HOME@~@" | sed -e "s@//@/@")
+
+  printf "\033]0;bash (%s) - urxvt\007" "$TITLE_PATH"
+
+  unset TITLE_PATH
+}
+
 PROMPT_TRAIL=/
 [ "$PWD" != / ] || unset PROMPT_TRAIL
 HEADER_TEXT=$(PUT_HEADER)
