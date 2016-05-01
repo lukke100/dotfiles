@@ -1,14 +1,14 @@
 Config
-    { font          = "xft:Terminus (TTF)-9"
-    , fgColor       = "#ffffff"
-    , bgColor       = "#404040"
-    , position      = TopP 24 24
-    , border        = NoBorder
-    , lowerOnStart  = True
-    , commands      =
-        [ Run StdinReader
-        ]
-    , sepChar   = "%"
-    , alignSep  = "}{"
-    , template  = "%StdinReader%"
-    }
+  { font          = "xft:Terminus (TTF)-9"
+  , fgColor       = "#ffffff"
+  , bgColor       = "#404040"
+  , position      = TopP 24 24
+  , border        = NoBorder
+  , lowerOnStart  = True
+  , commands      =
+    [ Run StdinReader
+    ]
+  , sepChar   = "%"
+  , alignSep  = "}{"
+  , template  = "%StdinReader%"
+  }
