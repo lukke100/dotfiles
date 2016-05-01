@@ -9,8 +9,8 @@ URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
-URxvt*foreground:      #d0cdd7
-URxvt*background: [100]#35313b
+URxvt*foreground: #d0cdd7
+URxvt*background: #35313b
 
 ! Black
 *color0:  #35313b
@@ -44,12 +44,12 @@ URxvt*background: [100]#35313b
 *color7:  #aeaab4
 *color15: #d0cdd7
 
-Xft.antialias:          true
-Xft.autohint:           true
-Xft.dpi:                96
-Xft.hinting:            true
-Xft.hintstyle:          hintsfull
-Xft.rgba:               rgb
+Xft.antialias: true
+Xft.autohint:  true
+Xft.dpi:       96
+Xft.hinting:   true
+Xft.hintstyle: hintsfull
+Xft.rgba:      rgb
 
 ! TODO: include rofi config
 
