@@ -7,7 +7,7 @@ Config
   , lowerOnStart  = True
   , commands      =
     [ Run StdinReader
-    , Run Date "<fc=#8667e0>%a %h %d %r</fc>" "date" 10
+    , Run Date "%a %h %d %r" "date" 10
     ]
   , sepChar   = "%"
   , alignSep  = "}{"
