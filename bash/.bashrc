@@ -98,22 +98,22 @@ unset GIT_COMPLETE
 
 if echo "$TERM" | grep -q linux
 then
-  printf "\033]P0000000" # Black
-  printf "\033]P1ff6565" # Red
-  printf "\033]P293d44f" # Green
-  printf "\033]P3eab93d" # Yellow
-  printf "\033]P4204a87" # Blue
-  printf "\033]P5ce5c00" # Magenta
-  printf "\033]P689b6e2" # Cyan
-  printf "\033]P7cccccc" # White
-  printf "\033]P8555753" # Bright Black
-  printf "\033]P9ff8d8d" # Bright Red
-  printf "\033]PAc8e7a8" # Bright Green
-  printf "\033]PBffc123" # Bright Yellow
-  printf "\033]PC3465a4" # Bright Blue
-  printf "\033]PDf57900" # Bright Magenta
-  printf "\033]PE46a4ff" # Bright Cyan
-  printf "\033]PFffffff" # Bright White
+  printf '\033]P0000000' # Black
+  printf '\033]P1ff6565' # Red
+  printf '\033]P293d44f' # Green
+  printf '\033]P3eab93d' # Yellow
+  printf '\033]P4204a87' # Blue
+  printf '\033]P5ce5c00' # Magenta
+  printf '\033]P689b6e2' # Cyan
+  printf '\033]P7cccccc' # White
+  printf '\033]P8555753' # Bright Black
+  printf '\033]P9ff8d8d' # Bright Red
+  printf '\033]PAc8e7a8' # Bright Green
+  printf '\033]PBffc123' # Bright Yellow
+  printf '\033]PC3465a4' # Bright Blue
+  printf '\033]PDf57900' # Bright Magenta
+  printf '\033]PE46a4ff' # Bright Cyan
+  printf '\033]PFffffff' # Bright White
 
   clear
 fi
