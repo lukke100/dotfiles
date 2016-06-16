@@ -18,7 +18,7 @@ PROMPT_TRAIL=/
 [ "$PWD" != / ] || unset PROMPT_TRAIL
 HEADER_TEXT=$(PUT_HEADER)
 
-if [ "$(id -u)" -ne "0" ]
+if [ "$(id -u)" -eq "0" ]
 then
   USER_IND='#'
 else
