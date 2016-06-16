@@ -18,14 +18,22 @@ PROMPT_TRAIL=/
 [ "$PWD" != / ] || unset PROMPT_TRAIL
 HEADER_TEXT=$(PUT_HEADER)
 
+if [ "$(id -u)" -ne "0" ]
+then
+  USER_IND='#'
+else
+  USER_IND='->'
+fi
+
 if [ -n "$HEADER_TEXT" ]
 then
-  PS1="$HEADER_TEXT\n\w$PROMPT_TRAIL λ -> "
+  PS1="$HEADER_TEXT\n\w$PROMPT_TRAIL λ $USER_IND "
 else
-  PS1="\w$PROMPT_TRAIL λ -> "
+  PS1="\w$PROMPT_TRAIL λ $USER_IND "
 fi
 
 PUT_TITLE
 
 unset PROMPT_TRAIL
 unset HEADER_TEXT
+unset USER_IND
