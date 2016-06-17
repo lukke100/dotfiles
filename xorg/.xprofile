@@ -19,5 +19,6 @@ dex -a -e xmonad
 wmname LG3D
 xrdb -load ~/.Xresources
 xset r rate 200 30
+xset m 0 0
 xsetroot -cursor_name left_ptr
 ~/.fehbg
