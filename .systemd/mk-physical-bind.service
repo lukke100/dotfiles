@@ -1,0 +1,9 @@
+[Unit]
+Description=1.8TB Physical Drive Link
+ConditionVirtualization=false
+AssertPathIsDirectory=/mnt/shared-physical
+AssertPathIsDirectory=/mnt/shared-active
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mount --bind /mnt/shared-physical /mnt/shared-active

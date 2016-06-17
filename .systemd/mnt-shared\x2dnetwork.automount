@@ -1,0 +1,15 @@
+[Unit]
+Description=1.8TB Samba Network Drive
+Requires=systemd-networkd.service
+Wants=network-online.target
+After=network-online.target
+Requires=mk-network-bind.service
+ConditionVirtualization=oracle
+AssertPathIsDirectory=/mnt/shared-network
+
+[Automount]
+Where=/mnt/shared-network
+TimeoutIdleSec=10
+
+[Install]
+WantedBy=multi-user.target
