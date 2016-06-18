@@ -69,7 +69,6 @@ alias ll="ls -l"
 alias ls="ls -1HLbh --file-type $COLORTYPE $DIRSFIRST $TIMESTYLE"
 alias top=htop
 alias vdir="vdir -A $COLORTYPE $DIRSFIRST $TIMESTYLE"
-alias vim=nvim
 
 unset COLORTYPE
 unset DIRSFIRST
