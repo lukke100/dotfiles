@@ -9,8 +9,8 @@ URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
-URxvt*foreground: #d0cdd7
-URxvt*background: #404040
+URxvt*foreground: #939393
+URxvt*background: #292929
 
 ! Black
 *color0:  #35313b
