@@ -38,7 +38,7 @@ GO_L_BIN=$HOME/.go/bin
 PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" "$CLUA_BIN" "$GO_L_BIN" "$PATH")
 
 BROWSER=firefox-nightly
-EDITOR=vim
+EDITOR=nvim
 EMSCRIPTEN_ROOT=/usr/lib/emscripten
 GOPATH=$HOME/.go
 LLVM_ROOT=/usr/bin
@@ -46,7 +46,7 @@ LUA_CPATH=$(luarocks path --lr-cpath)
 LUA_PATH=$(luarocks path --lr-path)
 NODE_JS=/usr/bin/node
 PAGER=less
-VISUAL=vim
+VISUAL=nvim
 XDG_CONFIG_HOME=$HOME/.config
 
 PERL5LIB="$HOME/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
