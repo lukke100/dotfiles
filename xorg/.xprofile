@@ -13,7 +13,7 @@ fi
 
 # pidof compton  || compton &
 # pidof conky    || conky &
-# pidof redshift || redshift -l 45.0:-75.0 &
+pidof redshift || redshift -l 45.0:-75.0 &
 
 dex -a -e xmonad
 wmname LG3D
