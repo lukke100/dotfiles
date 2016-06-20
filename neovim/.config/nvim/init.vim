@@ -11,7 +11,6 @@ set smartindent
 set tabstop=2
 
 " ============================ Interface Options =========================== "
-set background=dark
 set number
 set ruler
 set scrolloff=7
