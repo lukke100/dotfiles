@@ -98,7 +98,8 @@ unset GIT_COMPLETE
 
 if echo "$TERM" | grep -q linux
 then
-  printf '\033]P0000000' # Black
+  USE_BACKGROUND=false
+
   printf '\033]P1ff6565' # Red
   printf '\033]P293d44f' # Green
   printf '\033]P3eab93d' # Yellow
@@ -115,5 +116,12 @@ then
   printf '\033]PE46a4ff' # Bright Cyan
   printf '\033]PFffffff' # Bright White
 
-  clear
+  # changing background color doesn't fully apply unless `clear` is called
+  if "$USE_BACKGROUND"
+  then
+    printf '\033]P0000000' # Black
+    clear
+  fi
+
+  unset USE_BACKGROUND
 fi
