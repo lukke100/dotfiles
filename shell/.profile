@@ -60,6 +60,11 @@ then
     transmission-daemon &
 fi
 
+if [ ! "$(pidof mpd)" ]
+then
+    mpd --stderr
+fi
+
 BASHRC=$HOME/.bashrc
 
 if [ -x "$BASHRC" ]
