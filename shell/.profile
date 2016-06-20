@@ -37,7 +37,7 @@ GO_L_BIN=$HOME/.go/bin
 
 PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" "$CLUA_BIN" "$GO_L_BIN" "$PATH")
 
-BROWSER=firefox-nightly
+BROWSER=firefox
 EDITOR=nvim
 EMSCRIPTEN_ROOT=/usr/lib/emscripten
 GOPATH=$HOME/.go

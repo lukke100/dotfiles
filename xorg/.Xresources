@@ -4,7 +4,7 @@ URxvt.depth:                32
 URxvt.saveLines:            0
 URxvt.perl-ext:             default,url-select
 URxvt.keysym.C-i:           perl:url-select:select_next
-URxvt.url-select.launcher:  firefox-nightly
+URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
