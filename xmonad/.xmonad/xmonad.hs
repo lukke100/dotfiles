@@ -1,7 +1,6 @@
 import XMonad
 import XMonad.Actions.CycleWS
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.GridVariants
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
@@ -17,11 +16,13 @@ bdNorm  = "#939393"
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
 
-tLayout = Tall 1 (3/100) (1/2)
-layouts = spacing 24 (Grid (16/10))
-      ||| spacing 24 tLayout
-      ||| spacing 24 (Mirror tLayout)
-      ||| Full
+layouts = let
+  tLayout  = Tall 1 (3/100) (1/2)
+  layouts' = (spacing 24 $ Grid $ 16/10)
+         ||| (spacing 24 tLayout)
+         ||| (spacing 24 $ Mirror tLayout)
+         ||| noBorders Full
+  in layouts'
 
 main :: IO ()
 main = statusBar barPath barFmt toggleStrutsKey conf >>= xmonad
@@ -37,7 +38,7 @@ barFmt = xmobarPP
 toggleStrutsKey :: XConfig t -> (KeyMask, KeySym)
 toggleStrutsKey XConfig { XMonad.modMask = m } = (m, xK_b)
 
-conf = ewmh $ defaultConfig
+conf = defaultConfig
   { terminal            = "urxvt"
   , focusFollowsMouse   = False
   , layoutHook          = smartBorders layouts
@@ -45,7 +46,6 @@ conf = ewmh $ defaultConfig
   , normalBorderColor   = bdNorm
   , borderWidth         = 2
   , workspaces          = ["term", "code", "http", "media", "misc"]
-  , handleEventHook     = handleEventHook defaultConfig <+> fullscreenEventHook
   , clickJustFocuses    = False
   } `additionalKeys`
     [ ((mod1Mask,               xK_Down),   nextWS)
