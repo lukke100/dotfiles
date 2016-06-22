@@ -18,7 +18,7 @@ barPath = "xmobar ~/.xmonad/xmobar.rc"
 
 layouts = let
   tLayout  = Tall 1 (3/100) (1/2)
-  layouts' = (spacing 24 $ Grid $ 16/10)
+  layouts' = (spacing 24 $ Grid $ 4/3)
          ||| (spacing 24 tLayout)
          ||| (spacing 24 $ Mirror tLayout)
          ||| noBorders Full
