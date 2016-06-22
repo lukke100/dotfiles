@@ -4,6 +4,9 @@ set nowritebackup
 set noswapfile
 
 " =========================== Indentation Options ========================== "
+colorscheme default
+
+set background=dark
 set expandtab
 set nowrap
 set shiftwidth=2
@@ -31,3 +34,19 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
+
+" ========================== Plugin Initialization ========================= "
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+
+call plug#begin()
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'airblade/vim-gitgutter'
+Plug 'neomake/neomake'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
+call deoplete#enable()
+
+let g:airline_powerline_fonts = 1
