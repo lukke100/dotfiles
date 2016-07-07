@@ -28,7 +28,7 @@ export PS4
 if [ -n "$BASH" ]
 then
   # shellcheck disable=SC2039
-  shopt -s histappend
+  shopt -s checkwinsize histappend
 
   # shellcheck disable=SC2039
   SOURCE_DIR=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
