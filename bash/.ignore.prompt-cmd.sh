@@ -37,3 +37,8 @@ PUT_TITLE
 unset PROMPT_TRAIL
 unset HEADER_TEXT
 unset USER_IND
+
+if [ -n "$BASH" ]
+then
+  history -a
+fi
