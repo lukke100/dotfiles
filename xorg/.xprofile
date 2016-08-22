@@ -11,9 +11,13 @@ then
   unset X11_FILE
 fi
 
-# pidof compton  || compton &
 # pidof conky    || conky &
-pidof redshift || redshift -l 45.0:-75.0 &
+
+if ! systemd-detect-virt --quiet
+then
+  pidof compton  || compton &
+  pidof redshift || redshift -l 45.0:-75.0 &
+fi
 
 dex -a -e xmonad
 wmname LG3D
