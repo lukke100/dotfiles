@@ -8,7 +8,7 @@ import XMonad.Util.EZConfig
 
 brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
 brSelBg = "#7c60bf"
-brSelTx = "#292929"
+brSelTx = "#ececec"
 brTtlTx = "#7c60bf"
 bdFocus = "#7c60bf"
 bdNorm  = "#939393"
