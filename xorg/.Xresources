@@ -51,5 +51,36 @@ Xft.hinting:   true
 Xft.hintstyle: hintsfull
 Xft.rgba:      rgb
 
-! TODO: include rofi config
-
+rofi.modi:              run,window,ssh
+rofi.opacity:           100
+rofi.width:             50
+rofi.lines:             15
+rofi.columns:           1
+rofi.font:              Terminus 9
+rofi.color-normal:      #292929,#939393,#292929,#7c60bf,#ececec
+rofi.color-urgent:      #292929,#dc322f,#292929,#dc322f,#fdf6e3
+rofi.color-active:      #292929,#939393,#292929,#7c60bf,#fdf6e3
+rofi.color-window:      #292929,#7c60bf,#939393
+rofi.bw:                2
+rofi.location:          2
+rofi.padding:           2
+rofi.yoffset:           66
+rofi.xoffset:           0
+rofi.fixed-num-lines:   false
+rofi.terminal:          urxvt
+rofi.ssh-client:        ssh
+rofi.disable-history:   true
+rofi.levenshtein-sort:  true
+rofi.case-sensitive:    false
+rofi.sidebar-mode:      false
+rofi.eh:                1
+rofi.line-margin:       2
+rofi.separator-style:   none
+rofi.hide-scrollbar:    true
+rofi.fake-transparency: false
+rofi.threads:           4
+rofi.scrollbar-width:   8
+rofi.scroll-method:     1
+rofi.fake-background:   screenshot
+rofi.window-format:     {w}   {c}   {t}
+rofi.kb-cancel:         Escape,Control+bracketleft
