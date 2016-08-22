@@ -20,6 +20,7 @@ set scrolloff=7
 set showmatch
 set virtualedit=all
 set wildmenu
+set clipboard+=unnamedplus
 
 " ============================ Searching Options =========================== "
 set ignorecase
