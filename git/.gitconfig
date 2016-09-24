@@ -7,3 +7,4 @@
 	algorithm = patience
 [commit]
 	verbose = true
+	template = ~/.gitmessage
