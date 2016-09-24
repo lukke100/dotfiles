@@ -1,0 +1,9 @@
+[user]
+	email = lukke100@gmail.com
+	name = Lucas Hart
+[push]
+	default = simple
+[diff]
+	algorithm = patience
+[commit]
+	verbose = true
