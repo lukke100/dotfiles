@@ -7,6 +7,7 @@ set noswapfile
 colorscheme default
 
 set background=dark
+set colorcolumn=81
 set expandtab
 set nowrap
 set shiftwidth=2
@@ -51,3 +52,6 @@ call plug#end()
 call deoplete#enable()
 
 let g:airline_powerline_fonts = 1
+
+" =========================== File Type Specific =========================== "
+autocmd FileType gitcommit set colorcolumn=73
