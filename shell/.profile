@@ -30,12 +30,14 @@ HOME_BIN=$HOME/.local/bin
 PERL_BIN=$HOME/.perl5/bin
 CLUA_BIN=$(luarocks path --lr-bin)
 RUBY_BIN=$(ruby -rubygems -e "puts Gem.user_dir")/bin
-HASK_BIN=$( ( (type stack > /dev/null 2>&1) && (stack path 2> /dev/null) ) | grep "^bin-path: " | sed "s/^bin-path: //")
 GO_L_BIN=$HOME/.go/bin
 
 # TODO: replace `type` with POSIX compliant function
+HASK_BIN=$( ( (type stack > /dev/null 2>&1) && (stack path 2> /dev/null) ) | \
+  grep "^bin-path: " | sed "s/^bin-path: //")
 
-PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" "$CLUA_BIN" "$GO_L_BIN" "$PATH")
+PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" \
+  "$CLUA_BIN" "$GO_L_BIN" "$PATH")
 
 BROWSER=firefox
 EDITOR=nvim

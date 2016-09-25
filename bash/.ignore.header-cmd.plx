@@ -26,7 +26,10 @@ sub main
   my $pad_lft = $args->{-pad} x $pad_w;
   my $pad_rgt = $pad_lft;
 
-  chop($pad_rgt) if (length($pad_lft . $args->{-title} . $pad_rgt)) > $args->{-width};
+  if ((length($pad_lft . $args->{-title} . $pad_rgt)) > $args->{-width})
+  {
+    chop($pad_rgt);
+  }
 
   my $all_txt
     = $args->{-ansi_line}

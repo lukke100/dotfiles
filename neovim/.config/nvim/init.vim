@@ -1,9 +1,9 @@
-" ============================= Backup Options ============================= "
+" ============================== Backup Options ============================== "
 set nobackup
 set nowritebackup
 set noswapfile
 
-" =========================== Indentation Options ========================== "
+" =========================== Indentation Options ============================ "
 colorscheme default
 
 set background=dark
@@ -14,7 +14,7 @@ set shiftwidth=2
 set smartindent
 set tabstop=2
 
-" ============================ Interface Options =========================== "
+" ============================ Interface Options ============================= "
 set number
 set ruler
 set scrolloff=7
@@ -23,12 +23,12 @@ set virtualedit=all
 set wildmenu
 set clipboard+=unnamedplus
 
-" ============================ Searching Options =========================== "
+" ============================ Searching Options ============================= "
 set ignorecase
 set magic
 set smartcase
 
-" ======================= Remove Trailing Whitespace ======================= "
+" ======================== Remove Trailing Whitespace ======================== "
 autocmd BufWrite *.* : call DeleteTrailingWS()
 
 func! DeleteTrailingWS()
@@ -37,7 +37,7 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 
-" ========================== Plugin Initialization ========================= "
+" ========================== Plugin Initialization =========================== "
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
@@ -53,5 +53,5 @@ call deoplete#enable()
 
 let g:airline_powerline_fonts = 1
 
-" =========================== File Type Specific =========================== "
+" ============================ File Type Specific ============================ "
 autocmd FileType gitcommit set colorcolumn=73
