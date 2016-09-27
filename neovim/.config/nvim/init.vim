@@ -13,6 +13,7 @@ set nowrap
 set shiftwidth=2
 set smartindent
 set tabstop=2
+set textwidth=80
 
 " ============================ Interface Options ============================= "
 set number
@@ -55,3 +56,4 @@ let g:airline_powerline_fonts = 1
 
 " ============================ File Type Specific ============================ "
 autocmd FileType gitcommit set colorcolumn=73
+autocmd FileType gitcommit set textwidth=72
