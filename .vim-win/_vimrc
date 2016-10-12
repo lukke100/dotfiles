@@ -2,6 +2,9 @@ source $VIMRUNTIME/../_vimrc
 source E:/lukke/work/dotfiles/.vim/.vimrc
 
 " configure gVim appearance
-:set guifont=Monofur:h10
-:set lines=60
-:set columns=120
+set guifont=Monofur:h10
+set lines=60
+set columns=120
+
+" override textwidth set by `vimrc_example.vim`
+autocmd FileType text setlocal textwidth=80
