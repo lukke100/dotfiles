@@ -3,4 +3,4 @@
 
 . ~/.xprofile
 
-~/.xmonad/xmonad
+exec ~/.xmonad/xmonad
