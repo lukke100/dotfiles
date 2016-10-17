@@ -1,4 +1,4 @@
-source $VIMRUNTIME/../_vimrc
+" source $VIMRUNTIME/../_vimrc
 source E:/lukke/work/dotfiles/.disabled/vim/.vimrc
 
 " configure gVim appearance
