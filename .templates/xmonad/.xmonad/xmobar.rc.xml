@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lkk:template xmlns:lkk="http://www.github.com/lukke100"
+              xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="../../../.scripts/shared-config.xml"
+              xpointer="xpointer(/*/node())"/>
+
+  <lkk:content>
+Config
+  { font          = "xft:Terminus (TTF)-9"
+  , fgColor       = "#<lkk:ref name="color-bkg-text"/>"
+  , bgColor       = "#<lkk:ref name="color-bkg"/>"
+  , position      = TopP 24 24
+  , border        = NoBorder
+  , lowerOnStart  = True
+  , commands      =
+    [ Run StdinReader
+    , Run Date "%a %h %d %r" "date" 10
+    ]
+  , sepChar   = "%"
+  , alignSep  = "}{"
+  , template  = "%StdinReader% }{ %date% "
+  }
+  </lkk:content>
+</lkk:template>
