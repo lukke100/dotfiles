@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lkk:template xmlns:lkk="http://www.github.com/lukke100">
+  <lkk:declare name="color-bkg"      value="something"/>
+  <lkk:declare name="color-bkg-text" value="something"/>
+  <lkk:declare name="color-act"      value="something"/>
+  <lkk:declare name="color-act-text" value="something"/>
+</lkk:template>
