@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lkk:template xmlns:lkk="http://www.github.com/lukke100"
+              xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="../../.scripts/shared-config.xml"
+              xpointer="xpointer(/*/node())"/>
+
+  <lkk:content>
+URxvt.scrollBar:            false
+URxvt.font:                 xft:Terminess Powerline:size=9
+URxvt.depth:                32
+URxvt.saveLines:            0
+URxvt.perl-ext:             default,url-select
+URxvt.keysym.C-i:           perl:url-select:select_next
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+URxvt.cursorUnderline:      true
+URxvt.cursorBlink:          true
+
+URxvt*foreground: rgba:9300/9300/9300/ffff
+URxvt*background: rgba:2f00/2f00/2f00/e000
+
+! Black
+*color0:  #<lkk:ref name="color-black"/>
+! Red
+*color1:  #<lkk:ref name="color-red"/>
+! Green
+*color2:  #<lkk:ref name="color-green"/>
+! Yellow
+*color3:  #<lkk:ref name="color-yellow"/>
+! Blue
+*color4:  #<lkk:ref name="color-blue"/>
+! Magenta
+*color5:  #<lkk:ref name="color-magenta"/>
+! Cyan
+*color6:  #<lkk:ref name="color-cyan"/>
+! White
+*color7:  #<lkk:ref name="color-white"/>
+
+! Light Black
+*color8:  #<lkk:ref name="color-light-black"/>
+! Light Red
+*color9:  #<lkk:ref name="color-light-red"/>
+! Light Green
+*color10: #<lkk:ref name="color-light-green"/>
+! Light Yellow
+*color11: #<lkk:ref name="color-light-yellow"/>
+! Light Blue
+*color12: #<lkk:ref name="color-light-blue"/>
+! Light Magenta
+*color13: #<lkk:ref name="color-light-magenta"/>
+! Light Cyan
+*color14: #<lkk:ref name="color-light-cyan"/>
+! Light White
+*color15: #<lkk:ref name="color-light-white"/>
+
+Xft.antialias: true
+Xft.autohint:  true
+Xft.dpi:       96
+Xft.hinting:   true
+Xft.hintstyle: hintsfull
+Xft.rgba:      rgb
+
+rofi.modi:              run,window,ssh
+rofi.opacity:           100
+rofi.width:             50
+rofi.lines:             15
+rofi.columns:           1
+rofi.font:              Terminus 9
+rofi.color-normal:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-text"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-act-text"/>
+rofi.color-urgent:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-urg"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-urg"/>,#<lkk:ref name="color-urg-text"/>
+rofi.color-active:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-text"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-act-text"/>
+rofi.color-window:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-bkg-text"/>
+rofi.bw:                2
+rofi.location:          2
+rofi.padding:           2
+rofi.yoffset:           66
+rofi.xoffset:           0
+rofi.fixed-num-lines:   false
+rofi.terminal:          urxvt
+rofi.ssh-client:        ssh
+rofi.disable-history:   true
+rofi.levenshtein-sort:  true
+rofi.case-sensitive:    false
+rofi.sidebar-mode:      false
+rofi.eh:                1
+rofi.line-margin:       2
+rofi.separator-style:   none
+rofi.hide-scrollbar:    true
+rofi.fake-transparency: false
+rofi.threads:           4
+rofi.scrollbar-width:   8
+rofi.scroll-method:     1
+rofi.fake-background:   screenshot
+rofi.window-format:     {w}   {c}   {t}
+rofi.kb-cancel:         Escape,Control+bracketleft
+  </lkk:content>
+</lkk:template>

@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lkk:template xmlns:lkk="http://www.github.com/lukke100">
-  <lkk:declare name="color-bkg"      value="292929"/>
-  <lkk:declare name="color-bkg-text" value="939393"/>
-  <lkk:declare name="color-act"      value="7c60bf"/>
-  <lkk:declare name="color-act-text" value="ececec"/>
+  <lkk:declare name="color-bkg"           value="292929"/>
+  <lkk:declare name="color-bkg-text"      value="939393"/>
+  <lkk:declare name="color-act"           value="7c60bf"/>
+  <lkk:declare name="color-act-text"      value="ececec"/>
+  <lkk:declare name="color-urg"           value="dc322f"/>
+  <lkk:declare name="color-urg-text"      value="ececec"/>
+
+  <lkk:declare name="color-black"         value="35313b"/>
+  <lkk:declare name="color-red"           value="885163"/>
+  <lkk:declare name="color-green"         value="5c845b"/>
+  <lkk:declare name="color-yellow"        value="887d5b"/>
+  <lkk:declare name="color-blue"          value="55598e"/>
+  <lkk:declare name="color-magenta"       value="81518e"/>
+  <lkk:declare name="color-cyan"          value="558487"/>
+  <lkk:declare name="color-white"         value="aeaab4"/>
+
+  <lkk:declare name="color-light-black"   value="4f4c56"/>
+  <lkk:declare name="color-light-red"     value="b98898"/>
+  <lkk:declare name="color-light-green"   value="92b692"/>
+  <lkk:declare name="color-light-yellow"  value="b9af92"/>
+  <lkk:declare name="color-light-blue"    value="8c8ec0"/>
+  <lkk:declare name="color-light-magenta" value="b388c0"/>
+  <lkk:declare name="color-light-cyan"    value="8cb6b9"/>
+  <lkk:declare name="color-light-white"   value="d0cdd7"/>
 </lkk:template>

@@ -14,34 +14,36 @@ URxvt*background: rgba:2f00/2f00/2f00/e000
 
 ! Black
 *color0:  #35313b
-*color8:  #4f4c56
-
 ! Red
 *color1:  #885163
-*color9:  #b98898
-
 ! Green
 *color2:  #5c845b
-*color10: #92b692
-
 ! Yellow
 *color3:  #887d5b
-*color11: #b9af92
-
 ! Blue
 *color4:  #55598e
-*color12: #8c8ec0
-
 ! Magenta
 *color5:  #81518e
-*color13: #b388c0
-
 ! Cyan
 *color6:  #558487
-*color14: #8cb6b9
-
 ! White
 *color7:  #aeaab4
+
+! Light Black
+*color8:  #4f4c56
+! Light Red
+*color9:  #b98898
+! Light Green
+*color10: #92b692
+! Light Yellow
+*color11: #b9af92
+! Light Blue
+*color12: #8c8ec0
+! Light Magenta
+*color13: #b388c0
+! Light Cyan
+*color14: #8cb6b9
+! Light White
 *color15: #d0cdd7
 
 Xft.antialias: true
@@ -58,8 +60,8 @@ rofi.lines:             15
 rofi.columns:           1
 rofi.font:              Terminus 9
 rofi.color-normal:      #292929,#939393,#292929,#7c60bf,#ececec
-rofi.color-urgent:      #292929,#dc322f,#292929,#dc322f,#fdf6e3
-rofi.color-active:      #292929,#939393,#292929,#7c60bf,#fdf6e3
+rofi.color-urgent:      #292929,#dc322f,#292929,#dc322f,#ececec
+rofi.color-active:      #292929,#939393,#292929,#7c60bf,#ececec
 rofi.color-window:      #292929,#7c60bf,#939393
 rofi.bw:                2
 rofi.location:          2
