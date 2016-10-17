@@ -8,6 +8,7 @@ set noundofile
 colorscheme slate
 
 set background=dark
+set backspace=indent,eol,start
 set colorcolumn=81
 set expandtab
 set nojoinspaces
