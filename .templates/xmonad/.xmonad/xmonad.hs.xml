@@ -19,7 +19,7 @@ brSelBg = "#<lkk:ref name="color-act"/>"
 brSelTx = "#<lkk:ref name="color-act-text"/>"
 brTtlTx = "#<lkk:ref name="color-act"/>"
 bdFocus = "#<lkk:ref name="color-act"/>"
-bdNorm  = "#<lkk:ref name="color-bkg-text"/>"
+bdNorm  = "#<lkk:ref name="color-bkg"/>"
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
