@@ -1,3 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lkk:template xmlns:lkk="http://www.github.com/lukke100"
+              xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="../../.scripts/shared-config.xml"
+              xpointer="xpointer(/*/node())"/>
+
+  <lkk:content>
 #!/bin/sh
 # shellcheck disable=SC2139
 
@@ -100,28 +108,30 @@ if echo "$TERM" | grep -q linux
 then
   USE_BACKGROUND=true
 
-  printf '\033]P1885163' # Red
-  printf '\033]P25c845b' # Green
-  printf '\033]P3887d5b' # Yellow
-  printf '\033]P455598e' # Blue
-  printf '\033]P581518e' # Magenta
-  printf '\033]P6558487' # Cyan
-  printf '\033]P7aeaab4' # White
-  printf '\033]P84f4c56' # Light Black
-  printf '\033]P9b98898' # Light Red
-  printf '\033]PA92b692' # Light Green
-  printf '\033]PBb9af92' # Light Yellow
-  printf '\033]PC8c8ec0' # Light Blue
-  printf '\033]PDb388c0' # Light Magenta
-  printf '\033]PE8cb6b9' # Light Cyan
-  printf '\033]PFd0cdd7' # Light White
+  printf '\033]P1<lkk:ref name="color-red"/>' # Red
+  printf '\033]P2<lkk:ref name="color-green"/>' # Green
+  printf '\033]P3<lkk:ref name="color-yellow"/>' # Yellow
+  printf '\033]P4<lkk:ref name="color-blue"/>' # Blue
+  printf '\033]P5<lkk:ref name="color-magenta"/>' # Magenta
+  printf '\033]P6<lkk:ref name="color-cyan"/>' # Cyan
+  printf '\033]P7<lkk:ref name="color-white"/>' # White
+  printf '\033]P8<lkk:ref name="color-light-black"/>' # Light Black
+  printf '\033]P9<lkk:ref name="color-light-red"/>' # Light Red
+  printf '\033]PA<lkk:ref name="color-light-green"/>' # Light Green
+  printf '\033]PB<lkk:ref name="color-light-yellow"/>' # Light Yellow
+  printf '\033]PC<lkk:ref name="color-light-blue"/>' # Light Blue
+  printf '\033]PD<lkk:ref name="color-light-magenta"/>' # Light Magenta
+  printf '\033]PE<lkk:ref name="color-light-cyan"/>' # Light Cyan
+  printf '\033]PF<lkk:ref name="color-light-white"/>' # Light White
 
   # changing background color doesn't fully apply unless `clear` is called
   if "$USE_BACKGROUND"
   then
-    printf '\033]P035313b' # Black
+    printf '\033]P0<lkk:ref name="color-black"/>' # Black
     clear
   fi
 
   unset USE_BACKGROUND
 fi
+  </lkk:content>
+</lkk:template>
