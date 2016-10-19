@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lkk:template xmlns:lkk="http://www.github.com/lukke100"
+              xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="../../../../.scripts/shared-config.xml"
+              xpointer="xpointer(/*/node())"/>
+
+  <lkk:content>
+#!/bin/sh
+set -euo pipefail
+IFS=$(printf '\n\t')
+
+BSPWM_DIR=$(readlink -f "$XDG_CONFIG_HOME/bspwm")
+STATE_SRC=$(readlink -f "$BSPWM_DIR/state")
+USAGE_MSG=$(printf 'Usage:\tlkk-mode get\n\tlkk-mode set DEFAULT|MANUAL|RESIZE')
+
+USAGE_DIE()
+{
+  echo "$USAGE_MSG"
+  exit 1
+}
+
+mkdir -p "$BSPWM_DIR"
+
+# TODO: lock/unlock `$STATE_SRC` to prevent race conditions
+
+if [ "$#" = 1 ] &amp;&amp; [ "$1" = get ]
+then
+  if [ ! -f "$STATE_SRC" ]
+  then
+    echo DEFAULT > "$STATE_SRC"
+  fi
+
+  BSPWM_STATE=$(cat "$STATE_SRC")
+
+  case "$BSPWM_STATE" in
+    DEFAULT|MANUAL|RESIZE)
+      echo "$BSPWM_STATE"
+      ;;
+    *)
+      echo DEFAULT | tee "$STATE_SRC"
+  esac
+
+  unset BSPWM_STATE
+
+elif [ "$#" = 2 ] &amp;&amp; [ "$1" = set ]
+then
+  case "$2" in
+    DEFAULT|MANUAL|RESIZE)
+      echo "$2" > "$STATE_SRC"
+      ;;
+    *)
+      USAGE_DIE
+  esac
+
+else
+  USAGE_DIE
+fi
+
+unset BSPWM_DIR
+unset STATE_SRC
+unset USAGE_DIE
+unset USAGE_MSG
+  </lkk:content>
+</lkk:template>
