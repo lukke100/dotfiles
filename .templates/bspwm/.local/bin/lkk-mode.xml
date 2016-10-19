@@ -20,6 +20,12 @@ USAGE_DIE()
   exit 1
 }
 
+COLOR_SET()
+{
+  bspc config focused_border_color  "$1"
+  bspc config presel_feedback_color "$1"
+}
+
 mkdir -p "$BSPWM_DIR"
 
 # TODO: lock/unlock `$STATE_SRC` to prevent race conditions
@@ -46,8 +52,20 @@ then
 elif [ "$#" = 2 ] &amp;&amp; [ "$1" = set ]
 then
   case "$2" in
-    DEFAULT|MANUAL|RESIZE)
-      echo "$2" > "$STATE_SRC"
+    DEFAULT)
+      COLOR_SET "#<lkk:ref name="color-act"/>"
+
+      echo DEFAULT > "$STATE_SRC"
+      ;;
+    MANUAL)
+      COLOR_SET "#<lkk:ref name="color-act-alt1"/>"
+
+      echo MANUAL > "$STATE_SRC"
+      ;;
+    RESIZE)
+      COLOR_SET "#<lkk:ref name="color-act-alt2"/>"
+
+      echo RESIZE > "$STATE_SRC"
       ;;
     *)
       USAGE_DIE
@@ -58,6 +76,7 @@ else
 fi
 
 unset BSPWM_DIR
+unset COLOR_SET
 unset STATE_SRC
 unset USAGE_DIE
 unset USAGE_MSG

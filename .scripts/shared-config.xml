@@ -7,6 +7,9 @@
   <lkk:declare name="color-urg"           value="dc322f"/>
   <lkk:declare name="color-urg-text"      value="ececec"/>
 
+  <lkk:declare name="color-act-alt1"      value="ffb671"/>
+  <lkk:declare name="color-act-alt2"      value="bdef6a"/>
+
   <lkk:declare name="color-black"         value="35313b"/>
   <lkk:declare name="color-red"           value="885163"/>
   <lkk:declare name="color-green"         value="5c845b"/>
