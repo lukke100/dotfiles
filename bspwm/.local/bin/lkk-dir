@@ -1,0 +1,59 @@
+#!/bin/sh
+set -euo pipefail
+IFS=$(printf '\n\t')
+
+USAGE_MSG=$(printf 'Usage:\tlkk-dir STD|ALT NORTH|WEST|SOUTH|EAST')
+
+USAGE_DIE()
+{
+  echo "$USAGE_MSG"
+  exit 1
+}
+
+if [ ! "$#" = 2 ]
+then
+  USAGE_DIE
+fi
+
+case "$1" in
+  STD|ALT)
+    ;;
+  *)
+    USAGE_DIE
+esac
+
+case "$2" in
+  NORTH|WEST|SOUTH|EAST)
+    ;;
+  *)
+    USAGE_DIE
+esac
+
+BSPWM_DIR=$(echo "$2" | tr '[:upper:]' '[:lower:]')
+
+# TODO: lock/unlock `$STATE_SRC` to prevent race conditions
+
+case "$1+$(lkk-mode get)" in
+  STD+DEFAULT)
+    bspc node -f "$BSPWM_DIR"
+    ;;
+  ALT+DEFAULT)
+    bspc node -s "$BSPWM_DIR"
+    ;;
+  STD+MANUAL)
+    bspc node -p "$BSPWM_DIR"
+    ;;
+  ALT+MANUAL)
+    # TODO: determine a better use of alternate mode
+    ;;
+  STD+RESIZE)
+    # TODO: call `bspc` to expand a window's ratio in by `$BSPWM_DIR`
+    ;;
+  ALT+RESIZE)
+    # TODO: call `bspc` to shrink a window's ratio in by `$BSPWM_DIR`
+    ;;
+esac
+
+unset BSPWM_DIR
+unset USAGE_DIE
+unset USAGE_MSG
