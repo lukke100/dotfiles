@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$(printf '\n\t')
 
-USAGE_MSG=$(printf 'Usage:\tlkk-dir STD|ALT NORTH|WEST|SOUTH|EAST')
+USAGE_MSG=$(printf 'Usage:\tlkk-dir STD|ALT NORTH|EAST|SOUTH|WEST')
 
 USAGE_DIE()
 {
@@ -23,7 +23,11 @@ case "$1" in
 esac
 
 case "$2" in
-  NORTH|WEST|SOUTH|EAST)
+  NORTH|WEST)
+    EXPAND_PX='-10'
+    ;;
+  SOUTH|EAST)
+    EXPAND_PX='+10'
     ;;
   *)
     USAGE_DIE
@@ -47,13 +51,14 @@ case "$1+$(lkk-mode get)" in
     # TODO: determine a better use of alternate mode
     ;;
   STD+RESIZE)
-    # TODO: call `bspc` to expand a window's ratio in by `$BSPWM_DIR`
+    bspc node "@$BSPWM_DIR" -r "$EXPAND_PX"
     ;;
   ALT+RESIZE)
-    # TODO: call `bspc` to shrink a window's ratio in by `$BSPWM_DIR`
+    bspc node "@$BSPWM_DIR" -r "$(echo "$EXPAND_PX" | tr '+-' '-+')"
     ;;
 esac
 
 unset BSPWM_DIR
+unset EXPAND_PX
 unset USAGE_DIE
 unset USAGE_MSG
