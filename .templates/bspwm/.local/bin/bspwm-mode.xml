@@ -12,7 +12,9 @@ IFS=$(printf '\n\t')
 
 BSPWM_DIR=$(readlink -f "$XDG_CONFIG_HOME/bspwm")
 STATE_SRC=$(readlink -f "$BSPWM_DIR/state")
-USAGE_MSG=$(printf 'Usage:\tlkk-mode get\n\tlkk-mode set DEFAULT|MANUAL|RESIZE')
+USAGE_MSG=$(printf '%s\n' \
+  'Usage: bspwm-mode get' \
+  '       bspwm-mode set DEFAULT|MANUAL|RESIZE')
 
 USAGE_DIE()
 {
