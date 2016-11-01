@@ -19,6 +19,8 @@ set tabstop=2
 set textwidth=80
 
 " ============================ Interface Options ============================= "
+syntax on
+
 set number
 set ruler
 set scrolloff=7
