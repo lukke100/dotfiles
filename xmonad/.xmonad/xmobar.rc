@@ -1,7 +1,7 @@
 Config
   { font          = "xft:Terminus (TTF)-9"
-  , fgColor       = "#939393"
-  , bgColor       = "#292929"
+  , fgColor       = "#dbdbdb"
+  , bgColor       = "#404040"
   , position      = TopP 24 24
   , border        = NoBorder
   , lowerOnStart  = True
