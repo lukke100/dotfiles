@@ -40,15 +40,13 @@ func! DeleteTrailingWS()
 endfunc
 
 " ========================== Plugin Initialization =========================== "
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
 call plug#begin()
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
 Plug 'neomake/neomake'
+Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
+Plug 'zchee/deoplete-jedi'
 call plug#end()
 
 call deoplete#enable()
