@@ -7,6 +7,20 @@
   <lkk:declare name="color-urg"           value="dc322f"/>
   <lkk:declare name="color-urg-text"      value="ececec"/>
 
+  <!--
+    NOTE: Currently, the RGBA color format is used for "color-term" for 256
+    distinct alpha values. The alternative, hex codes preceded by "[XX]", only
+    offer ~100 distinct values mapping erratically to the 8 bit alpha channel.
+    For consistency, "color-term-text" also uses the  RGBA format.
+
+    Generally, one should only place /repeated/ text strings into this text
+    file. However, these RGBA values should generally be changed alongside other
+    color values. So, we leave these here for convenience.
+  -->
+
+  <lkk:declare name="color-term"          value="rgba:2f00/2f00/2f00/e000"/>
+  <lkk:declare name="color-term-text"     value="rgba:9300/9300/9300/ffff"/>
+
   <lkk:declare name="color-act-alt1"      value="ffb671"/>
   <lkk:declare name="color-act-alt2"      value="bdef6a"/>
 
