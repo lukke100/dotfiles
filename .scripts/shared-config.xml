@@ -27,9 +27,9 @@
     placed here because they should be changed alongside "color-bkg".
   -->
 
-  <lkk:declare name="color-shadow-red"    value="0.41"/>
-  <lkk:declare name="color-shadow-green"  value="0.41"/>
-  <lkk:declare name="color-shadow-blue"   value="0.41"/>
+  <lkk:declare name="color-shadow-red"    value="0.25"/>
+  <lkk:declare name="color-shadow-green"  value="0.25"/>
+  <lkk:declare name="color-shadow-blue"   value="0.25"/>
 
   <lkk:declare name="color-act-alt1"      value="ffb671"/>
   <lkk:declare name="color-act-alt2"      value="bdef6a"/>
