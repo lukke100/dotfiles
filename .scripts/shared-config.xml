@@ -21,6 +21,16 @@
   <lkk:declare name="color-term"          value="rgba:4925/4925/4925/e000"/>
   <lkk:declare name="color-term-text"     value="rgba:db00/db00/db00/ffff"/>
 
+  <!--
+    NOTE: As "color-term" and "color-term-text" are only used by URxvt,
+    "color-shadow-*" options are used only by compton. Despite that, they're
+    placed here because they should be changed alongside "color-bkg".
+  -->
+
+  <lkk:declare name="color-shadow-red"    value="0.41"/>
+  <lkk:declare name="color-shadow-green"  value="0.41"/>
+  <lkk:declare name="color-shadow-blue"   value="0.41"/>
+
   <lkk:declare name="color-act-alt1"      value="ffb671"/>
   <lkk:declare name="color-act-alt2"      value="bdef6a"/>
 
