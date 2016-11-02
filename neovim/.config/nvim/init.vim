@@ -9,6 +9,7 @@ colorscheme default
 set background=dark
 set colorcolumn=81
 set expandtab
+set nojoinspaces
 set nowrap
 set shiftwidth=2
 set smartindent
