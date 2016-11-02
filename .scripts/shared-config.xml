@@ -18,8 +18,8 @@
     color values. So, we leave these here for convenience.
   -->
 
-  <lkk:declare name="color-term"          value="rgba:2f00/2f00/2f00/e000"/>
-  <lkk:declare name="color-term-text"     value="rgba:9300/9300/9300/ffff"/>
+  <lkk:declare name="color-term"          value="rgba:4925/4925/4925/e000"/>
+  <lkk:declare name="color-term-text"     value="rgba:db00/db00/db00/ffff"/>
 
   <lkk:declare name="color-act-alt1"      value="ffb671"/>
   <lkk:declare name="color-act-alt2"      value="bdef6a"/>
