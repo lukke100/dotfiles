@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/usr/bin/env sh
 umask 077
 
 export PATH

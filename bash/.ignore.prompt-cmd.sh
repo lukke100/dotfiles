@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/usr/bin/env sh
 PUT_HEADER()
 {
   printf ''

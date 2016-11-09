@@ -1,5 +1,4 @@
-#!/bin/perl
-
+#!/usr/bin/env perl
 use 5.14.0;
 use Encode;
 use IO::Handle;
