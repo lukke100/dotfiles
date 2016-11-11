@@ -1,0 +1,2 @@
+[MESSAGES CONTROL]
+disable=bad-whitespace,missing-docstring,too-few-public-methods,unused-argument
