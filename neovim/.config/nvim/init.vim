@@ -43,6 +43,7 @@ endfunc
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/vim-easy-align'
 Plug 'neomake/neomake'
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
@@ -54,5 +55,9 @@ call deoplete#enable()
 let g:airline_powerline_fonts = 1
 
 " ============================ File Type Specific ============================ "
+let g:syntastic_python_checkers = ['flake8', 'pylint']
+
+autocmd CompleteDone * pclose!
+
 autocmd FileType gitcommit set colorcolumn=73
 autocmd FileType gitcommit set textwidth=72
