@@ -1,4 +1,43 @@
 /*
  * Do not remove the @namespace line -- it's required for correct functioning
  */
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*
+ * Using "> *" to override `devedition.css`
+ */
+:root[devtoolstheme="dark"] > * {
+  /* Chrome */
+  --chrome-background-color:                  #404040;
+  --chrome-color:                             #dbdbdb;
+  --chrome-secondary-background-color:        #606060;
+  --chrome-navigator-toolbox-separator-color: rgba(0,0,0,.2);
+  --chrome-nav-bar-separator-color:           rgba(0,0,0,.2);
+  --chrome-nav-buttons-background:            #252C33;
+  --chrome-nav-buttons-hover-background:      #1B2127;
+  --chrome-nav-bar-controls-border-color:     #1D2328;
+  --chrome-selection-color:                   #ececec;
+  --chrome-selection-background-color:        #7c60bf;
+
+  /* Tabs */
+  --tabs-toolbar-color:             #dbdbdb;;
+  --tab-background-color:           #404040;
+  --tab-hover-background-color:     #07090a;
+  --tab-selection-color:            #ececec;
+  --tab-selection-background-color: #7c60bf;
+  --tab-selection-box-shadow:       none;
+
+  --pinned-tab-glow: radial-gradient(22px at center calc(100% - 2px), rgba(76,158,217,0.9) 13%, rgba(0,0,0,0.4) 16%, transparent 70%);
+
+  /* Url and search bars */
+  --url-and-searchbar-background-color: #404040;
+  --urlbar-separator-color:             #5F6670;
+  --urlbar-dropmarker-url:              url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
+  --urlbar-dropmarker-region:           rect(0px, 11px, 14px, 0px);
+  --urlbar-dropmarker-hover-region:     rect(0, 22px, 14px, 11px);
+  --urlbar-dropmarker-active-region:    rect(0px, 33px, 14px, 22px);
+  --urlbar-dropmarker-2x-url:           url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
+  --urlbar-dropmarker-2x-region:        rect(0px, 11px, 14px, 0px);
+  --urlbar-dropmarker-hover-2x-region:  rect(0, 22px, 14px, 11px);
+  --urlbar-dropmarker-active-2x-region: rect(0px, 33px, 14px, 22px);
+}

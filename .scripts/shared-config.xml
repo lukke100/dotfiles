@@ -7,6 +7,8 @@
   <lkk:declare name="color-urg"           value="dc322f"/>
   <lkk:declare name="color-urg-text"      value="ececec"/>
 
+  <lkk:declare name="color-bkg2"          value="606060"/>
+
   <!--
     NOTE: Currently, the RGBA color format is used for "color-term" for 256
     distinct alpha values. The alternative, hex codes preceded by "[XX]", only
