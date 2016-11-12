@@ -60,12 +60,12 @@ then
       echo DEFAULT > "$STATE_SRC"
       ;;
     MANUAL)
-      COLOR_SET "#<lkk:ref name="color-act-alt1"/>"
+      COLOR_SET "#<lkk:ref name="color-act2"/>"
 
       echo MANUAL > "$STATE_SRC"
       ;;
     RESIZE)
-      COLOR_SET "#<lkk:ref name="color-act-alt2"/>"
+      COLOR_SET "#<lkk:ref name="color-act3"/>"
 
       echo RESIZE > "$STATE_SRC"
       ;;

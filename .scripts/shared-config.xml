@@ -9,6 +9,9 @@
 
   <lkk:declare name="color-bkg2"          value="606060"/>
 
+  <lkk:declare name="color-act2"          value="ffb671"/>
+  <lkk:declare name="color-act3"          value="bdef6a"/>
+
   <!--
     NOTE: Currently, the RGBA color format is used for "color-term" for 256
     distinct alpha values. The alternative, hex codes preceded by "[XX]", only
@@ -33,8 +36,6 @@
   <lkk:declare name="color-shadow-green"  value="0.25"/>
   <lkk:declare name="color-shadow-blue"   value="0.25"/>
 
-  <lkk:declare name="color-act-alt1"      value="ffb671"/>
-  <lkk:declare name="color-act-alt2"      value="bdef6a"/>
 
   <lkk:declare name="color-black"         value="35313b"/>
   <lkk:declare name="color-red"           value="885163"/>
