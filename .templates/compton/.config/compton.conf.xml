@@ -6,6 +6,8 @@
               xpointer="xpointer(/*/node())"/>
 
   <lkk:content>
+# TODO: Reconfigure to perform properly.
+
 # Shadow
 shadow               = true;
 no-dnd-shadow        = true;
