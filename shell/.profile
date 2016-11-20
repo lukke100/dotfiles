@@ -2,6 +2,7 @@
 umask 077
 
 export PATH
+export CLASSPATH
 
 export BROWSER
 export EDITOR
@@ -37,6 +38,9 @@ HASK_BIN=$( ( (type stack > /dev/null 2>&1) && (stack path 2> /dev/null) ) | \
 
 PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" \
   "$CLUA_BIN" "$GO_L_BIN" "$PATH")
+
+CLASSPATH=$(perl -e "$PATH_FIX" "$CLASSPATH" "." \
+  /usr/share/java/*.jar)
 
 BROWSER=firefox
 EDITOR=nvim
