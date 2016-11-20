@@ -12,47 +12,13 @@ URxvt.depth:                32
 URxvt.saveLines:            0
 URxvt.perl-ext:             default,url-select
 URxvt.keysym.C-i:           perl:url-select:select_next
-URxvt.url-select.launcher:  firefox
+URxvt.url-select.launcher:  firefox-developer
 URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
 URxvt*foreground: <lkk:ref name="color-term-text"/>
 URxvt*background: <lkk:ref name="color-term"/>
-
-! Black
-*color0:  #<lkk:ref name="color-black"/>
-! Red
-*color1:  #<lkk:ref name="color-red"/>
-! Green
-*color2:  #<lkk:ref name="color-green"/>
-! Yellow
-*color3:  #<lkk:ref name="color-yellow"/>
-! Blue
-*color4:  #<lkk:ref name="color-blue"/>
-! Magenta
-*color5:  #<lkk:ref name="color-magenta"/>
-! Cyan
-*color6:  #<lkk:ref name="color-cyan"/>
-! White
-*color7:  #<lkk:ref name="color-white"/>
-
-! Light Black
-*color8:  #<lkk:ref name="color-light-black"/>
-! Light Red
-*color9:  #<lkk:ref name="color-light-red"/>
-! Light Green
-*color10: #<lkk:ref name="color-light-green"/>
-! Light Yellow
-*color11: #<lkk:ref name="color-light-yellow"/>
-! Light Blue
-*color12: #<lkk:ref name="color-light-blue"/>
-! Light Magenta
-*color13: #<lkk:ref name="color-light-magenta"/>
-! Light Cyan
-*color14: #<lkk:ref name="color-light-cyan"/>
-! Light White
-*color15: #<lkk:ref name="color-light-white"/>
 
 Xft.antialias: true
 Xft.autohint:  true

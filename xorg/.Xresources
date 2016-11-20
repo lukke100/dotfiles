@@ -4,47 +4,13 @@ URxvt.depth:                32
 URxvt.saveLines:            0
 URxvt.perl-ext:             default,url-select
 URxvt.keysym.C-i:           perl:url-select:select_next
-URxvt.url-select.launcher:  firefox
+URxvt.url-select.launcher:  firefox-developer
 URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
 URxvt*foreground: rgba:db00/db00/db00/ffff
 URxvt*background: rgba:4925/4925/4925/e000
-
-! Black
-*color0:  #35313b
-! Red
-*color1:  #885163
-! Green
-*color2:  #5c845b
-! Yellow
-*color3:  #887d5b
-! Blue
-*color4:  #55598e
-! Magenta
-*color5:  #81518e
-! Cyan
-*color6:  #558487
-! White
-*color7:  #aeaab4
-
-! Light Black
-*color8:  #4f4c56
-! Light Red
-*color9:  #b98898
-! Light Green
-*color10: #92b692
-! Light Yellow
-*color11: #b9af92
-! Light Blue
-*color12: #8c8ec0
-! Light Magenta
-*color13: #b388c0
-! Light Cyan
-*color14: #8cb6b9
-! Light White
-*color15: #d0cdd7
 
 Xft.antialias: true
 Xft.autohint:  true
