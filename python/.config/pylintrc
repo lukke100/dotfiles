@@ -1,2 +1,3 @@
 [MESSAGES CONTROL]
-disable=bad-whitespace,missing-docstring,too-few-public-methods,unused-argument
+disable = bad-whitespace, missing-docstring, too-few-public-methods,
+  unused-argument, redefined-builtin
