@@ -30,6 +30,12 @@ GENERATE_CONFIG()
   INPUT_FILE=$(readlink -m "$TEMPLATE_DIR/$1")
 
   OUTPUT_DIR=$(dirname "$(readlink -m "$DOTFILE_ROOT/$1")")
+
+  if [ ! -d "$OUTPUT_DIR" ]
+  then
+    OUTPUT_DIR=$(dirname "$(readlink -m "$DOTFILE_ROOT/.disabled/$1")")
+  fi
+
   OUTPUT_NAME=$(basename -s ".xml" "$INPUT_FILE")
   OUTPUT_FILE=$OUTPUT_DIR/$OUTPUT_NAME
 
