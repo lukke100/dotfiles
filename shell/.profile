@@ -42,7 +42,7 @@ PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$HASK_BIN" "$PERL_BIN" "$RUBY_BIN" \
 CLASSPATH=$(perl -e "$PATH_FIX" "$CLASSPATH" "." \
   /usr/share/java/*.jar)
 
-BROWSER=firefox
+BROWSER=google-chrome-stable
 EDITOR=nvim
 EMSCRIPTEN_ROOT=/usr/lib/emscripten
 GOPATH=$HOME/.go
