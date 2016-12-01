@@ -21,14 +21,14 @@ if [ "$(id -u)" -eq "0" ]
 then
   USER_IND='#'
 else
-  USER_IND='->'
+  USER_IND='>'
 fi
 
 if [ -n "$HEADER_TEXT" ]
 then
-  PS1="$HEADER_TEXT\n\w$PROMPT_TRAIL λ $USER_IND "
+  PS1="$HEADER_TEXT\n\w$PROMPT_TRAIL $USER_IND "
 else
-  PS1="\w$PROMPT_TRAIL λ $USER_IND "
+  PS1="\w$PROMPT_TRAIL $USER_IND "
 fi
 
 PUT_TITLE
