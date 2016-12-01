@@ -7,7 +7,7 @@
 
   <lkk:content>
 Config
-  { font          = "xft:Terminus (TTF)-9"
+  { font          = "xft:monofur:size=11"
   , fgColor       = "#<lkk:ref name="color-bkg-text"/>"
   , bgColor       = "#<lkk:ref name="color-bkg"/>"
   , position      = TopP 24 24

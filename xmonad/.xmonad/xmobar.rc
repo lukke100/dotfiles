@@ -1,5 +1,5 @@
 Config
-  { font          = "xft:Terminus (TTF)-9"
+  { font          = "xft:monofur:size=11"
   , fgColor       = "#dbdbdb"
   , bgColor       = "#404040"
   , position      = TopP 24 24
