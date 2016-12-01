@@ -37,7 +37,7 @@ main = statusBar barPath barFmt toggleStrutsKey conf >>= xmonad
 
 barFmt :: PP
 barFmt = xmobarPP
-  { ppCurrent = xmobarColor brSelTx brSelBg . wrap " λ " " "
+  { ppCurrent = xmobarColor brSelTx brSelBg . wrap " " " "
   , ppTitle   = xmobarColor brTtlTx ""
   , ppVisible = wrap "[" "]"
   , ppUrgent  = xmobarColor "red" "yellow"
