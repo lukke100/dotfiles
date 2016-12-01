@@ -32,7 +32,7 @@ rofi.opacity:           100
 rofi.width:             50
 rofi.lines:             15
 rofi.columns:           1
-rofi.font:              monofur 12
+rofi.font:              monofur 11
 rofi.color-normal:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-text"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-act-text"/>
 rofi.color-urgent:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-urg"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-urg"/>,#<lkk:ref name="color-urg-text"/>
 rofi.color-active:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-text"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-act-text"/>

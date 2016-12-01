@@ -24,7 +24,7 @@ rofi.opacity:           100
 rofi.width:             50
 rofi.lines:             15
 rofi.columns:           1
-rofi.font:              monofur 12
+rofi.font:              monofur 11
 rofi.color-normal:      #404040,#dbdbdb,#404040,#7c60bf,#ececec
 rofi.color-urgent:      #404040,#dc322f,#404040,#dc322f,#ececec
 rofi.color-active:      #404040,#dbdbdb,#404040,#7c60bf,#ececec
