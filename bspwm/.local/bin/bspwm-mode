@@ -47,7 +47,7 @@ elif [ "$#" = 2 ] && [ "$1" = set ]
 then
   case "$2" in
     DEFAULT)
-      COLOR_SET "#7c60bf"
+      COLOR_SET "#ffffff"
 
       echo DEFAULT > "$STATE_SRC"
       ;;

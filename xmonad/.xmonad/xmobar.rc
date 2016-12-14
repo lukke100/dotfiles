@@ -1,7 +1,7 @@
 Config
   { font          = "xft:monofur:size=11"
-  , fgColor       = "#dbdbdb"
-  , bgColor       = "#404040"
+  , fgColor       = "#ffffff"
+  , bgColor       = "#808080"
   , position      = TopP 24 24
   , border        = NoBorder
   , lowerOnStart  = True

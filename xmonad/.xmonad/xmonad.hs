@@ -7,11 +7,11 @@ import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig
 
 brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
-brSelBg = "#7c60bf"
-brSelTx = "#ececec"
-brTtlTx = "#7c60bf"
-bdFocus = "#7c60bf"
-bdNorm  = "#404040"
+brSelBg = "#ffffff"
+brSelTx = "#808080"
+brTtlTx = "#ffffff"
+bdFocus = "#ffffff"
+bdNorm  = "#808080"
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
