@@ -61,3 +61,5 @@ autocmd CompleteDone * pclose!
 
 autocmd FileType gitcommit set colorcolumn=73
 autocmd FileType gitcommit set textwidth=72
+
+autocmd FileType make set tabstop=8
