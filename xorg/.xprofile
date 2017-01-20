@@ -17,6 +17,8 @@ if ! systemd-detect-virt --quiet
 then
   # pidof compton  || compton --blur-background --blur-background-frame &
   pidof redshift || redshift -l 45.0:-75.0 &
+else
+  pidof compton  || compton &
 fi
 
 dex -a -e xmonad

@@ -23,8 +23,8 @@
     color values. So, we leave these here for convenience.
   -->
 
-  <lkk:declare name="color-term"          value="rgba:9249/9249/9249/9249"/>
-  <lkk:declare name="color-term-text"     value="rgba:ff00/ff00/ff00/ffff"/>
+  <lkk:declare name="color-term"          value="rgba:0000/0000/0000/7fff"/>
+  <lkk:declare name="color-term-text"     value="rgba:ffff/ffff/ffff/ffff"/>
 
   <!--
     NOTE: As "color-term" and "color-term-text" are only used by URxvt,

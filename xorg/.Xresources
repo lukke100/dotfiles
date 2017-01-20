@@ -9,8 +9,8 @@ URxvt.url-select.underline: true
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
-URxvt*foreground: rgba:ff00/ff00/ff00/ffff
-URxvt*background: rgba:9249/9249/9249/9249
+URxvt*foreground: rgba:ffff/ffff/ffff/ffff
+URxvt*background: rgba:0000/0000/0000/7fff
 
 Xft.antialias: true
 Xft.autohint:  true
