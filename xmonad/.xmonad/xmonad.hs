@@ -7,10 +7,10 @@ import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig
 
 brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
-brSelBg = "#ffffff"
-brSelTx = "#808080"
-brTtlTx = "#ffffff"
-bdFocus = "#ffffff"
+brSelBg = "#e49e34"
+brSelTx = "#ffffff"
+brTtlTx = "#e49e34"
+bdFocus = "#e49e34"
 bdNorm  = "#808080"
 
 barPath :: String

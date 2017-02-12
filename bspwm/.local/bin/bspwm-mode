@@ -47,17 +47,17 @@ elif [ "$#" = 2 ] && [ "$1" = set ]
 then
   case "$2" in
     DEFAULT)
-      COLOR_SET "#ffffff"
+      COLOR_SET "#e49e34"
 
       echo DEFAULT > "$STATE_SRC"
       ;;
     MANUAL)
-      COLOR_SET "#ffb671"
+      COLOR_SET "#34e49e"
 
       echo MANUAL > "$STATE_SRC"
       ;;
     RESIZE)
-      COLOR_SET "#bdef6a"
+      COLOR_SET "#9e34e4"
 
       echo RESIZE > "$STATE_SRC"
       ;;

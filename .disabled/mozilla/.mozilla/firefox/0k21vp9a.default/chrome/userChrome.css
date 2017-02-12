@@ -16,15 +16,15 @@
   --chrome-nav-buttons-background:            #252C33;
   --chrome-nav-buttons-hover-background:      #1B2127;
   --chrome-nav-bar-controls-border-color:     #1D2328;
-  --chrome-selection-color:                   #808080;
-  --chrome-selection-background-color:        #ffffff;
+  --chrome-selection-color:                   #ffffff;
+  --chrome-selection-background-color:        #e49e34;
 
   /* Tabs */
   --tabs-toolbar-color:             #ffffff;;
   --tab-background-color:           #808080;
   --tab-hover-background-color:     #07090a;
-  --tab-selection-color:            #808080;
-  --tab-selection-background-color: #ffffff;
+  --tab-selection-color:            #ffffff;
+  --tab-selection-background-color: #e49e34;
   --tab-selection-box-shadow:       none;
 
   --pinned-tab-glow: radial-gradient(22px at center calc(100% - 2px), rgba(76,158,217,0.9) 13%, rgba(0,0,0,0.4) 16%, transparent 70%);

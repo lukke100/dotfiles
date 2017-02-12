@@ -2,15 +2,15 @@
 <lkk:template xmlns:lkk="http://www.github.com/lukke100">
   <lkk:declare name="color-bkg"           value="808080"/>
   <lkk:declare name="color-bkg-text"      value="ffffff"/>
-  <lkk:declare name="color-act"           value="ffffff"/>
-  <lkk:declare name="color-act-text"      value="808080"/>
+  <lkk:declare name="color-act"           value="e49e34"/>
+  <lkk:declare name="color-act-text"      value="ffffff"/>
   <lkk:declare name="color-urg"           value="dc322f"/>
   <lkk:declare name="color-urg-text"      value="ececec"/>
 
   <lkk:declare name="color-bkg2"          value="606060"/>
 
-  <lkk:declare name="color-act2"          value="ffb671"/>
-  <lkk:declare name="color-act3"          value="bdef6a"/>
+  <lkk:declare name="color-act2"          value="34e49e"/>
+  <lkk:declare name="color-act3"          value="9e34e4"/>
 
   <!--
     NOTE: Currently, the RGBA color format is used for "color-term" for 256
@@ -23,7 +23,7 @@
     color values. So, we leave these here for convenience.
   -->
 
-  <lkk:declare name="color-term"          value="rgba:0000/0000/0000/7fff"/>
+  <lkk:declare name="color-term"          value="rgba:6fff/6fff/6fff/dfff"/>
   <lkk:declare name="color-term-text"     value="rgba:ffff/ffff/ffff/ffff"/>
 
   <!--

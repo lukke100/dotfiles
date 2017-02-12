@@ -10,7 +10,7 @@ URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
 URxvt*foreground: rgba:ffff/ffff/ffff/ffff
-URxvt*background: rgba:0000/0000/0000/7fff
+URxvt*background: rgba:6fff/6fff/6fff/dfff
 
 Xft.antialias: true
 Xft.autohint:  true
@@ -25,10 +25,10 @@ rofi.width:             50
 rofi.lines:             15
 rofi.columns:           1
 rofi.font:              monofur 11
-rofi.color-normal:      #808080,#ffffff,#808080,#ffffff,#808080
+rofi.color-normal:      #808080,#ffffff,#808080,#e49e34,#ffffff
 rofi.color-urgent:      #808080,#dc322f,#808080,#dc322f,#ececec
-rofi.color-active:      #808080,#ffffff,#808080,#ffffff,#808080
-rofi.color-window:      #808080,#ffffff,#ffffff
+rofi.color-active:      #808080,#ffffff,#808080,#e49e34,#ffffff
+rofi.color-window:      #808080,#e49e34,#ffffff
 rofi.bw:                2
 rofi.location:          2
 rofi.padding:           2
