@@ -3,16 +3,16 @@ set -euo pipefail
 IFS=$(printf '\n\t')
 
 export DOTFILE_ROOT
-export SCRIPTS_DIR
+export META_DIR
 export INPUT_SCHEMA
 export STYLESHEET
 export TEMPLATE_DIR
 
 DOTFILE_ROOT=$(readlink -m ./)
-SCRIPTS_DIR=$(readlink -m "$DOTFILE_ROOT/.scripts/")
-INPUT_SCHEMA=$(readlink -m "$SCRIPTS_DIR/templates.xsd")
-STYLESHEET=$(readlink -m "$SCRIPTS_DIR/generate-configs.xslt")
-TEMPLATE_DIR=$(readlink -m "$DOTFILE_ROOT/.templates/")
+META_DIR=$(readlink -m "$DOTFILE_ROOT/.meta/")
+TEMPLATE_DIR=$(readlink -m "$META_DIR/templates/")
+INPUT_SCHEMA=$(readlink -m "$META_DIR/templates.xsd")
+STYLESHEET=$(readlink -m "$META_DIR/generate-configs.xslt")
 
 GENERATE_CONFIG()
 {
@@ -33,7 +33,7 @@ GENERATE_CONFIG()
 
   if [ ! -d "$OUTPUT_DIR" ]
   then
-    OUTPUT_DIR=$(dirname "$(readlink -m "$DOTFILE_ROOT/.disabled/$1")")
+    OUTPUT_DIR=$(dirname "$(readlink -m "$META_DIR/disabled/$1")")
   fi
 
   OUTPUT_NAME=$(basename -s ".xml" "$INPUT_FILE")
@@ -52,14 +52,6 @@ GENERATE_CONFIG()
   tac "$XSLT_OUTPUT" | sed --posix '/./,$!d' | tac - > "$OUTPUT_FILE"
 
   rm "$XSLT_OUTPUT"
-
-  unset INPUT_FILE
-
-  unset OUTPUT_DIR
-  unset OUTPUT_NAME
-  unset OUTPUT_FILE
-
-  unset XSLT_OUTPUT
 }
 export -f GENERATE_CONFIG
 
@@ -68,11 +60,3 @@ cd "$TEMPLATE_DIR"
 find ./ -type f -print0 | xargs -0n1 sh -c 'GENERATE_CONFIG "$@"' "$0"
 
 cd "$DOTFILE_ROOT"
-
-unset GENERATE_CONFIG
-
-unset DOTFILE_ROOT
-unset SCRIPTS_DIR
-unset INPUT_SCHEMA
-unset STYLESHEET
-unset TEMPLATE_DIR

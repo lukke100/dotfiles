@@ -2,7 +2,7 @@
 <lkk:template xmlns:lkk="http://www.github.com/lukke100"
               xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <xi:include href="../../../../../../.scripts/shared-config.xml"
+  <xi:include href="../../../../../../shared-config.xml"
               xpointer="xpointer(/*/node())"/>
 
   <lkk:content>
