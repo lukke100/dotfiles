@@ -5,18 +5,18 @@ set noswapfile
 set noundofile
 
 " =========================== Indentation Options ============================ "
-colorscheme slate
+colorscheme default
 
-set background=dark
+set background=light
 set backspace=indent,eol,start
-set colorcolumn=81
+set colorcolumn=80
 set expandtab
 set nojoinspaces
 set nowrap
 set shiftwidth=2
 set smartindent
 set tabstop=2
-set textwidth=80
+set textwidth=79
 
 " ============================ Interface Options ============================= "
 syntax on
