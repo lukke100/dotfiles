@@ -5,14 +5,10 @@ packages:   []
 extra-deps:
     - X11-xft-0.3.1
     - alsa-core-0.5.0.1
-    - alsa-mixer-0.2.0.2
-    - data-ordlist-0.4.7.0
-    - dbus-0.10.10
-    - libmpd-0.9.0.4
+    - alsa-mixer-0.2.0.3
+    - dbus-0.10.12
     - libxml-sax-0.7.5
-    - regex-compat-tdfa-0.95.1.4
-    - sandi-0.3.5
-    - xmobar-0.23.1
-    - xmonad-0.11.1
-    - xmonad-contrib-0.11.3
-resolver:   lts-2.22
+    - xmobar-0.24.3
+    - xmonad-0.13
+    - xmonad-contrib-0.13
+resolver:   lts-8.0
