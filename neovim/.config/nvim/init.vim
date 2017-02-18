@@ -7,14 +7,14 @@ set noswapfile
 colorscheme default
 
 set background=dark
-set colorcolumn=81
+set colorcolumn=80
 set expandtab
 set nojoinspaces
 set nowrap
 set shiftwidth=2
 set smartindent
 set tabstop=2
-set textwidth=80
+set textwidth=79
 
 " ============================ Interface Options ============================= "
 set number
