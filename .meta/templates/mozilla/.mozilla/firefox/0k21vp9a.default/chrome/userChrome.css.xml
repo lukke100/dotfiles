@@ -28,7 +28,7 @@
   --chrome-selection-background-color:        #<lkk:ref name="color-act"/>;
 
   /* Tabs */
-  --tabs-toolbar-color:             #<lkk:ref name="color-bkg-text"/>;;
+  --tabs-toolbar-color:             #<lkk:ref name="color-bkg-text"/>;
   --tab-background-color:           #<lkk:ref name="color-bkg"/>;
   --tab-hover-background-color:     #07090a;
   --tab-selection-color:            #<lkk:ref name="color-act-text"/>;
