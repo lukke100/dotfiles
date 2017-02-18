@@ -10,7 +10,7 @@ URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
 URxvt*foreground: rgba:0000/0000/0000/ffff
-URxvt*background: rgba:ffff/ffff/ffff/efff
+URxvt*background: rgba:ffff/ffff/ffff/cfff
 
 Xft.antialias: true
 Xft.autohint:  true

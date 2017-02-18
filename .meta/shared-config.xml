@@ -23,7 +23,7 @@
     color values. So, we leave these here for convenience.
   -->
 
-  <lkk:declare name="color-term"          value="rgba:ffff/ffff/ffff/efff"/>
+  <lkk:declare name="color-term"          value="rgba:ffff/ffff/ffff/cfff"/>
   <lkk:declare name="color-term-text"     value="rgba:0000/0000/0000/ffff"/>
 
   <!--
