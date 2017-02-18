@@ -25,12 +25,4 @@ do
   then
     mv --verbose "$IMPORT_PATH" "$EXPORT_PATH"
   fi
-
-  unset EXPORT_PATH
-  unset EXPORT_NAME
-  unset IMPORT_SUFX
-  unset IMPORT_NAME
-  unset IMPORT_FLDR
 done
-
-unset IGNORE_LEN

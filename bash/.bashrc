@@ -70,13 +70,8 @@ alias ls="ls -1HLbh --file-type $COLORTYPE $DIRSFIRST $TIMESTYLE"
 alias top=htop
 alias vdir="vdir -A $COLORTYPE $DIRSFIRST $TIMESTYLE"
 
-unset COLORTYPE
-unset DIRSFIRST
-unset TIMESTYLE
-
 RM_EX_RGX='s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
 eval "$(dircolors -b | sed -e "$RM_EX_RGX")"
-unset RM_EX_RGX
 
 BASH_COMPLETE=/usr/share/bash-completion/bash_completion
 GIT_COMPLETE=/usr/share/git/completion/git-prompt.sh
@@ -92,9 +87,6 @@ then
   # shellcheck disable=SC1090
   . "$GIT_COMPLETE"
 fi
-
-unset BASH_COMPLETE
-unset GIT_COMPLETE
 
 if echo "$TERM" | grep -q linux
 then
@@ -122,6 +114,4 @@ then
     printf '\033]P035313b' # Black
     clear
   fi
-
-  unset USE_BACKGROUND
 fi

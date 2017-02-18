@@ -49,8 +49,6 @@ then
       echo DEFAULT | tee "$STATE_SRC"
   esac
 
-  unset BSPWM_STATE
-
 elif [ "$#" = 2 ] &amp;&amp; [ "$1" = set ]
 then
   case "$2" in
@@ -76,11 +74,5 @@ then
 else
   USAGE_DIE
 fi
-
-unset BSPWM_DIR
-unset COLOR_SET
-unset STATE_SRC
-unset USAGE_DIE
-unset USAGE_MSG
   </lkk:content>
 </lkk:template>

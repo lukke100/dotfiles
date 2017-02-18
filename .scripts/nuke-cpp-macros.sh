@@ -11,5 +11,4 @@ do
   cat -s "$TMP_FILE" > "$INPUT_FILE"
 
   rm "$TMP_FILE"
-  unset TMP_FILE
 done

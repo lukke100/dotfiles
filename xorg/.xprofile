@@ -7,8 +7,6 @@ then
   do
     [ -x "$X11_FILE" ] && . "$X11_FILE"
   done
-
-  unset X11_FILE
 fi
 
 # pidof conky    || conky &

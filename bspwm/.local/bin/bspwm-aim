@@ -57,8 +57,3 @@ case "$1+$(bspwm-mode get)" in
     bspc node "@$BSPWM_DIR" -r "$(echo "$EXPAND_PX" | tr '+-' '-+')"
     ;;
 esac
-
-unset BSPWM_DIR
-unset EXPAND_PX
-unset USAGE_DIE
-unset USAGE_MSG
