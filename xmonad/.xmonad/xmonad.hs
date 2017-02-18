@@ -11,7 +11,7 @@ brSelBg = "#e49e34"
 brSelTx = "#ffffff"
 brTtlTx = "#e49e34"
 bdFocus = "#e49e34"
-bdNorm  = "#808080"
+bdNorm  = "#ffffff"
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"

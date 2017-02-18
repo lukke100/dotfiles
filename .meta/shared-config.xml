@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lkk:template xmlns:lkk="http://www.github.com/lukke100">
-  <lkk:declare name="color-bkg"           value="808080"/>
-  <lkk:declare name="color-bkg-text"      value="ffffff"/>
+  <lkk:declare name="color-bkg"           value="ffffff"/>
+  <lkk:declare name="color-bkg-text"      value="000000"/>
   <lkk:declare name="color-act"           value="e49e34"/>
   <lkk:declare name="color-act-text"      value="ffffff"/>
   <lkk:declare name="color-urg"           value="dc322f"/>
@@ -23,8 +23,8 @@
     color values. So, we leave these here for convenience.
   -->
 
-  <lkk:declare name="color-term"          value="rgba:6fff/6fff/6fff/dfff"/>
-  <lkk:declare name="color-term-text"     value="rgba:ffff/ffff/ffff/ffff"/>
+  <lkk:declare name="color-term"          value="rgba:ffff/ffff/ffff/efff"/>
+  <lkk:declare name="color-term-text"     value="rgba:0000/0000/0000/ffff"/>
 
   <!--
     NOTE: As "color-term" and "color-term-text" are only used by URxvt,
@@ -32,9 +32,9 @@
     placed here because they should be changed alongside "color-bkg".
   -->
 
-  <lkk:declare name="color-shadow-red"    value="0.50"/>
-  <lkk:declare name="color-shadow-green"  value="0.50"/>
-  <lkk:declare name="color-shadow-blue"   value="0.50"/>
+  <lkk:declare name="color-shadow-red"    value="1.0"/>
+  <lkk:declare name="color-shadow-green"  value="1.0"/>
+  <lkk:declare name="color-shadow-blue"   value="1.0"/>
 
 
   <lkk:declare name="color-black"         value="35313b"/>

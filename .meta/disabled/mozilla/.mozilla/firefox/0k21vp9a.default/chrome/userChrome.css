@@ -8,8 +8,8 @@
  */
 :root[devtoolstheme="dark"] > * {
   /* Chrome */
-  --chrome-background-color:                  #808080;
-  --chrome-color:                             #ffffff;
+  --chrome-background-color:                  #ffffff;
+  --chrome-color:                             #000000;
   --chrome-secondary-background-color:        #606060;
   --chrome-navigator-toolbox-separator-color: rgba(0,0,0,.2);
   --chrome-nav-bar-separator-color:           rgba(0,0,0,.2);
@@ -20,8 +20,8 @@
   --chrome-selection-background-color:        #e49e34;
 
   /* Tabs */
-  --tabs-toolbar-color:             #ffffff;;
-  --tab-background-color:           #808080;
+  --tabs-toolbar-color:             #000000;;
+  --tab-background-color:           #ffffff;
   --tab-hover-background-color:     #07090a;
   --tab-selection-color:            #ffffff;
   --tab-selection-background-color: #e49e34;
@@ -30,7 +30,7 @@
   --pinned-tab-glow: radial-gradient(22px at center calc(100% - 2px), rgba(76,158,217,0.9) 13%, rgba(0,0,0,0.4) 16%, transparent 70%);
 
   /* Url and search bars */
-  --url-and-searchbar-background-color: #808080;
+  --url-and-searchbar-background-color: #ffffff;
   --urlbar-separator-color:             #5F6670;
   --urlbar-dropmarker-url:              url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
   --urlbar-dropmarker-region:           rect(0px, 11px, 14px, 0px);
