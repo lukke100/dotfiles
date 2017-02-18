@@ -25,9 +25,9 @@ rofi.width:             50
 rofi.lines:             15
 rofi.columns:           1
 rofi.font:              monospace 10
-rofi.color-normal:      #ffffff,#000000,#ffffff,#e49e34,#ffffff
+rofi.color-normal:      #ffffff,#000000,#ffffff,#e49e34,#000000
 rofi.color-urgent:      #ffffff,#dc322f,#ffffff,#dc322f,#ececec
-rofi.color-active:      #ffffff,#000000,#ffffff,#e49e34,#ffffff
+rofi.color-active:      #ffffff,#000000,#ffffff,#e49e34,#000000
 rofi.color-window:      #ffffff,#e49e34,#000000
 rofi.bw:                2
 rofi.location:          2

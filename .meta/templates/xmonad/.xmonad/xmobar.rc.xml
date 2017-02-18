@@ -11,7 +11,8 @@ Config
   , fgColor       = "#<lkk:ref name="color-bkg-text"/>"
   , bgColor       = "#<lkk:ref name="color-bkg"/>"
   , position      = TopP 24 24
-  , border        = NoBorder
+  , border        = BottomB
+  , borderColor   = "#<lkk:ref name="color-act-text"/>"
   , lowerOnStart  = True
   , commands      =
     [ Run StdinReader

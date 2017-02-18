@@ -3,7 +3,7 @@
   <lkk:declare name="color-bkg"           value="ffffff"/>
   <lkk:declare name="color-bkg-text"      value="000000"/>
   <lkk:declare name="color-act"           value="e49e34"/>
-  <lkk:declare name="color-act-text"      value="ffffff"/>
+  <lkk:declare name="color-act-text"      value="000000"/>
   <lkk:declare name="color-urg"           value="dc322f"/>
   <lkk:declare name="color-urg-text"      value="ececec"/>
 

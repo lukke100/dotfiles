@@ -14,12 +14,11 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig
 
-brSelBg, brSelTx, brTtlTx, bdFocus, bdNorm :: String
-brSelBg = "#<lkk:ref name="color-act"/>"
-brSelTx = "#<lkk:ref name="color-act-text"/>"
-brTtlTx = "#<lkk:ref name="color-act"/>"
-bdFocus = "#<lkk:ref name="color-act"/>"
-bdNorm  = "#<lkk:ref name="color-bkg"/>"
+borderSelectBkg :: String
+borderSelectBkg = "#<lkk:ref name="color-act"/>"
+
+borderSelectTxt :: String
+borderSelectTxt = "#<lkk:ref name="color-act-text"/>"
 
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
@@ -37,8 +36,8 @@ main = statusBar barPath barFmt toggleStrutsKey conf >>= xmonad
 
 barFmt :: PP
 barFmt = xmobarPP
-  { ppCurrent = xmobarColor brSelTx brSelBg . wrap " " " "
-  , ppTitle   = xmobarColor brTtlTx ""
+  { ppCurrent = xmobarColor borderSelectTxt borderSelectBkg . wrap " " " "
+  , ppTitle   = xmobarColor "#<lkk:ref name="color-act"/>" ""
   , ppVisible = wrap "[" "]"
   , ppUrgent  = xmobarColor "red" "yellow"
   }
@@ -49,10 +48,10 @@ toggleStrutsKey XConfig { XMonad.modMask = m } = (m, xK_b)
 conf = def
   { terminal            = "urxvt"
   , focusFollowsMouse   = False
-  , layoutHook          = smartBorders layouts
-  , focusedBorderColor  = bdFocus
-  , normalBorderColor   = bdNorm
-  , borderWidth         = 2
+  , layoutHook          = layouts
+  , focusedBorderColor  = "#<lkk:ref name="color-bkg-text"/>"
+  , normalBorderColor   = "#<lkk:ref name="color-bkg"/>"
+  , borderWidth         = 1
   , workspaces          = ["term", "code", "http", "media", "misc"]
   , clickJustFocuses    = False
   } `additionalKeys`

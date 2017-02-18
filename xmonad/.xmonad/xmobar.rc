@@ -3,7 +3,8 @@ Config
   , fgColor       = "#000000"
   , bgColor       = "#ffffff"
   , position      = TopP 24 24
-  , border        = NoBorder
+  , border        = BottomB
+  , borderColor   = "#000000"
   , lowerOnStart  = True
   , commands      =
     [ Run StdinReader
