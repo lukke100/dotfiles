@@ -1,5 +1,5 @@
 Config
-  { font          = "xft:monofur:size=11"
+  { font          = "xft:monospace:size=10"
   , fgColor       = "#ffffff"
   , bgColor       = "#808080"
   , position      = TopP 24 24
