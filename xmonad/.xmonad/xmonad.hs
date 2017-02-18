@@ -18,9 +18,9 @@ barPath = "xmobar ~/.xmonad/xmobar.rc"
 
 layouts = let
   tLayout  = Tall 1 (3/100) (1/2)
-  layouts' = (spacing 24 $ Grid $ 4/3)
-         ||| (spacing 24 tLayout)
-         ||| (spacing 24 $ Mirror tLayout)
+  layouts' = spacing 24 (Grid $ 4/3)
+         ||| spacing 24 tLayout
+         ||| spacing 24 (Mirror tLayout)
          ||| noBorders Full
   in layouts'
 
@@ -38,7 +38,7 @@ barFmt = xmobarPP
 toggleStrutsKey :: XConfig t -> (KeyMask, KeySym)
 toggleStrutsKey XConfig { XMonad.modMask = m } = (m, xK_b)
 
-conf = defaultConfig
+conf = def
   { terminal            = "urxvt"
   , focusFollowsMouse   = False
   , layoutHook          = smartBorders layouts
