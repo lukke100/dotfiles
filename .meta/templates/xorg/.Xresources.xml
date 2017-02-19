@@ -35,10 +35,10 @@ rofi.font:              monospace 10
 rofi.color-normal:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-text"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-act-text"/>
 rofi.color-urgent:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-urg"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-urg"/>,#<lkk:ref name="color-urg-text"/>
 rofi.color-active:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-text"/>,#<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-act-text"/>
-rofi.color-window:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-act"/>,#<lkk:ref name="color-bkg-text"/>
-rofi.bw:                2
+rofi.color-window:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-text"/>,#<lkk:ref name="color-bkg-text"/>
+rofi.bw:                1
 rofi.location:          2
-rofi.padding:           2
+rofi.padding:           1
 rofi.yoffset:           66
 rofi.xoffset:           0
 rofi.fixed-num-lines:   false
