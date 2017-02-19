@@ -2,7 +2,7 @@
 <lkk:template xmlns:lkk="http://www.github.com/lukke100">
   <lkk:declare name="color-bkg"           value="ffffff"/>
   <lkk:declare name="color-bkg-text"      value="000000"/>
-  <lkk:declare name="color-act"           value="e49e34"/>
+  <lkk:declare name="color-act"           value="d79fcf"/>
   <lkk:declare name="color-act-text"      value="000000"/>
   <lkk:declare name="color-urg"           value="dc322f"/>
   <lkk:declare name="color-urg-text"      value="ececec"/>

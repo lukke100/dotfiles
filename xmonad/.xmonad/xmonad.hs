@@ -7,7 +7,7 @@ import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig
 
 borderSelectBkg :: String
-borderSelectBkg = "#e49e34"
+borderSelectBkg = "#d79fcf"
 
 borderSelectTxt :: String
 borderSelectTxt = "#000000"
@@ -29,7 +29,7 @@ main = statusBar barPath barFmt toggleStrutsKey conf >>= xmonad
 barFmt :: PP
 barFmt = xmobarPP
   { ppCurrent = xmobarColor borderSelectTxt borderSelectBkg . wrap " " " "
-  , ppTitle   = xmobarColor "#e49e34" ""
+  , ppTitle   = xmobarColor "#d79fcf" ""
   , ppVisible = wrap "[" "]"
   , ppUrgent  = xmobarColor "red" "yellow"
   }
