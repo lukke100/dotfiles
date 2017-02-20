@@ -39,7 +39,7 @@ rofi.color-window:      #<lkk:ref name="color-bkg"/>,#<lkk:ref name="color-bkg-t
 rofi.bw:                1
 rofi.location:          2
 rofi.padding:           1
-rofi.yoffset:           66
+rofi.yoffset:           51
 rofi.xoffset:           0
 rofi.fixed-num-lines:   false
 rofi.terminal:          urxvt

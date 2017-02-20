@@ -2,7 +2,7 @@ Config
   { font          = "xft:monospace:size=10"
   , fgColor       = "#000000"
   , bgColor       = "#ffffff"
-  , position      = TopP 24 24
+  , position      = TopP 17 17
   , border        = BottomB
   , borderColor   = "#000000"
   , lowerOnStart  = True
