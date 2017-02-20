@@ -15,13 +15,9 @@ borderSelectTxt = "#000000"
 barPath :: String
 barPath = "xmobar ~/.xmonad/xmobar.rc"
 
-layouts = let
-  tLayout  = Tall 1 (3/100) (1/2)
-  layouts' = spacing 17 (Grid $ 4/3)
-         ||| spacing 17 tLayout
-         ||| spacing 17 (Mirror tLayout)
-         ||| noBorders Full
-  in layouts'
+layouts = spacing 17 (Tall 1 (4/100) $ 56/100)
+      ||| spacing 17 (Grid $ 4/3)
+      ||| noBorders Full
 
 main :: IO ()
 main = statusBar barPath barFmt toggleStrutsKey conf >>= xmonad
