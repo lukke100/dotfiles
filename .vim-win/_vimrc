@@ -1,5 +1,5 @@
 " source $VIMRUNTIME/../_vimrc
-source E:/lukke/work/dotfiles/.disabled/vim/.vimrc
+source E:/lukke/work/dotfiles/.meta/disabled/vim/.vimrc
 
 " configure gVim appearance
 set guifont=Monofur:h10
