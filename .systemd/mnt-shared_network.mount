@@ -7,7 +7,7 @@ ConditionVirtualization=oracle
 AssertPathIsDirectory=/mnt/shared-network
 
 [Mount]
-What=//192.168.1.4/DRIVESHARE
+What=//192.168.1.3/DRIVESHARE
 Where=/mnt/shared-network
 Options=credentials=/etc/smb-cred,uid=lukke,gid=lukke
 Type=cifs
