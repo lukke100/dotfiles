@@ -45,3 +45,7 @@ endfunc
 " ============================ File Type Specific ============================ "
 autocmd FileType gitcommit setlocal colorcolumn=73
 autocmd FileType gitcommit setlocal textwidth=72
+
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python setlocal softtabstop=4
