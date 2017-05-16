@@ -92,26 +92,26 @@ if echo "$TERM" | grep -q linux
 then
   USE_BACKGROUND=true
 
-  printf '\033]P1885163' # Red
-  printf '\033]P25c845b' # Green
-  printf '\033]P3887d5b' # Yellow
-  printf '\033]P455598e' # Blue
-  printf '\033]P581518e' # Magenta
-  printf '\033]P6558487' # Cyan
-  printf '\033]P7aeaab4' # White
-  printf '\033]P84f4c56' # Light Black
-  printf '\033]P9b98898' # Light Red
-  printf '\033]PA92b692' # Light Green
-  printf '\033]PBb9af92' # Light Yellow
-  printf '\033]PC8c8ec0' # Light Blue
-  printf '\033]PDb388c0' # Light Magenta
-  printf '\033]PE8cb6b9' # Light Cyan
-  printf '\033]PFd0cdd7' # Light White
+  printf '\033]P17e1741' # Red
+  printf '\033]P21b511d' # Green
+  printf '\033]P36d2717' # Yellow
+  printf '\033]P4511da3' # Blue
+  printf '\033]P56b1970' # Magenta
+  printf '\033]P6443879' # Cyan
+  printf '\033]P7bfbfbf' # White
+  printf '\033]P87f7f7f' # Light Black
+  printf '\033]P9e65e62' # Light Red
+  printf '\033]PA569d1c' # Light Green
+  printf '\033]PBc27a2c' # Light Yellow
+  printf '\033]PC7d81db' # Light Blue
+  printf '\033]PDd35aca' # Light Magenta
+  printf '\033]PE66964f' # Light Cyan
+  printf '\033]PFffffff' # Light White
 
   # changing background color doesn't fully apply unless `clear` is called
   if "$USE_BACKGROUND"
   then
-    printf '\033]P035313b' # Black
+    printf '\033]P0000000' # Black
     clear
   fi
 fi

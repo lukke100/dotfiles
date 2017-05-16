@@ -19,6 +19,24 @@ URxvt.cursorBlink:          true
 URxvt*foreground: <lkk:ref name="color-term-text"/>
 URxvt*background: <lkk:ref name="color-term"/>
 
+URxvt*color0:  #<lkk:ref name="color-black"/>
+URxvt*color1:  #<lkk:ref name="color-red"/>
+URxvt*color2:  #<lkk:ref name="color-green"/>
+URxvt*color3:  #<lkk:ref name="color-yellow"/>
+URxvt*color4:  #<lkk:ref name="color-blue"/>
+URxvt*color5:  #<lkk:ref name="color-magenta"/>
+URxvt*color6:  #<lkk:ref name="color-cyan"/>
+URxvt*color7:  #<lkk:ref name="color-white"/>
+
+URxvt*color8:  #<lkk:ref name="color-light-black"/>
+URxvt*color9:  #<lkk:ref name="color-light-red"/>
+URxvt*color10: #<lkk:ref name="color-light-green"/>
+URxvt*color11: #<lkk:ref name="color-light-yellow"/>
+URxvt*color12: #<lkk:ref name="color-light-blue"/>
+URxvt*color13: #<lkk:ref name="color-light-magenta"/>
+URxvt*color14: #<lkk:ref name="color-light-cyan"/>
+URxvt*color15: #<lkk:ref name="color-light-white"/>
+
 Xft.antialias: true
 Xft.autohint:  true
 Xft.dpi:       96

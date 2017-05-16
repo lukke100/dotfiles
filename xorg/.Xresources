@@ -12,6 +12,24 @@ URxvt.cursorBlink:          true
 URxvt*foreground: rgba:0000/0000/0000/ffff
 URxvt*background: rgba:ffff/ffff/ffff/cfff
 
+URxvt*color0:  #000000
+URxvt*color1:  #7e1741
+URxvt*color2:  #1b511d
+URxvt*color3:  #6d2717
+URxvt*color4:  #511da3
+URxvt*color5:  #6b1970
+URxvt*color6:  #443879
+URxvt*color7:  #bfbfbf
+
+URxvt*color8:  #7f7f7f
+URxvt*color9:  #e65e62
+URxvt*color10: #569d1c
+URxvt*color11: #c27a2c
+URxvt*color12: #7d81db
+URxvt*color13: #d35aca
+URxvt*color14: #66964f
+URxvt*color15: #ffffff
+
 Xft.antialias: true
 Xft.autohint:  true
 Xft.dpi:       96

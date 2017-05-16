@@ -36,22 +36,21 @@
   <lkk:declare name="color-shadow-green"  value="1.0"/>
   <lkk:declare name="color-shadow-blue"   value="1.0"/>
 
+  <lkk:declare name="color-black"         value="000000"/>
+  <lkk:declare name="color-red"           value="7e1741"/>
+  <lkk:declare name="color-green"         value="1b511d"/>
+  <lkk:declare name="color-yellow"        value="6d2717"/>
+  <lkk:declare name="color-blue"          value="511da3"/>
+  <lkk:declare name="color-magenta"       value="6b1970"/>
+  <lkk:declare name="color-cyan"          value="443879"/>
+  <lkk:declare name="color-white"         value="bfbfbf"/>
 
-  <lkk:declare name="color-black"         value="35313b"/>
-  <lkk:declare name="color-red"           value="885163"/>
-  <lkk:declare name="color-green"         value="5c845b"/>
-  <lkk:declare name="color-yellow"        value="887d5b"/>
-  <lkk:declare name="color-blue"          value="55598e"/>
-  <lkk:declare name="color-magenta"       value="81518e"/>
-  <lkk:declare name="color-cyan"          value="558487"/>
-  <lkk:declare name="color-white"         value="aeaab4"/>
-
-  <lkk:declare name="color-light-black"   value="4f4c56"/>
-  <lkk:declare name="color-light-red"     value="b98898"/>
-  <lkk:declare name="color-light-green"   value="92b692"/>
-  <lkk:declare name="color-light-yellow"  value="b9af92"/>
-  <lkk:declare name="color-light-blue"    value="8c8ec0"/>
-  <lkk:declare name="color-light-magenta" value="b388c0"/>
-  <lkk:declare name="color-light-cyan"    value="8cb6b9"/>
-  <lkk:declare name="color-light-white"   value="d0cdd7"/>
+  <lkk:declare name="color-light-black"   value="7f7f7f"/>
+  <lkk:declare name="color-light-red"     value="e65e62"/>
+  <lkk:declare name="color-light-green"   value="569d1c"/>
+  <lkk:declare name="color-light-yellow"  value="c27a2c"/>
+  <lkk:declare name="color-light-blue"    value="7d81db"/>
+  <lkk:declare name="color-light-magenta" value="d35aca"/>
+  <lkk:declare name="color-light-cyan"    value="66964f"/>
+  <lkk:declare name="color-light-white"   value="ffffff"/>
 </lkk:template>
