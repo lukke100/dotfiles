@@ -43,5 +43,5 @@ func! DeleteTrailingWS()
 endfunc
 
 " ============================ File Type Specific ============================ "
-autocmd FileType gitcommit set colorcolumn=73
-autocmd FileType gitcommit set textwidth=72
+autocmd FileType gitcommit setlocal colorcolumn=73
+autocmd FileType gitcommit setlocal textwidth=72

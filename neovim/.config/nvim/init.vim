@@ -59,7 +59,7 @@ let g:syntastic_python_checkers = ['flake8', 'pylint']
 
 autocmd CompleteDone * pclose!
 
-autocmd FileType gitcommit set colorcolumn=73
-autocmd FileType gitcommit set textwidth=72
+autocmd FileType gitcommit setlocal colorcolumn=73
+autocmd FileType gitcommit setlocal textwidth=72
 
-autocmd FileType make set tabstop=8
+autocmd FileType make setlocal tabstop=8
