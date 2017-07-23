@@ -60,11 +60,6 @@ PERL_LOCAL_LIB_ROOT="$HOME/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}
 PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 
-if [ ! "$(pidof transmission-daemon)" ]
-then
-    transmission-daemon &
-fi
-
 BASHRC=$HOME/.bashrc
 
 if [ -x "$BASHRC" ]
