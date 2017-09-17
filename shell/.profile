@@ -63,7 +63,7 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 BASHRC=$HOME/.bashrc
 
 # shellcheck disable=SC1091
-. /home/lukke/work/torch/install/bin/torch-activate
+. /home/lukke/work/torch-cl/install/bin/torch-activate
 
 if [ -x "$BASHRC" ]
 then
