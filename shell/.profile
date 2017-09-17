@@ -48,7 +48,7 @@ EMSCRIPTEN_ROOT=/usr/lib/emscripten
 GOPATH=$HOME/.go
 LLVM_ROOT=/usr/bin
 LUA_CPATH=$(luarocks path --lr-cpath)
-LUA_PATH=$(luarocks path --lr-path)
+LUA_PATH="$(luarocks path --lr-path);./?.lua"
 NODE_JS=/usr/bin/node
 PAGER=less
 VISUAL=nvim
@@ -61,6 +61,9 @@ PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 
 BASHRC=$HOME/.bashrc
+
+# shellcheck disable=SC1091
+. /home/lukke/work/torch/install/bin/torch-activate
 
 if [ -x "$BASHRC" ]
 then
