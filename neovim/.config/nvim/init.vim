@@ -42,15 +42,21 @@ endfunc
 " ========================== Plugin Initialization =========================== "
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neoinclude.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/vim-easy-align'
 Plug 'neomake/neomake'
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
+Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
+Plug 'zchee/libclang-python3'
 call plug#end()
 
 call deoplete#enable()
+
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header  = '/usr/lib/clang/'
 
 let g:airline_powerline_fonts = 1
 
