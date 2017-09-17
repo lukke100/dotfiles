@@ -7,7 +7,7 @@
 
   <lkk:content>
 Config
-  { font          = "xft:monospace:size=10"
+  { font          = "xft:monospace:size=9"
   , fgColor       = "#<lkk:ref name="color-bkg-text"/>"
   , bgColor       = "#<lkk:ref name="color-bkg"/>"
   , position      = TopP 17 17
