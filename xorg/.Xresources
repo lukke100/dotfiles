@@ -1,5 +1,5 @@
 URxvt.scrollBar:            false
-URxvt.font:                 xft:monospace:size=10
+URxvt.font:                 xft:monospace:size=9
 URxvt.depth:                32
 URxvt.saveLines:            0
 URxvt.perl-ext:             default,url-select
