@@ -40,25 +40,29 @@ func! DeleteTrailingWS()
 endfunc
 
 " ========================== Plugin Initialization =========================== "
-call plug#begin()
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neoinclude.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/vim-easy-align'
-Plug 'neomake/neomake'
-Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'
-Plug 'zchee/deoplete-clang'
-Plug 'zchee/deoplete-jedi'
-Plug 'zchee/libclang-python3'
-call plug#end()
 
-call deoplete#enable()
+" NOTE: The root user shouldn't install plugins.
+if ! (systemlist('id -u')[0] ==# 0)
+    call plug#begin()
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/neoinclude.vim'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'junegunn/vim-easy-align'
+    Plug 'neomake/neomake'
+    Plug 'scrooloose/syntastic'
+    Plug 'vim-airline/vim-airline'
+    Plug 'zchee/deoplete-clang'
+    Plug 'zchee/deoplete-jedi'
+    Plug 'zchee/libclang-python3'
+    call plug#end()
 
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header  = '/usr/lib/clang/'
+    call deoplete#enable()
 
-let g:airline_powerline_fonts = 1
+    let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+    let g:deoplete#sources#clang#clang_header  = '/usr/lib/clang/'
+
+    let g:airline_powerline_fonts = 1
+endif
 
 " ============================ File Type Specific ============================ "
 let g:syntastic_python_checkers = ['flake8', 'pylint']
