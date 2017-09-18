@@ -9,15 +9,12 @@ then
   done
 fi
 
-# pidof conky    || conky &
+pidof light-locker  || light-locker --lock-on-suspend --lock-on-lid &
+pidof compton       || compton &
 
 if ! systemd-detect-virt --quiet
 then
-  # pidof compton  || compton --blur-background --blur-background-frame &
-  pidof compton  || compton &
   pidof redshift || redshift -l 45.0:-75.0 &
-else
-  pidof compton  || compton &
 fi
 
 dex -a -e xmonad
