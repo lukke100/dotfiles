@@ -11,9 +11,9 @@ set colorcolumn=80
 set expandtab
 set nojoinspaces
 set nowrap
-set shiftwidth=2
+set shiftwidth=4
 set smartindent
-set tabstop=2
+set tabstop=4
 set textwidth=79
 
 " ============================ Interface Options ============================= "
