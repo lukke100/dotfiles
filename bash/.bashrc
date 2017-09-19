@@ -67,7 +67,6 @@ alias info="info --vi-keys"
 alias la="ls -A"
 alias ll="ls -l"
 alias ls="ls -1HLbh --file-type $COLORTYPE $DIRSFIRST $TIMESTYLE"
-alias top=htop
 alias vdir="vdir -A $COLORTYPE $DIRSFIRST $TIMESTYLE"
 
 RM_EX_RGX='s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
@@ -90,7 +89,7 @@ fi
 
 if echo "$TERM" | grep -q linux
 then
-  USE_BACKGROUND=true
+  USE_BACKGROUND=false
 
   printf '\033]P17e1741' # Red
   printf '\033]P21b511d' # Green
