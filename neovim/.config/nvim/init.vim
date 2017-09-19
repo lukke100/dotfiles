@@ -6,7 +6,7 @@ set noswapfile
 " =========================== Indentation Options ============================ "
 colorscheme default
 
-set background=light
+set background=dark
 set colorcolumn=80
 set expandtab
 set nojoinspaces
