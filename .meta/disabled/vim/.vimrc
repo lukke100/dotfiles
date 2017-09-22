@@ -13,9 +13,9 @@ set colorcolumn=80
 set expandtab
 set nojoinspaces
 set nowrap
-set shiftwidth=2
+set shiftwidth=4
 set smartindent
-set tabstop=2
+set tabstop=4
 set textwidth=79
 
 " ============================ Interface Options ============================= "
@@ -45,7 +45,3 @@ endfunc
 " ============================ File Type Specific ============================ "
 autocmd FileType gitcommit setlocal colorcolumn=73
 autocmd FileType gitcommit setlocal textwidth=72
-
-autocmd FileType python setlocal tabstop=4
-autocmd FileType python setlocal shiftwidth=4
-autocmd FileType python setlocal softtabstop=4
