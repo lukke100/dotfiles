@@ -61,13 +61,13 @@ COLORTYPE='--color=auto'
 DIRSFIRST='--group-directories-first'
 TIMESTYLE='--time-style=long-iso'
 
-alias dir="dir $COLORTYPE $DIRSFIRST $TIMESTYLE"
+DIR_FLAGS="-HLbho --file-type $COLORTYPE $DIRSFIRST $TIMESTYLE"
+
+alias dir="dir $DIR_FLAGS"
 alias grep="grep $COLORTYPE"
 alias info="info --vi-keys"
-alias la="ls -A"
-alias ll="ls -l"
-alias ls="ls -1HLbh --file-type $COLORTYPE $DIRSFIRST $TIMESTYLE"
-alias vdir="vdir -A $COLORTYPE $DIRSFIRST $TIMESTYLE"
+alias ls="ls $DIR_FLAGS"
+alias vdir="vdir -A $DIR_FLAGS"
 
 RM_EX_RGX='s/ex\=[0-9][0-9];[0-9][0-9]:/ex\=0:/'
 eval "$(dircolors -b | sed -e "$RM_EX_RGX")"
