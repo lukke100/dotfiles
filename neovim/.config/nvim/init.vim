@@ -9,6 +9,8 @@ colorscheme default
 set background=light
 set colorcolumn=80
 set expandtab
+set list
+set listchars=tab:»⋅,trail:⋅
 set nojoinspaces
 set nowrap
 set shiftwidth=4
@@ -72,4 +74,4 @@ autocmd CompleteDone * pclose!
 autocmd FileType gitcommit setlocal colorcolumn=73
 autocmd FileType gitcommit setlocal textwidth=72
 
-autocmd FileType make setlocal tabstop=8
+autocmd FileType c,cpp,make setlocal noexpandtab shiftwidth=8  tabstop=8
