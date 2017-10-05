@@ -6,6 +6,7 @@ set noswapfile
 " =========================== Indentation Options ============================ "
 colorscheme default
 
+set autoindent
 set background=dark
 set colorcolumn=80
 set expandtab
@@ -14,7 +15,6 @@ set listchars=tab:»⋅,trail:⋅
 set nojoinspaces
 set nowrap
 set shiftwidth=4
-set smartindent
 set tabstop=4
 set textwidth=79
 
