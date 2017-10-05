@@ -7,7 +7,7 @@ set noswapfile
 colorscheme default
 
 set autoindent
-set background=dark
+set background=light
 set colorcolumn=80
 set expandtab
 set list
