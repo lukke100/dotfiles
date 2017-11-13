@@ -25,7 +25,7 @@ PERL_BIN=$HOME/.perl5/bin
 PATH=$(perl -e "$PATH_FIX" "$HOME_BIN" "$PERL_BIN" "$PATH")
 CLASSPATH=$(perl -e "$PATH_FIX" "$CLASSPATH" "." /usr/share/java/*.jar)
 
-BROWSER=google-chrome-stable
+BROWSER=firefox-developer
 EDITOR=nvim
 PAGER=less
 VISUAL=nvim
