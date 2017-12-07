@@ -8,3 +8,5 @@
 [commit]
 	verbose = true
 	template = ~/.gitmessage
+[core]
+	excludesfile = ~/.gitignore
