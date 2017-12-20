@@ -9,13 +9,16 @@ colorscheme default
 set autoindent
 set background=light
 set colorcolumn=80
-set expandtab
+set copyindent
 set list
 set listchars=tab:»⋅,trail:⋅
+set noexpandtab
 set nojoinspaces
 set nowrap
-set shiftwidth=4
-set tabstop=4
+set preserveindent
+set shiftwidth=0
+set softtabstop=0
+set tabstop=8
 set textwidth=79
 
 " ============================ Interface Options ============================= "
@@ -73,5 +76,3 @@ autocmd CompleteDone * pclose!
 
 autocmd FileType gitcommit setlocal colorcolumn=73
 autocmd FileType gitcommit setlocal textwidth=72
-
-autocmd FileType c,cpp,make setlocal noexpandtab shiftwidth=8  tabstop=8
