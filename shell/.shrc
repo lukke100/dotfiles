@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+export LESS=-FRis
+export LESSHISTFILE=/dev/null
+export PS1="$USER@\\h \\$ "
+
+alias ls='ls -ALFl'
+
+if [ -z "$PS1" ]
+then
+	return
+fi
