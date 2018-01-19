@@ -1,9 +1,0 @@
-[Unit]
-Description=1.8TB Network Drive Link
-ConditionVirtualization=oracle
-AssertPathIsDirectory=/mnt/shared-network
-AssertPathIsDirectory=/mnt/shared-active
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/mount --bind /mnt/shared-network /mnt/shared-active
