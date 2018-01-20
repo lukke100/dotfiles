@@ -1,6 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/sh
 set -eu
-IFS=$(printf '\n\t')
 
 # shellcheck disable=SC2035
 stow "$@" -Dvt ~ */

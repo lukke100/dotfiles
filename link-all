@@ -1,6 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/sh
 set -eu
-IFS=$(printf '\n\t')
 
 SCRIPT_SRC=$(readlink -f "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT_SRC")

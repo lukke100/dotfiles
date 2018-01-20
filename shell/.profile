@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 umask 077
 
 export BROWSER=firefox

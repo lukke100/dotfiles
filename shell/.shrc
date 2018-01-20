@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 export LESS=-FRis
 export LESSHISTFILE=/dev/null
 export PS1="$USER@\\h \\$ "
