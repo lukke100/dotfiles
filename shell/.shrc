@@ -3,7 +3,7 @@ export LESS=-NRis
 export LESSHISTFILE=/dev/null
 export PS1="$USER@\\h \\$ "
 
-alias ls='ls -ALFl'
+alias ls='ls -AFLl'
 
 if [ -z "$PS1" ]
 then
