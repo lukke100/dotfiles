@@ -1,5 +1,5 @@
 #!/bin/sh
-export LESS=-Ris
+export LESS=-NRis
 export LESSHISTFILE=/dev/null
 export PS1="$USER@\\h \\$ "
 
