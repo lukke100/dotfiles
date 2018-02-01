@@ -3,7 +3,7 @@ export LESS=-NRis
 export LESSHISTFILE=/dev/null
 export PS1="$USER@\\h \\$ "
 
-alias ls='ls -AFLl | sort -k 1,1r -k 9,9'
+alias ls='ls_() { ls -AFLl "$@" | sort -k 1,1r -k 9,9; }; ls_'
 
 if [ -z "$PS1" ]
 then
