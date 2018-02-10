@@ -1,5 +1,5 @@
 #!/bin/sh
-export LESS=-NRis
+export LESS=-NRcis
 export LESSHISTFILE=/dev/null
 export MANWIDTH=72
 export PS1="$USER@\\h:\w \\$ "
