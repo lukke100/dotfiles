@@ -7,4 +7,4 @@ SCRIPT_DIR=$(dirname "$SCRIPT_SRC")
 cd "$SCRIPT_DIR"
 
 # shellcheck disable=SC2035
-stow --no-folding "$@" -vt ~ */ --ignore='\.ignore\.[^/]*'
+stow --no-folding "$@" -vt ~ */
