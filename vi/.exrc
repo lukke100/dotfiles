@@ -3,4 +3,3 @@ set number
 set ruler
 set showmatch
 set showmode
-set verbose
