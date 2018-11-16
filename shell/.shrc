@@ -1,7 +1,9 @@
 #!/bin/sh
-export LESS=-NRcis
-export LESSHISTFILE=/dev/null
-export MANWIDTH=72
+if [ "${KSH_VERSION+ }" ]
+then
+	. /etc/ksh.kshrc
+fi
+
 export PS1="$USER@\\h:\w \\$ "
 
 alias ls='ls_() { ls -AFLl "$@" | sort -k 1,1r -k 9,9; }; ls_'
