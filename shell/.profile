@@ -6,12 +6,12 @@ export EDITOR=vi
 export ENV=$HOME/.shrc
 export PAGER=less
 
-if [ "${BASH+1}" ]
+if [ "${BASH+ }" ]
 then
 	. "$ENV"
 fi
 
-if [ -x /usr/bin/fortune -a -z "${TMUX+1}" ]
+if [ -x /usr/bin/fortune -a -z "${TMUX+ }" ]
 then
 	/usr/bin/fortune freebsd-tips
 fi
