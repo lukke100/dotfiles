@@ -8,6 +8,9 @@ export LESS=-Rcis
 export LESSHISTFILE=/dev/null
 export MANWIDTH=72
 export PAGER=less
+export PATH=$HOME/.local/bin:$PATH
+
+mkdir -p "$HOME/.local/bin"
 
 if [ "${BASH+ }" ]
 then
