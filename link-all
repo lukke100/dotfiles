@@ -1,10 +1,3 @@
-#!/bin/sh
-set -eu
-
-SCRIPT_SRC=$(readlink -f "$0")
-SCRIPT_DIR=$(dirname "$SCRIPT_SRC")
-
-cd "$SCRIPT_DIR"
-
-# shellcheck disable=SC2035
+#!/bin/sh -eu
+cd "$(dirname -- "$0")"
 stow --no-folding "$@" -vt ~ */

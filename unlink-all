@@ -1,6 +1,4 @@
-#!/bin/sh
-set -eu
-
-# shellcheck disable=SC2035
+#!/bin/sh -eu
+cd "$(dirname -- "$0")"
 stow "$@" -Dvt ~ */
 find ~/ -empty -type d -delete
