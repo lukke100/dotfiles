@@ -10,3 +10,5 @@
 	template = ~/.config/git/message
 [core]
 	excludesfile = ~/.config/git/ignore
+[init]
+	defaultBranch = main
