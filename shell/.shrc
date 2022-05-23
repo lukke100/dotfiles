@@ -6,4 +6,4 @@ fi
 
 export PS1="$USER@\\h:\w \\$ "
 
-alias ls='ls_() { ls -AFLl "$@" | sort -k 1,1r -k 9,9; }; ls_'
+alias ls='ls -la'
