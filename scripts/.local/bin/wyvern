@@ -1,7 +1,7 @@
 #!/bin/sh -eu
 export CC=clang
 export CFLAGS
-CLFAGS="-Wall -Wextra -Werror -Wpedantic -g3 -O3 -std=c90 ${CFLAGS-}"
+CFLAGS="-Wall -Wextra -Werror -Wpedantic -g3 -O3 -std=c90 ${CFLAGS-}"
 CFLAGS="-fsanitize=address,bounds,undefined,implicit-conversion ${CFLAGS-}"
-CFLAGS="-Wno-unused-parameter ${CFLAGS-}"
+CFLAGS="-march=native -Wno-unused-parameter ${CFLAGS-}"
 "$@"
