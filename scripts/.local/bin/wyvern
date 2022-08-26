@@ -1,7 +1,10 @@
 #!/bin/sh -eu
 export CC=clang
 export CFLAGS
-CFLAGS="-Wall -Wextra -Werror -Wpedantic -g3 -O3 -std=c90 ${CFLAGS-}"
+export LDFLAGS
 CFLAGS="-fsanitize=address,bounds,undefined,implicit-conversion ${CFLAGS-}"
-CFLAGS="-march=native -Wno-unused-parameter ${CFLAGS-}"
+CFLAGS="-g3 -Og -march=native ${CFLAGS-}"
+CFLAGS="-Wall -Wextra -Werror -Wpedantic -std=c90 ${CFLAGS-}"
+CFLAGS="-I$HOME/.local/include/ ${CFLAGS-}"
+LDFLAGS="-L$HOME/.local/lib/ ${LDFLAGS-}"
 "$@"
