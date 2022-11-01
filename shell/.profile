@@ -16,12 +16,18 @@ export PERL_MM_OPT=INSTALL_BASE=$HOME/perl5
 
 mkdir -p "$HOME/.local/bin"
 
-if [ "${BASH+ }" ]
+if [ "${BASH:+dummy}" ]
 then
 	. "$ENV"
 fi
 
-if [ -x /usr/bin/fortune -a -z "${TMUX+ }" ]
+if [ -z "${SSH_AUTH_SOCK:+dummy}" ]
+then
+	eval `ssh-agent -s`
+	ssh-add
+fi
+
+if [ -x /usr/bin/fortune ]
 then
 	/usr/bin/fortune freebsd-tips
 fi
