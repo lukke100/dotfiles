@@ -24,7 +24,6 @@ fi
 if [ -z "${SSH_AUTH_SOCK:+dummy}" ]
 then
 	eval `ssh-agent -s`
-	ssh-add
 fi
 
 if [ -x /usr/bin/fortune ]
