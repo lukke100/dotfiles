@@ -21,10 +21,13 @@ then
 	. "$ENV"
 fi
 
-if [ -z "${SSH_AUTH_SOCK:+dummy}" ]
+if [ ! -S "$HOME/.ssh/ssh-auth-sock" ]
 then
 	eval `ssh-agent -s`
+	ln -fs "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh-auth-sock"
 fi
+
+export SSH_AUTH_SOCK=$HOME/.ssh/ssh-auth-sock
 
 if [ -x /usr/bin/fortune ]
 then
