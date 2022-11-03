@@ -4,6 +4,7 @@ umask 077
 export BROWSER=firefox
 export EDITOR=vi
 export ENV=$HOME/.shrc
+export LC_CTYPE=en_US.UTF-8
 export LESS=-Rcis
 export LESSHISTFILE=/dev/null
 export MANWIDTH=72
