@@ -33,4 +33,7 @@ export SSH_AUTH_SOCK=$HOME/.ssh/ssh-auth-sock
 if [ -x /usr/bin/fortune ]
 then
 	/usr/bin/fortune freebsd-tips
+elif [ -x /usr/games/fortune ]
+then
+	/usr/games/fortune
 fi
