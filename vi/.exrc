@@ -1,4 +1,4 @@
-set autoindent
+set noautoindent
 set number
 set ruler
 set showmatch
