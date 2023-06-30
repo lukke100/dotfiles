@@ -4,6 +4,6 @@ then
 	. /etc/ksh.kshrc
 fi
 
-export PS1="$USER@\\h:\w \\$ "
+export PS1='$USER${HOST+@$HOST}:\w \$ '
 
 alias ls='ls -la'
