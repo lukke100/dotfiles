@@ -5,6 +5,7 @@
 	default = simple
 [diff]
 	algorithm = histogram
+	wsErrorHighlight = all
 [commit]
 	verbose = true
 	template = ~/.config/git/message
