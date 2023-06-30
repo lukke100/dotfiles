@@ -1,9 +1,9 @@
 #!/bin/sh
-if [ "${KSH_VERSION+ }" ]
+if [ "${KSH_VERSION:+dummy}" ]
 then
 	. /etc/ksh.kshrc
 fi
 
 export PS1='$USER${HOST+@$HOST}:\w \$ '
 
-alias ls='ls -la'
+alias ls='ls -Alp'
