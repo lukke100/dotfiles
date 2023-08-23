@@ -38,16 +38,6 @@ then
 	eval "$(SHELL=/bin/sh lesspipe)"
 fi
 
-if [ -x /usr/bin/dircolors ]
-then
-	eval "$(dircolors -b)"
-	alias ls='ls -Alp --color=auto'
-	alias cd='_cdls() { "cd" "$@" && "ls" -p --color=auto; }; _cdls'
-else
-	alias ls='ls -Alp'
-	alias cd='_cdls() { "cd" "$@" && "ls" -p; }; _cdls'
-fi
-
 if [ "${BASH:+dummy}" ]
 then
 	. "$ENV"
