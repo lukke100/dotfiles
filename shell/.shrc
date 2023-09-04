@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ "${KSH_VERSION:+dummy}" ]
+if [ -n "$KSH_VERSION" ]
 then
 	. /etc/ksh.kshrc
 fi
