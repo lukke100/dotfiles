@@ -1,6 +1,7 @@
 #!/bin/sh
 umask 077
 
+export ASAN_OPTIONS=abort_on_error=1:disable_coredump=0:unmap_shadow_on_exit=1
 export BROWSER=firefox
 export EDITOR=vi
 export ENV="$HOME/.shrc"
