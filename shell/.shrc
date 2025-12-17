@@ -4,12 +4,21 @@ then
 	. /etc/ksh.kshrc
 fi
 
+lsalias='ls -Alp'
+cdalias='_cdls() { "cd" "$@" && "ls" -p'
+
 if [ -x /usr/bin/dircolors ]
 then
 	eval "$(dircolors -b)"
-	alias ls='ls -Alp --color=auto'
-	alias cd='_cdls() { "cd" "$@" && "ls" -p --color=auto; }; _cdls'
-else
-	alias ls='ls -Alp'
-	alias cd='_cdls() { "cd" "$@" && "ls" -p; }; _cdls'
+	lsalias="$lsalias --color=auto"
+	cdalias="$cdalias --color=auto"
 fi
+
+if 'ls' --group-directories-first -d . >/dev/null 2>&1
+then
+	lsalias="$lsalias --group-directories-first"
+	cdalias="$cdalias --group-directories-first"
+fi
+
+eval "alias ls='$lsalias'"
+eval "alias cd='$cdalias; }; _cdls'"
