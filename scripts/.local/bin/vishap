@@ -1,0 +1,4 @@
+#!/bin/sh -eu
+export CC=clang
+
+exec "$CC" "$@"

@@ -1,12 +1,12 @@
 #!/bin/sh -eu
-export CC=clang
+export CC
 export CFLAGS
 export LDFLAGS
 export MAKEFLAGS
+CC="${CC-vishap}"
 CFLAGS="-fsanitize=address,bounds,undefined,implicit-conversion ${CFLAGS-}"
-CFLAGS="-g3 -Og -march=native ${CFLAGS-}"
 CFLAGS="-Wall -Wextra -Werror -Wpedantic -std=c90 ${CFLAGS-}"
-CFLAGS="-I$HOME/.local/include/ ${CFLAGS-}"
+CFLAGS="-I$HOME/.local/include/ -g3 -Og ${CFLAGS-}"
 LDFLAGS="-L$HOME/.local/lib/ ${LDFLAGS-}"
 MAKEFLAGS="-e"
-"$@"
+exec "$@"

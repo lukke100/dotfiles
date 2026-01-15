@@ -1,11 +1,12 @@
 #!/bin/sh -eu
-export CC=clang
+export CC
 export CFLAGS
 export LDFLAGS
 export MAKEFLAGS
-CFLAGS="-DNDEBUG -flto -march=native -Oz ${CFLAGS-}"
+CC="${CC-clang}"
 CFLAGS="-Wall -Wextra -Wpedantic -std=c90 ${CFLAGS-}"
+CFLAGS="-DNDEBUG -flto -march=native -Oz ${CFLAGS-}"
 CFLAGS="-I$HOME/.local/include/ ${CFLAGS-}"
-LDFLAGS="-flto -L$HOME/.local/lib/ -s ${LDFLAGS-}"
+LDFLAGS="-L$HOME/.local/lib/ -flto -s ${LDFLAGS-}"
 MAKEFLAGS="-e"
-"$@"
+exec "$@"
