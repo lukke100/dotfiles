@@ -3,7 +3,7 @@ umask 077
 
 export ASAN_OPTIONS=abort_on_error=1:disable_coredump=0:unmap_shadow_on_exit=1
 export BROWSER=firefox
-export EDITOR=vi
+export EDITOR=nvim
 export ENV="$HOME/.shrc"
 export HISTFILE="$HOME/.history"
 export HISTSIZE=1000
