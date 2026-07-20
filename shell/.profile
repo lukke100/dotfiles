@@ -1,4 +1,7 @@
 #!/bin/sh
+[ -n "$PROFILE_LOADED" ] && return
+export PROFILE_LOADED=1
+
 umask 077
 
 export ASAN_OPTIONS=abort_on_error=1:disable_coredump=0:unmap_shadow_on_exit=1
@@ -44,9 +47,4 @@ fi
 if [ -x /usr/bin/lesspipe ]
 then
 	eval "$(SHELL=/bin/sh lesspipe)"
-fi
-
-if [ -n "$BASH" ]
-then
-	. "$ENV"
 fi

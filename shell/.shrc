@@ -4,6 +4,8 @@ then
 	. /etc/ksh.kshrc
 fi
 
+. "$HOME/.profile"
+
 lsalias='ls -Alp'
 cdalias='_cdls() { "cd" "$@" && "ls" -p'
 
