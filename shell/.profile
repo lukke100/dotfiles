@@ -21,6 +21,11 @@ export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 
 mkdir -p "$HOME/.local/bin"
 
+if [ -n "$XDG_RUNTIME_DIR" ] && [ -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ]
+then
+	export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+fi
+
 if [ -x /usr/bin/fortune ]
 then
 	/usr/bin/fortune freebsd-tips
