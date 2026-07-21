@@ -1,10 +1,19 @@
 #!/bin/sh
+. "$HOME/.profile"
+
 if [ -n "$KSH_VERSION" ]
 then
 	. /etc/ksh.kshrc
 fi
 
-. "$HOME/.profile"
+umask 0077
+
+case $- in
+	*i*) ;;
+	*) return ;;
+esac
+
+export PS1='$USER${HOSTNAME+@$HOSTNAME}:\w \$ '
 
 lsalias='ls -Alp'
 cdalias='_cdls() { "cd" "$@" && "ls" -p'

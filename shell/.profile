@@ -1,8 +1,6 @@
 #!/bin/sh
-[ -n "$PROFILE_LOADED" ] && return
-export PROFILE_LOADED=1
-
-umask 077
+[ -n "$PROFILESOURCED" ] && return
+export PROFILESOURCED=1
 
 export ASAN_OPTIONS=abort_on_error=1:disable_coredump=0:unmap_shadow_on_exit=1
 export BROWSER=firefox
@@ -20,21 +18,8 @@ export PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:$PERL5LIB}"
 export PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:$PERL_LOCAL_LIB_ROOT}"
 export PERL_MB_OPT="--install_base $HOME/perl5"
 export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
-export PS1='$USER${HOSTNAME+@$HOSTNAME}:\w \$ '
 
 mkdir -p "$HOME/.local/bin"
-
-if [ ! -S "$HOME/.ssh/ssh_auth_sock" ]
-then
-	if [ -z "$SSH_AUTH_SOCK" ]
-	then
-		eval "$(ssh-agent -s)"
-	fi
-
-	ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh_auth_sock"
-fi
-
-export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
 
 if [ -x /usr/bin/fortune ]
 then
@@ -47,4 +32,9 @@ fi
 if [ -x /usr/bin/lesspipe ]
 then
 	eval "$(SHELL=/bin/sh lesspipe)"
+fi
+
+if [ -n "$BASH" ]
+then
+	. "$HOME/.shrc"
 fi
