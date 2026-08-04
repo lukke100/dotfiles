@@ -15,7 +15,7 @@ esac
 
 export PS1='$USER${HOSTNAME+@$HOSTNAME}:\w \$ '
 
-lsalias='ls -Alp'
+lsalias='LC_COLLATE=C ls -Alp'
 cdalias='_cdls() { "cd" "$@" && "ls" -p'
 
 if [ -x /usr/bin/dircolors ]
